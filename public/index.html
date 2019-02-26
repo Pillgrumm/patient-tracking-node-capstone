@@ -243,24 +243,24 @@
                             <span>Please add patient's bed number.</span>
                         </div>
                     </div>
-                </div>
-                <div class="input-wrapper">
-                        <label for="dateOfAdmission">Date of Admission</label>
-                        <input id="dateOfAdmission" class="sideBySideInputs" type="date" required>
-                        <label for="timeOfAdmission">Time of Admission</label>
-                        <input id="timeOfAdmission" class="sideBySideInputs" type="time" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content">
-                                <i class="fas fa-info"></i>
+            </div>
+            <div class="input-wrapper">
+                    <label for="dateOfAdmission">Date of Admission</label>
+                    <input id="dateOfAdmission" class="sideBySideInputs" type="date" required>
+                    <label for="timeOfAdmission">Time of Admission</label>
+                    <input id="timeOfAdmission" class="sideBySideInputs" type="time" required>
+                    <div class="icons-wrapper">
+                        <div class="icon-content">
+                            <i class="fas fa-info"></i>
                                 <span>Date and time the patient was admitted. Required. Consistent</span>
-                            </div>
-                            <div class="icon-content">
+                         </div>
+                         <div class="icon-content">
                                 <i class="fas fa-times"></i>
                                 <span>Please add patient's date/time of admission.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
+                         </div>
+                     </div>
+                 </div>
+                 <div class="input-wrapper">
                             <label for="dateOfDischarge">Date of Discharge</label>
                             <input id="dateOfDischarge" class="sideBySideInputs" type="date" required>
                             <label for="timeOfDischarge">Time of Discharge</label>
@@ -279,6 +279,273 @@
             
         </fieldset>
     </section>
+    <section class="form-wrapper">
+            <fieldset>
+                <legend>Maternal/Delivery Information</legend>
+                <div class="input-wrapper">
+                        <label for="gravida">Gravida</label>
+                        <input id="gravida" type="number" required>
+                        <div class="icons-wrapper">
+                            <div class="icon-content">
+                                <i class="fas fa-info"></i>
+                                <span>How many pregnancies mother has had. Required. Consistent</span>
+                            </div>
+                            <div class="icon-content">
+                                <i class="fas fa-times"></i>
+                                <span>Please add gravida count.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                            <label for="para">Para</label>
+                            <input id="para" type="number" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content">
+                                    <i class="fas fa-info"></i>
+                                    <span>How many deliveries mother has had. Required. Consistent</span>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add para count.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                                <label for="age">Age</label>
+                                <input id="age" type="number" required>
+                                <div class="icons-wrapper">
+                                    <div class="icon-content">
+                                        <i class="fas fa-info"></i>
+                                            <span>Age of mother. Required. Interchangeable</span>
+                                </div>
+                                <div class="icon-content">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add mothers age.</span>
+                                </div>
+                             </div>
+                         </div>
+                            <div class="input-wrapper">
+                                    <label for="vagCs">VAG/CS</label>
+                                    <select name="vagCs">
+                                                <option value="" disabled selected>Select your option</option>
+                                                <option value ="vag">VAG</option>
+                                                <option value ="cs">CS</option>
+                                      </select>
+                                    <div class="icons-wrapper">
+                                        <div class="icon-content">
+                                            <i class="fas fa-info"></i>
+                                            <span>Vaginal or C-Section birth. Required. Consistent.</span>
+                                        </div>
+                                        <div class="icon-content">
+                                            <i class="fas fa-times"></i>
+                                            <span>Please select one.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="apgar">APGAR</label><br>
+                                    <!-- <form class="sideBySideInputs"> -->
+                                    <select name="apgar1" class="sideBySideInputs">
+                                                <option value="" disabled selected>Select your option</option>
+                                                <option value ="vag">1</option>
+                                                <option value ="vag">2</option>
+                                                <option value ="vag">3</option>
+                                                <option value ="vag">4</option>
+                                                <option value ="vag">5</option>
+                                                <option value ="vag">6</option>
+                                                <option value ="vag">7</option>
+                                                <option value ="vag">8</option>
+                                                <option value ="vag">9</option>
+                                                <option value ="vag">10</option>
+
+                                      </select>
+                                         <select name="apgar1"> 
+                                                <option value="" disabled selected>Select your option</option>
+                                                <option value ="vag">1</option>
+                                                <option value ="vag">2</option>
+                                                <option value ="vag">3</option>
+                                                <option value ="vag">4</option>
+                                                <option value ="vag">5</option>
+                                                <option value ="vag">6</option>
+                                                <option value ="vag">7</option>
+                                                <option value ="vag">8</option>
+                                                <option value ="vag">9</option>
+                                                <option value ="vag">10</option>
+                                      </select>
+                                    <div class="icons-wrapper">
+                                        <div class="icon-content">
+                                            <i class="fas fa-info"></i>
+                                            <span>Vaginal or C-Section birth. Required. Consistent.</span>
+                                        </div>
+                                        <div class="icon-content">
+                                            <i class="fas fa-times"></i>
+                                            <span>Please select one.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                        <label for="rom">ROM</label> <!--Could be hours/days/weeks-->
+                                        <input id="rom" type="number" class="sideBySideInputs">hours 
+                                        <div class="icons-wrapper">
+                                            <div class="icon-content">
+                                                <i class="fas fa-info"></i>
+                                                <span>Rupture of membranes. Not Required. Consistent</span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <i class="fas fa-times"></i>
+                                                <span>If ROM has occured, please input the amount of hours.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="input-wrapper">
+                                        <label for="hx">HX</label>
+                                        <input id="hx" type="text" value="" placeholder="Drug Abuse">
+                                        <div class="icons-wrapper">
+                                            <div class="icon-content">
+                                                <i class="fas fa-info"></i>
+                                                <span>Maternal history with at least 3 characters. Required. Interchangeable.</span>
+                                            </div>
+                                            <div class="icon-content"> 
+                                                <i class="fas fa-times"></i>
+                                                <span>Please add maternal history.</span>
+                                            </div>
+                                        </div>
+                                 </div>
+                                 <div class="input-wrapper">
+                                    <label for="maternalBloodType">Maternal Blood Type</label>
+                                    <select name="maternalBloodType">
+                                                <option value="" disabled selected>Select blood type</option>
+                                                <option value ="O+">O+</option>
+                                                <option value ="O-">O-</option>
+                                                <option value ="A+">A+</option>
+                                                <option value ="A-">A-</option>
+                                                <option value ="B+">B+</option>
+                                                <option value ="B-">B-</option>
+                                                <option value ="AB+">AB+</option>
+                                                <option value ="AB-">AB-</option>
+                                      </select>
+                                    <div class="icons-wrapper">
+                                        <div class="icon-content">
+                                            <i class="fas fa-info"></i>
+                                            <span>The maternal blood type. Required. Consistent.</span>
+                                        </div>
+                                        <div class="icon-content">
+                                            <i class="fas fa-times"></i>
+                                            <span>Please add maternal blood type.</span>
+                                        </div>
+                                    </div>
+                                </div>
+            </fieldset>
+            </section>
+                    <section class="form-wrapper">
+                        <fieldset>
+                                <legend>Assessment</legend>
+                                <div class="input-wrapper">
+                                    <label for="neuro">Neuro</label><br>
+                                    <label for ="neuroCheckBox">HUS</label>
+                                    <input id ="neuroCheckBox" class="sideBySideInputs" type="checkbox">
+                                    <input id="neuroText" class="sideBySideInputs" type="text" value="" placeholder="Normal">
+                                    <div class="icons-wrapper">
+                                        <div class="icon-content">
+                                            <i class="fas fa-info"></i>
+                                            <span>Hemolytic-uremic syndrome. Not Required. Interchangeable.</span>
+                                        </div>
+                                        <div class="icon-content"> 
+                                            <i class="fas fa-times"></i>
+                                            <span>If checked, add HUS text.</span>
+                                        </div>
+                                    </div>
+                             </div>
+                             <div class="input-wrapper">
+                                <label for="respiratory">Respiratory</label><br>
+                                <input type="radio" class="sideBySideInputs" id="ra" name="respiratory" value="ra">
+                                <label for="ra">RA</label>
+                                <input type="radio" class="sideBySideInputs" id="vent" name="respiratory" value="vent">
+                                <label for="vent">VENT</label><br>
+                                <input type="radio" class="sideBySideInputs" id="hfnc" name="respiratory" value="hfnc">
+                                <label for="hfnc">HFNC</label>
+                                <input type="radio" class="sideBySideInputs" id="vt" name="respiratory" value="vt">
+                                <label for="vt">VT</label>
+                                <div class="icons-wrapper">
+                                    <div class="icon-content">
+                                        <i class="fas fa-info"></i>
+                                        <span>Respiratory support settings. One Required. Interchangeable.</span>
+                                    </div>
+                                    <div class="icon-content"> 
+                                        <i class="fas fa-times"></i>
+                                        <span>Please select respiratory settings.</span>
+                                    </div>
+                                <label for="fio2">FIO2</label>
+                                <input id="fio2" class="sideBySideInputs" type="text" value="" placeholder="21" min="21" max="100" required>%
+                                    <div class="icon-content">
+                                        <i class="fas fa-info"></i>
+                                        <span>FIO2 Percentage. Required. Interchangeable.</span>
+                                    </div>
+                                    <div class="icon-content"> 
+                                        <i class="fas fa-times"></i>
+                                        <span>Please input FIO2.</span>
+                                    </div>
+                                </div>
+                         </div>
+                         <div class="input-wrapper">
+                            <label for="abdpb">ABs/Desats/PB</label>
+                            <input id="abdpb" type="text" value="" placeholder="???" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field with at least 3 characters. Required. Interchangeable.</span>
+                                </div>
+                                <div class="icon-content"> 
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add text.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="cardiac">Cardiac</label><br>
+                            <input id="cardiac" class="sideBySideInputs" type="checkbox">
+                            <label for="cardiac">Murmur</label>
+                            <input id="ech0" class="sideBySideInputs" type="checkbox">
+                            <label for="ech0">ECH0</label>
+                            <div class="icons-wrapper">
+                                <div class="icon-content">
+                                    <i class="fas fa-info"></i>
+                                    <span>Checkbox for cardiac. Not Required. Interchangeable.</span>
+                                </div>
+                                <div class="icon-content"> 
+                                    <i class="fas fa-times"></i>
+                                    <span>Please check applicable.</span>
+                                </div>
+                            </div>
+                            <label for="results">Results</label>
+                            <input id="results" type="text" placeholder="Results Here">
+                            <div class="icons-wrapper">
+                                <div class="icon-content">
+                                    <i class="fas fa-info"></i>
+                                    <span>Results text input. Not Required. Interchangeable.</span>
+                                </div>
+                                <div class="icon-content"> 
+                                    <i class="fas fa-times"></i>
+                                    <span>Please input results.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="meds">Meds</label>
+                            <input id="meds" type="text" value="" placeholder="Caffeine" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patients medication. Not Required. Interchangeable.</span>
+                                </div>
+                                <div class="icon-content"> 
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patients medications.</span>
+                                </div>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </section>
 
 </body>
 
