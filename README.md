@@ -1,5 +1,7 @@
 # patient-tracking-node-capstone
-Live Preview @ https://patient-tracking-capstone.herokuapp.com/
+<!-- Live Preview with node @ https://patient-tracking-capstone.herokuapp.com/  -->
+
+Live Preview wihtout Node https://pillgrumm.github.io/patient-tracking-node-capstone/public/index.html
 
 #  The typical command lines for capstone projects
 
