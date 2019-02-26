@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+/* -------------------------------------
+General styles */
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+/* -------------------------------------
+Header styles
+*/
+
+
+/* -------------------------------------
+Content styles
+*/
+.form-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.form-wrapper .input-wrapper {
+    border-bottom: 1px solid gray;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: grey
+}
+
+.form-wrapper fieldset {
+    border: 1px solid blue;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-wrapper fieldset label,
+.form-wrapper fieldset input,
+.form-wrapper fieldset select {
+    display: inline-block;
+    width: 30%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: grey
+}
+
+.form-wrapper fieldset input,
+.form-wrapper fieldset select {
+    width: 69%;
+    border: 1px solid gray;
+}
+.form-wrapper fieldset input.sideBySideInputs{
+    display: inline-block;
+    width: auto;
+    margin-right: 1rem;
+}
+.form-wrapper fieldset .icons-wrapper {
+    display: block;
+    width: 100%;
+    margin: 1rem;
+}
+
+.form-wrapper fieldset .icons-wrapper .icon-content {
+    display: block;
+    width: 100%;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: grey;
+}
+
+.form-wrapper fieldset .icons-wrapper .icon-content i,
+.form-wrapper fieldset .icons-wrapper .icon-content span {
+    display: inline-block;
+    width: auto;
+    max-width: 90%;
+    vertical-align: middle;
+}
+
+.form-wrapper fieldset .icons-wrapper .icon-content .fa-times {
+    width: 20px;
+    font-size: 2rem;
+    color: red;
+}
+
+.form-wrapper fieldset .icons-wrapper .icon-content .fa-info {
+    color: green;
+    width: 20px;
+    font-size: 2rem;
+}
+
+.form-wrapper fieldset .icons-wrapper .icon-content span {
+    margin-left: 1rem;
+}
+
+
+/* -------------------------------------
+Footer styles
+*/
+
+
+/* -------------------------------------
+Responsive styles
+*/

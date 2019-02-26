@@ -1,0 +1,35 @@
+{
+  "name": "patient-tracking-node-capstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pillgrumm/patient-tracking-node-capstone.git"
+  },
+  "author": "Nicholas Valenzuela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pillgrumm/patient-tracking-node-capstone/issues"
+  },
+  "homepage": "https://github.com/Pillgrumm/patient-tracking-node-capstone#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.0.12"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "faker": "^4.1.0",
+    "mocha": "^5.0.4",
+    "morgan": "^1.9.0"
+  }
+}
