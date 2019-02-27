@@ -66,7 +66,7 @@ Content styles
     width: 69%;
     border: 1px solid gray;
 }
-.form-wrapper fieldset input.sideBySideInputs{
+.form-wrapper fieldset input.sideBySide, .form-wrapper fieldset select.sideBySide{
     display: inline-block;
     width: auto;
     margin-right: 1rem;

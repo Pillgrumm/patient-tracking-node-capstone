@@ -70,8 +70,8 @@
             </div>
             <div class="input-wrapper">
                 <label for="correctedGestationalAge">CGA</label>
-                <input id="correctedGestationalAge" class="sideBySideInputs" type="number" value="" placeholder="29" required>weeks
-                <input id="correctedGestationalAge" class="sideBySideInputs" type="number" value="" placeholder="7" required>days
+                <input id="correctedGestationalAge" class="sideBySide" type="number" value="" placeholder="29" required>weeks
+                <input id="correctedGestationalAge" class="sideBySide" type="number" value="" placeholder="7" required>days
                 <div class="icons-wrapper">
                     <div class="icon-content">
                         <i class="fas fa-info"></i>
@@ -246,9 +246,9 @@
             </div>
             <div class="input-wrapper">
                     <label for="dateOfAdmission">Date of Admission</label>
-                    <input id="dateOfAdmission" class="sideBySideInputs" type="date" required>
+                    <input id="dateOfAdmission" class="sideBySide" type="date" required>
                     <label for="timeOfAdmission">Time of Admission</label>
-                    <input id="timeOfAdmission" class="sideBySideInputs" type="time" required>
+                    <input id="timeOfAdmission" class="sideBySide" type="time" required>
                     <div class="icons-wrapper">
                         <div class="icon-content">
                             <i class="fas fa-info"></i>
@@ -262,9 +262,9 @@
                  </div>
                  <div class="input-wrapper">
                             <label for="dateOfDischarge">Date of Discharge</label>
-                            <input id="dateOfDischarge" class="sideBySideInputs" type="date" required>
+                            <input id="dateOfDischarge" class="sideBySide" type="date" required>
                             <label for="timeOfDischarge">Time of Discharge</label>
-                            <input id="timeOfDischarge" class="sideBySideInputs" type="time" required>
+                            <input id="timeOfDischarge" class="sideBySide" type="time" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content">
                                     <i class="fas fa-info"></i>
@@ -344,8 +344,8 @@
                                 </div>
                                 <div class="input-wrapper">
                                     <label for="apgar">APGAR</label><br>
-                                    <!-- <form class="sideBySideInputs"> -->
-                                    <select name="apgar1" class="sideBySideInputs">
+                                    <!-- <form class="sideBySide"> -->
+                                    <select name="apgar1" class="sideBySide">
                                                 <option value="" disabled selected>Select your option</option>
                                                 <option value ="vag">1</option>
                                                 <option value ="vag">2</option>
@@ -359,7 +359,7 @@
                                                 <option value ="vag">10</option>
 
                                       </select>
-                                         <select name="apgar1"> 
+                                         <select name="apgar1" class="sideBySide"> 
                                                 <option value="" disabled selected>Select your option</option>
                                                 <option value ="vag">1</option>
                                                 <option value ="vag">2</option>
@@ -385,7 +385,7 @@
                                 </div>
                                 <div class="input-wrapper">
                                         <label for="rom">ROM</label> <!--Could be hours/days/weeks-->
-                                        <input id="rom" type="number" class="sideBySideInputs">hours 
+                                        <input id="rom" type="number" class="sideBySide">hours 
                                         <div class="icons-wrapper">
                                             <div class="icon-content">
                                                 <i class="fas fa-info"></i>
@@ -443,8 +443,8 @@
                                 <div class="input-wrapper">
                                     <label for="neuro">Neuro</label><br>
                                     <label for ="neuroCheckBox">HUS</label>
-                                    <input id ="neuroCheckBox" class="sideBySideInputs" type="checkbox">
-                                    <input id="neuroText" class="sideBySideInputs" type="text" value="" placeholder="Normal">
+                                    <input id ="neuroCheckBox" class="sideBySide" type="checkbox">
+                                    <input id="neuroText" class="sideBySide" type="text" value="" placeholder="Normal">
                                     <div class="icons-wrapper">
                                         <div class="icon-content">
                                             <i class="fas fa-info"></i>
@@ -458,13 +458,13 @@
                              </div>
                              <div class="input-wrapper">
                                 <label for="respiratory">Respiratory</label><br>
-                                <input type="radio" class="sideBySideInputs" id="ra" name="respiratory" value="ra">
+                                <input type="radio" class="sideBySide" id="ra" name="respiratory" value="ra">
                                 <label for="ra">RA</label>
-                                <input type="radio" class="sideBySideInputs" id="vent" name="respiratory" value="vent">
+                                <input type="radio" class="sideBySide" id="vent" name="respiratory" value="vent">
                                 <label for="vent">VENT</label><br>
-                                <input type="radio" class="sideBySideInputs" id="hfnc" name="respiratory" value="hfnc">
+                                <input type="radio" class="sideBySide" id="hfnc" name="respiratory" value="hfnc">
                                 <label for="hfnc">HFNC</label>
-                                <input type="radio" class="sideBySideInputs" id="vt" name="respiratory" value="vt">
+                                <input type="radio" class="sideBySide" id="vt" name="respiratory" value="vt">
                                 <label for="vt">VT</label>
                                 <div class="icons-wrapper">
                                     <div class="icon-content">
@@ -476,7 +476,7 @@
                                         <span>Please select respiratory settings.</span>
                                     </div>
                                 <label for="fio2">FIO2</label>
-                                <input id="fio2" class="sideBySideInputs" type="text" value="" placeholder="21" min="21" max="100" required>%
+                                <input id="fio2" class="sideBySide" type="text" value="" placeholder="21" min="21" max="100" required>%
                                     <div class="icon-content">
                                         <i class="fas fa-info"></i>
                                         <span>FIO2 Percentage. Required. Interchangeable.</span>
@@ -503,9 +503,9 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="cardiac">Cardiac</label><br>
-                            <input id="cardiac" class="sideBySideInputs" type="checkbox">
+                            <input id="cardiac" class="sideBySide" type="checkbox">
                             <label for="cardiac">Murmur</label>
-                            <input id="ech0" class="sideBySideInputs" type="checkbox">
+                            <input id="ech0" class="sideBySide" type="checkbox">
                             <label for="ech0">ECH0</label>
                             <div class="icons-wrapper">
                                 <div class="icon-content">
@@ -551,15 +551,15 @@
                                 <legend>Labs/Tests</legend>
                                 <div class="input-wrapper">
                                     <label for="labsTests">Labs/Tests(???)</label><br>
-                                    <input id="cbc" class="sideBySideInputs" type="checkbox">
+                                    <input id="cbc" class="sideBySide" type="checkbox">
                                     <label for="cbc">CBC</label>
-                                    <input id="tb" class="sideBySideInputs" type="checkbox">
+                                    <input id="tb" class="sideBySide" type="checkbox">
                                     <label for="tb">TB</label>
-                                    <input id="bmp" class="sideBySideInputs" type="checkbox">
+                                    <input id="bmp" class="sideBySide" type="checkbox">
                                     <label for="bmp">BMP</label><br>
-                                    <input id="crp" class="sideBySideInputs" type="checkbox">
+                                    <input id="crp" class="sideBySide" type="checkbox">
                                     <label for="crp">CRP</label>
-                                    <input id="tg" class="sideBySideInputs" type="checkbox">
+                                    <input id="tg" class="sideBySide" type="checkbox">
                                     <label for="tg">TG</label>
                                     <div class="icons-wrapper">
                                         <div class="icon-content">
@@ -584,10 +584,10 @@
                                             <i class="fas fa-times"></i>
                                             <span>Please add QTu Labs</span>
                                         </div>
-                                    <input id="trough" class="sideBySideInputs" type="checkbox">
+                                    <input id="trough" class="sideBySide" type="checkbox">
                                     <label for="trough">Trough</label>@
-                                    <input id="dateOfTrough" class="sideBySideInputs" type="date" required>
-                                    <input id="timeOfTrough" class="sideBySideInputs" type="time" required>
+                                    <input id="dateOfTrough" class="sideBySide" type="date" required>
+                                    <input id="timeOfTrough" class="sideBySide" type="time" required>
                                     <div class="icons-wrapper">
                                         <div class="icon-content">
                                             <i class="fas fa-info"></i>
@@ -603,11 +603,11 @@
                                 <div class="input-wrapper">
                                     <label for="radiology">Radiology</label><br>
                                     <label for="cxr">CXR</label>
-                                    <input id="cxr" type="checkbox" class="sideBySideInputs">
-                                    <input id="cxr" type="date" class="sideBySideInputs">
+                                    <input id="cxr" type="checkbox" class="sideBySide">
+                                    <input id="cxr" type="date" class="sideBySide">
                                     <label for="kub">KUB</label>
-                                    <input id="kub" type="checkbox" class="sideBySideInputs">
-                                    <input id="kub" type="date" class="sideBySideInputs">
+                                    <input id="kub" type="checkbox" class="sideBySide">
+                                    <input id="kub" type="date" class="sideBySide">
                                     <div class="icons-wrapper">
                                         <div class="icon-content">
                                             <i class="fas fa-info"></i>
@@ -626,8 +626,8 @@
                                             <legend>Other Tests</legend>
                                             <div class="input-wrapper">
                                                 <label for="hepB">Hepatitis B Vaccine</label>
-                                                <input id="hepB" class="sideBySideInputs" type="checkbox">
-                                                <input id="hepB" class="sideBySideInputs" type="date">
+                                                <input id="hepB" class="sideBySide" type="checkbox">
+                                                <input id="hepB" class="sideBySide" type="date">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -641,8 +641,8 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="newbornScreen">Newborn Screen</label>
-                                                <input id="newbornScreen" class="sideBySideInputs" type="checkbox">
-                                                <input id="newbornScreen" class="sideBySideInputs" type="date">
+                                                <input id="newbornScreen" class="sideBySide" type="checkbox">
+                                                <input id="newbornScreen" class="sideBySide" type="date">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -656,8 +656,8 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="cchdEch0">CCHD/ECH0</label>
-                                                <input id="cchdEch0" class="sideBySideInputs" type="checkbox">
-                                                <input id="cchdEch0" class="sideBySideInputs" type="text">
+                                                <input id="cchdEch0" class="sideBySide" type="checkbox">
+                                                <input id="cchdEch0" class="sideBySide" type="text">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -671,10 +671,10 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="eyeExam">Eye Exam Date/Results</label>
-                                                <input id="eyeExam" class="sideBySideInputs" type="checkbox">
-                                                <input id="eyeExam" class="sideBySideInputs" type="date"><br>
+                                                <input id="eyeExam" class="sideBySide" type="checkbox">
+                                                <input id="eyeExam" class="sideBySide" type="date"><br>
                                                 <label for="eyeExam">Results</label>
-                                                <input id="eyeExam" class="sideBySideInputs" type="text">
+                                                <input id="eyeExam" class="sideBySide" type="text">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -688,8 +688,8 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="fu">F/U(???)</label>
-                                                <input id="fu" class="sideBySideInputs" type="checkbox">
-                                                <input id="fu" class="sideBySideInputs" type="date">
+                                                <input id="fu" class="sideBySide" type="checkbox">
+                                                <input id="fu" class="sideBySide" type="date">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -703,7 +703,7 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="hearing">Hearing</label>
-                                                <input id="hearing" class="sideBySideInputs" type="checkbox">
+                                                <input id="hearing" class="sideBySide" type="checkbox">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -717,7 +717,7 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="carSeat">Car Seat</label>
-                                                <input id="carSeat" class="sideBySideInputs" type="checkbox">
+                                                <input id="carSeat" class="sideBySide" type="checkbox">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -731,7 +731,7 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="cpr">CPR</label>
-                                                <input id="cpr" class="sideBySideInputs" type="checkbox">
+                                                <input id="cpr" class="sideBySide" type="checkbox">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -745,7 +745,7 @@
                                             </div>
                                             <div class="input-wrapper">
                                                 <label for="circ">Circ</label>
-                                                <input id="circ" class="sideBySideInputs" type="checkbox">
+                                                <input id="circ" class="sideBySide" type="checkbox">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
@@ -757,8 +757,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                        </fieldset>
-                    </section>
+                                    </fieldset>
+                                </section>
+                                <section class="form-wrapper">
+                                    <fieldset>
+                                        <legend>Referals</legend>
+                                     </fieldset>
+                                </section>
 
 </body>
 
