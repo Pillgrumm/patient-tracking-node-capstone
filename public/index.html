@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Respiratory Therapist Patient Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -877,34 +877,204 @@
                                              </div>
                                             </div>
                                             <div class="input-wrapper">
-                                                <label for="adLib">Ad Lib(???)</label>
+                                                <label for="adLib">Ad Lib</label>
                                                 <input type="checkbox" id="adLib" class="sideBySide">
                                                 <div class="icons-wrapper">
                                                     <div class="icon-content">
                                                         <i class="fas fa-info"></i>
-                                                            <span>Ad Lib(???). Not Required. Interchangeable</span>
+                                                            <span>If child can be fed as much as they want. Not Required. Interchangeable</span>
                                                      </div>
                                                      <div class="icon-content">
                                                             <i class="fas fa-times"></i>
-                                                            <span>(???).</span>
+                                                            <span>If applicable, check box.</span>
                                                      </div>
                                                  </div>
                                                 </div>
                                                 <div class="input-wrapper">
-                                                    <label for="cueBased">Cue-based(???)</label>
+                                                    <label for="cueBased">Cue-based</label>
                                                     <input type="checkbox" id="adLib" class="sideBySide">
                                                     <div class="icons-wrapper">
                                                         <div class="icon-content">
                                                             <i class="fas fa-info"></i>
-                                                                <span>Ad Lib(???). Not Required. Interchangeable</span>
+                                                                <span>If the child gives cues when hungry. Not Required. Interchangeable</span>
                                                          </div>
                                                          <div class="icon-content">
                                                                 <i class="fas fa-times"></i>
-                                                                <span>(???).</span>
+                                                                <span>If applicable, check box.</span>
                                                          </div>
                                                      </div>
                                                     </div>
+                                                    <div class="input-wrapper">
+                                                        <label for="foodItanke">Food Intake</label>
+                                                        <input id="cc" class="sideBySide" type="number" placeholder="160"> cc/kg/day
+                                                        <input id="hr" class="sideBySide" type="number" placeholder="27">
+                                                        <div class="icons-wrapper">
+                                                            <div class="icon-content">
+                                                                <i class="fas fa-info"></i>
+                                                                    <span>Cubic Centimeters Per Kilogram Per Day. Interchangeable</span>
+                                                             </div>
+                                                             <div class="icon-content">
+                                                                    <i class="fas fa-times"></i>
+                                                                    <span>(???).</span>
+                                                             </div>
+                                                         </div>
+                                                        </div>
+                                                        <div class="input-wrapper">
+                                                        <label for="feedingAttempts">Feeding Attempts</label>
+                                                        <input id="feedingAttempts" class="sideBySide" type="number" value="" placeholder="7">Attempted
+                                                        <input id="completedAttempts" class="sideBySide" type="number" value="" placeholder="3">Completed
+                                                            <div class="icons-wrapper">
+                                                                <div class="icon-content">
+                                                                    <i class="fas fa-info"></i>
+                                                                    <span>Feeding attempts with at least 1 numerical character. Not Required.</span>
+                                                                </div>
+                                                                <div class="icon-content">
+                                                                    <i class="fas fa-times"></i>
+                                                                    <span>Please add patient's attempted/completed feedings.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                      </fieldset>
+                                </section>
+                                <section class="form-wrapper">
+                                    <fieldset>
+                                        <legend>In Depth Patient Notes</legend>
+                                        <div class="input-wrapper">
+                                            <label for="planOfCare">Plan of Care</label>
+                                            <input id="planOfCare" type="text" value="">
+                                            <div class="icons-wrapper">
+                                                <div class="icon-content">
+                                                    <i class="fas fa-info"></i>
+                                                    <span>Text field for Plan of Care. Not Required. Interchangeable</span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <i class="fas fa-times"></i>
+                                                    <span>Please add plan of care.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label for="socialConsiderations">Social Considerations</label>
+                                            <input id="socialConsiderations" type="text" value="">
+                                            <div class="icons-wrapper">
+                                                <div class="icon-content">
+                                                    <i class="fas fa-info"></i>
+                                                    <span>Text field for social considerations. Not Required. Interchangeable</span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <i class="fas fa-times"></i>
+                                                    <span>Please add social considerations.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label for="historyChanges">History/Changes</label>
+                                            <input id="historyChanges" type="text" value="">
+                                            <div class="icons-wrapper">
+                                                <div class="icon-content">
+                                                    <i class="fas fa-info"></i>
+                                                    <span>Text field for patient history and changes. Not Required. Interchangeable</span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <i class="fas fa-times"></i>
+                                                    <span>Please add text for history and changes.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </section>
+                                <section class="form-wrapper">
+                                    <fieldset>
+                                        <legend>Other</legend>
+                                        <div class="input-wrapper">
+                                            <label for="referals">Referrals</label>
+                                            <input id="referals" type="text" value="">
+                                            <div class="icons-wrapper">
+                                                <div class="icon-content">
+                                                    <i class="fas fa-info"></i>
+                                                    <span>Text field for referrals. Not Required. Interchangeable</span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <i class="fas fa-times"></i>
+                                                    <span>Please add referalls.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <label for="synagis">Synagis</label>
+                                            <input id="synagis" type="checkbox" id="adLib" class="sideBySide">
+                                            <div class="icons-wrapper">
+                                                <div class="icon-content">
+                                                    <i class="fas fa-info"></i>
+                                                        <span>Check if child is using Synagis. Not Required. Interchangeable</span>
+                                                 </div>
+                                                 <div class="icon-content">
+                                                        <i class="fas fa-times"></i>
+                                                        <span>If applicable, check box.</span>
+                                                 </div>
+                                             </div>
+                                            </div>
+                                            <div class="input-wrapper">
+                                                <label for="vaccine">2mo Vaccine</label>
+                                                <input id="vaccine" type="checkbox" id="adLib" class="sideBySide">
+                                                <div class="icons-wrapper">
+                                                    <div class="icon-content">
+                                                        <i class="fas fa-info"></i>
+                                                            <span>Check if child has had 2 month vaccine. Not Required. Interchangeable</span>
+                                                     </div>
+                                                     <div class="icon-content">
+                                                            <i class="fas fa-times"></i>
+                                                            <span>If applicable, check box.</span>
+                                                     </div>
+                                                 </div>
+                                                </div>
+                                                <div class="input-wrapper">
+                                                    <label for="pediatrician">Pediatrician</label>
+                                                    <input id="pediatrician" type="text" value="">
+                                                    <div class="icons-wrapper">
+                                                        <div class="icon-content">
+                                                            <i class="fas fa-info"></i>
+                                                            <span>Text field for patients Pediatrician. Not Required. Interchangeable</span>
+                                                        </div>
+                                                        <div class="icon-content">
+                                                            <i class="fas fa-times"></i>
+                                                            <span>Please add pediatrician.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-wrapper">
+                                                    <label for="lastBath">Last Bath</label>
+                                                    <input id="lastBath" type="date" value="">
+                                                    <div class="icons-wrapper">
+                                                        <div class="icon-content">
+                                                            <i class="fas fa-info"></i>
+                                                            <span>Date for the patients last bath. Not Required. Interchangeable</span>
+                                                        </div>
+                                                        <div class="icon-content">
+                                                            <i class="fas fa-times"></i>
+                                                            <span>Please add the date for patients last bath.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-wrapper">
+                                                    <label for="coolingPatient">Cooling Patient(If checked, become required to fill sub form)</label>
+                                                <input type="checkbox" id="coolingPatient" class="sideBySide"> 
+                                                <input type="radio" class="sideBySide" id="consent"  value="consent"> Consent
+                                                <input type="radio" class="sideBySide" id="hus"  value="hus"> HUS
+                                                <input type="date" class="sideBySide">Date 
+                                                <input type="time" class="sideBySide">Time 
+                                                    <div class="icons-wrapper">
+                                                        <div class="icon-content">
+                                                            <i class="fas fa-info"></i>
+                                                            <span>Cooling patient information. Not Required. Interchangeable</span>
+                                                        </div>
+                                                        <div class="icon-content">
+                                                            <i class="fas fa-times"></i>
+                                                            <span>(If checked) Please fill out form for cooling patient.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    </fieldset>
                                 </section>
                                 <script
                                 src="https://code.jquery.com/jquery-3.3.1.js"
