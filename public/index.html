@@ -74,11 +74,11 @@
                 <input id="correctedGestationalAge" class="sideBySide" type="number" value="" placeholder="7" required>days
                 <input id="correctedGestationalAge" class="sideBySide" type="number" value="" placeholder="29" required>weeks
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Corrected Gestational Age with at least 1 numerical character. Required. Consistent</span>
                     </div>
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-error">
                         <i class="fas fa-times"></i>
                         <span>Please add patient's Corrected Gestational Age.</span>
                     </div>
@@ -88,11 +88,11 @@
                 <label for="dayOfLife">DOL</label>
                 <input id="dayOfLife" type="number" value="" placeholder="18" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Day of Life with at least 1 numerical character. Required. Interchangeable</span>
                     </div>
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-error">
                         <i class="fas fa-times"></i>
                         <span>Please add patient's day of life.</span>
                     </div>
@@ -102,11 +102,11 @@
                 <label for="dateOfBirth">DOB</label>
                 <input id="dayOfBirth" type="date" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Day the patient was born. Required. Consistent</span>
                     </div>
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-error">
                         <i class="fas fa-times"></i>
                         <span>Please add patient's date of birth.</span>
                     </div>
@@ -116,7 +116,7 @@
                 <label for="timeOfBirth">TOB</label>
                 <input id="timeOfBirth" type="time" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The time the patient was born. Required. Consistent</span>
                     </div>
@@ -130,7 +130,7 @@
                 <label for="birthWeight">Birth Wt (grams)</label>
                 <input id="birthWeight" type="number" placeholder="1050" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The weight of the patient at the time of birth. Required. Consistent.</span>
                     </div>
@@ -144,7 +144,7 @@
                 <label for="currentWeight">Current Wt (grams)</label>
                 <input id="currentWeight" type="number" placeholder="1500" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The current weight of the patient. Required. Interchangeable.</span>
                     </div>
@@ -158,7 +158,7 @@
                 <label for="kaiserScore">Kaiser Score</label>
                 <input id="kaiserScore" type="number" placeholder="2.3" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The kaiser score of the patient. Required. Consistent.</span>
                     </div>
@@ -182,7 +182,7 @@
                     <option value="AB-">AB-</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The blood type of the patient. Required. Consistent.</span>
                     </div>
@@ -199,7 +199,7 @@
                     <option value="+">+</option>
                     <option value="-">-</option>
                 </select>
-                <div class="icons-wrapper">
+                <div class="icon-content icon-content-info">
                     <div class="icon-content">
                         <i class="fas fa-info"></i>
                         <span>Coombs test results. Required. Consistent.</span>
@@ -221,7 +221,7 @@
                     <option value="2:1">2:1</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Acuity of the patient. Required. Interchangeable.</span>
                     </div>
@@ -235,7 +235,7 @@
                 <label for="bedNumber">Bed Number</label>
                 <input id="bedNumber" type="number" placeholder="12" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The patients bed number. Required. Interchangeable.</span>
                     </div>
@@ -251,7 +251,7 @@
                 <label for="timeOfAdmission">Time of Admission</label>
                 <input id="timeOfAdmission" class="sideBySide" type="time" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Date and time the patient was admitted. Required. Consistent</span>
                     </div>
@@ -267,7 +267,7 @@
                 <label for="timeOfDischarge">Time of Discharge</label>
                 <input id="timeOfDischarge" class="sideBySide" type="time" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Date and time the patient was discharged. Not Required. Consistent</span>
                     </div>
@@ -277,7 +277,6 @@
                     </div>
                 </div>
             </div>
-
         </fieldset>
     </section>
     <section class="form-wrapper">
@@ -287,7 +286,7 @@
                 <label for="gravida">Gravida</label>
                 <input id="gravida" type="number" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>How many pregnancies mother has had. Required. Consistent</span>
                     </div>
@@ -301,7 +300,7 @@
                 <label for="para">Para</label>
                 <input id="para" type="number" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>How many deliveries mother has had. Required. Consistent</span>
                     </div>
@@ -315,7 +314,7 @@
                 <label for="age">Age</label>
                 <input id="age" type="number" class="sideBySide" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Age of mother. Required. Interchangeable</span>
                     </div>
@@ -333,7 +332,7 @@
                     <option value="cs">CS</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Vaginal or C-Section birth. Required. Consistent.</span>
                     </div>
@@ -374,7 +373,7 @@
                     <option value="vag">10</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Vaginal or C-Section birth. Required. Consistent.</span>
                     </div>
@@ -389,7 +388,7 @@
                 <!--Could be hours/days/weeks-->
                 <input id="rom" type="number" class="sideBySide">hours
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Rupture of membranes. Not Required. Consistent</span>
                     </div>
@@ -403,7 +402,7 @@
                 <label for="hx">HX</label>
                 <input id="hx" type="text" value="" placeholder="Drug Abuse">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Maternal history with at least 3 characters. Required. Interchangeable.</span>
                     </div>
@@ -427,7 +426,7 @@
                     <option value="AB-">AB-</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>The maternal blood type. Required. Consistent.</span>
                     </div>
@@ -446,7 +445,7 @@
                 <input id="neuroCheckBox" class="sideBySide" type="checkbox"> HUS
                 <input id="neuroText" type="text" placeholder="Note:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Head Ultra Sound. Not Required. Interchangeable.</span>
                     </div>
@@ -465,7 +464,7 @@
                 <input type="radio" class="sideBySide" id="cpap" name="respiratory" value="cpap"> CPAP
                 <input type="text" id="respiratory-text" name="respiratory" placeholder="Note:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Respiratory support settings. One Required. Interchangeable.</span>
                     </div>
@@ -479,7 +478,7 @@
                 <label for="fio2">FIO2</label>
                 <input id="fio2" class="sideBySide" type="text" value="" placeholder="21" min="21" max="100" required>%
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>FIO2 Percentage. Required. Interchangeable.</span>
                     </div>
@@ -493,7 +492,7 @@
                 <label for="abdpb">ABs/Desats/PB</label>
                 <input id="abdpb" type="text" value="" placeholder="???" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Apnea Bradycardia/Desaturations/Periodic Breathing. Required. Interchangeable.</span>
                     </div>
@@ -510,7 +509,7 @@
                 <input id="echo" class="sideBySide" type="checkbox">
                 <label for="echo">ECHO</label>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Checkbox for cardiac. Not Required. Interchangeable.</span>
                     </div>
@@ -522,7 +521,7 @@
                 <label for="results">Results</label>
                 <input id="results" type="text" placeholder="Results Here">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Results text input. Not Required. Interchangeable.</span>
                     </div>
@@ -536,7 +535,7 @@
                 <label for="meds">Meds</label>
                 <input id="meds" type="text" value="" placeholder="Caffeine" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Patients medication. Not Required. Interchangeable.</span>
                     </div>
@@ -560,7 +559,7 @@
                 <input type="checkbox" class="sideBySide" id="tg" name="labsTests" value="tb"> TG
                 <input type="text" id="labsTestsText" name="labsTests" placeholder="Notes:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Checkbox form for labs/tests. Not Required. Interchangeable.</span>
                     </div>
@@ -574,7 +573,7 @@
                 <label for="qtuLabs">QTu Labs</label>
                 <input id="qtuLabs" type="text" value="" placeholder="???" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Information regarding the QTu Labs. Not Required. Interchangeable.</span>
                     </div>
@@ -591,7 +590,7 @@
                 <input id="dateOfTrough" class="sideBySide" type="date" required>
                 <input id="timeOfTrough" class="sideBySide" type="time" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Date and time of trough. Required. Consistent</span>
                     </div>
@@ -609,7 +608,7 @@
                 <input id="kub" type="date" class="sideBySide">
                 <input type="text" id="radiologyText" name="radiologyText" placeholder="Notes:" class="sideBySide">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Time of Radilogy. Not Required. Interchangeable.</span>
                     </div>
@@ -629,7 +628,7 @@
                 <input id="hepB" class="sideBySide" type="checkbox">
                 <input id="hepB" class="sideBySide" type="date">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient has Hepatitis B Vaccine, then select date. Not Required. Interchangeable.</span>
                     </div>
@@ -644,7 +643,7 @@
                 <input type="checkbox" class="sideBySide">
                 <input id="newbornScreen" class="sideBySide" type="date" required>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient has Newborn Screen, then select date. Required. Interchangeable.</span>
                     </div>
@@ -659,7 +658,7 @@
                 <input id="cchdEcho" class="sideBySide" type="checkbox">
                 <input id="cchdEcho" class="sideBySide" type="text" placeholder="Notes:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span> Check for ???, then add text. Not Required. Interchangeable.</span>
                     </div>
@@ -675,7 +674,7 @@
                 <input id="eyeExam" class="sideBySide" type="date"> Results
                 <input id="eyeExam" class="sideBySide" type="text">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient has had an eye exam, then add text. Not Required. Interchangeable.</span>
                     </div>
@@ -690,7 +689,7 @@
                 <input id="fu" class="sideBySide" type="checkbox">
                 <input id="fu" class="sideBySide" type="date">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient has had a follow up, then add date. Not Required. Interchangeable.</span>
                     </div>
@@ -705,7 +704,7 @@
                 <input id="hearing" class="sideBySide" type="checkbox">
                 <input id="hearing" class="sideBySide" type="text" placeholder="Notes:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient has had hearing test. Not Required. Interchangeable.</span>
                     </div>
@@ -724,7 +723,7 @@
                 </select>
                 <input id="carSeat" class="sideBySide" type="date">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient needs a car seat. Not Required. Interchangeable.</span>
                     </div>
@@ -742,7 +741,7 @@
                     <option value="no">No</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patients parents have watched CPR video. Required. Interchangeable.</span>
                     </div>
@@ -757,7 +756,7 @@
                 <input id="circ" class="sideBySide" type="checkbox">
                 <input id="circ" class="sideBySide" type="text" placeholder="Notes:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if the patient is circumsized. Not Required. Interchangeable.</span>
                     </div>
@@ -781,7 +780,7 @@
                 <input id="ivFluids" class="sideBySide" type="checkbox" value="uvc"> UVC
                 <input id="ivFluids" class="sideBySide" type="checkbox" value="salineLock"> Saline Lock
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check what IV fluids patine uses. Not Required. Interchangeable.</span>
                     </div>
@@ -797,7 +796,7 @@
                 <input id="cc" class="sideBySide" type="number" placeholder="CC">
                 <input id="hr" class="sideBySide" type="number" placeholder="Per hr">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Amount of drugs used per hour Required. Consistent</span>
                     </div>
@@ -813,7 +812,7 @@
                 <input id="cc" class="sideBySide" type="number" placeholder="CC">
                 <input id="hr" class="sideBySide" type="number" placeholder="Per hr">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Amount of drugs used per hour Required. Consistent</span>
                     </div>
@@ -828,7 +827,7 @@
                 <input id="cc" class="sideBySide" type="number" placeholder="CC">
                 <input id="hr" class="sideBySide" type="number" placeholder="Per hr">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Amount of drugs used per hour Required. Consistent</span>
                     </div>
@@ -842,7 +841,7 @@
                 <label for="other">Other</label>
                 <input id="cc" type="text" placeholder="Notes:">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Notes regarding intake. Required. Consistent</span>
                     </div>
@@ -866,7 +865,7 @@
                     <option value="npo">NPO</option>
                 </select>
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Method of feeding. Required. Interchangeable</span>
                     </div>
@@ -880,7 +879,7 @@
                 <label for="adLib">Ad Lib</label>
                 <input type="checkbox" id="adLib" class="sideBySide">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>If child can be fed as much as they want. Not Required. Interchangeable</span>
                     </div>
@@ -894,7 +893,7 @@
                 <label for="cueBased">Cue-based</label>
                 <input type="checkbox" id="adLib" class="sideBySide">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>If the child gives cues when hungry. Not Required. Interchangeable</span>
                     </div>
@@ -909,7 +908,7 @@
                 <input id="cc" class="sideBySide" type="number" placeholder="160"> cc/kg/day
                 <input id="hr" class="sideBySide" type="number" placeholder="27">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Cubic Centimeters Per Kilogram Per Day. Interchangeable</span>
                     </div>
@@ -924,7 +923,7 @@
                 <input id="feedingAttempts" class="sideBySide" type="number" value="" placeholder="7">Attempted
                 <input id="completedAttempts" class="sideBySide" type="number" value="" placeholder="3">Completed
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Feeding attempts with at least 1 numerical character. Not Required.</span>
                     </div>
@@ -943,7 +942,7 @@
                 <label for="planOfCare">Plan of Care</label>
                 <input id="planOfCare" type="text" value="">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Text field for Plan of Care. Not Required. Interchangeable</span>
                     </div>
@@ -957,7 +956,7 @@
                 <label for="socialConsiderations">Social Considerations</label>
                 <input id="socialConsiderations" type="text" value="">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Text field for social considerations. Not Required. Interchangeable</span>
                     </div>
@@ -971,7 +970,7 @@
                 <label for="historyChanges">History/Changes</label>
                 <input id="historyChanges" type="text" value="">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Text field for patient history and changes. Not Required. Interchangeable</span>
                     </div>
@@ -990,7 +989,7 @@
                 <label for="referals">Referrals</label>
                 <input id="referals" type="text" value="">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Text field for referrals. Not Required. Interchangeable</span>
                     </div>
@@ -1004,7 +1003,7 @@
                 <label for="synagis">Synagis</label>
                 <input id="synagis" type="checkbox" id="adLib" class="sideBySide">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if child is using Synagis. Not Required. Interchangeable</span>
                     </div>
@@ -1018,7 +1017,7 @@
                 <label for="vaccine">2mo Vaccine</label>
                 <input id="vaccine" type="checkbox" id="adLib" class="sideBySide">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Check if child has had 2 month vaccine. Not Required. Interchangeable</span>
                     </div>
@@ -1032,7 +1031,7 @@
                 <label for="pediatrician">Pediatrician</label>
                 <input id="pediatrician" type="text" value="">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Text field for patients Pediatrician. Not Required. Interchangeable</span>
                     </div>
@@ -1046,7 +1045,7 @@
                 <label for="lastBath">Last Bath</label>
                 <input id="lastBath" type="date" value="">
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Date for the patients last bath. Not Required. Interchangeable</span>
                     </div>
@@ -1064,7 +1063,7 @@
                 <input type="date" class="sideBySide">Date
                 <input type="time" class="sideBySide">Time
                 <div class="icons-wrapper">
-                    <div class="icon-content">
+                    <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
                         <span>Cooling patient information. Not Required. Interchangeable</span>
                     </div>
