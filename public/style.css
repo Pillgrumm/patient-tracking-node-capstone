@@ -110,6 +110,13 @@ Content styles
     margin-left: 1rem;
 }
 
+.depth-notes {
+    display: block;
+    width: 100%;
+    border: 1px solid gray;
+    font-family: sans-serif;
+}
+
 
 /* -------------------------------------
 Footer styles
