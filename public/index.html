@@ -458,10 +458,10 @@
             <div class="input-wrapper">
                 <label for="respiratory">Respiratory</label>
                 <input type="radio" class="sideBySide" id="ra" name="respiratory" value="ra"> RA
-                <input type="radio" class="sideBySide" id="vent" name="respiratory" value="vent"> VENT
-                <input type="radio" class="sideBySide" id="hfnc" name="respiratory" value="hfnc"> HFNC
-                <input type="radio" class="sideBySide" id="vt" name="respiratory" value="vt"> VT
-                <input type="radio" class="sideBySide" id="cpap" name="respiratory" value="cpap"> CPAP
+                <input type="radio" class="sideBySide" id="vent" name="respiratory" value="VENT"> VENT
+                <input type="radio" class="sideBySide" id="hfnc" name="respiratory" value="HFNC"> HFNC
+                <input type="radio" class="sideBySide" id="vt" name="respiratory" value="VT"> VT
+                <input type="radio" class="sideBySide" id="cpap" name="respiratory" value="CPAP"> CPAP
                 <input type="text" id="respiratory-text" name="respiratory" placeholder="Note:">
                 <div class="icons-wrapper">
                     <div class="icon-content icon-content-info">
@@ -754,7 +754,6 @@
             <div class="input-wrapper">
                 <label for="circ">Circ</label>
                 <input id="circ" class="sideBySide" type="checkbox">
-                <textarea name="circ" cols="40" rows="5" class="depth-notes"></textarea>
                 <div class="icons-wrapper">
                     <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
@@ -1043,7 +1042,7 @@
             </div>
             <div class="input-wrapper">
                 <label for="lastBath">Last Bath</label>
-                <input id="lastBath" type="date" value="">
+                <input id="lastBath" type="date" value="" class="sideBySide">
                 <div class="icons-wrapper">
                     <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
@@ -1062,6 +1061,27 @@
                 <input type="radio" class="sideBySide" id="hus" value="hus"> HUS
                 <input type="date" class="sideBySide">Date
                 <input type="time" class="sideBySide">Time
+                <div class="icons-wrapper">
+                    <div class="icon-content icon-content-info">
+                        <i class="fas fa-info"></i>
+                        <span>Cooling patient information. Not Required. Interchangeable</span>
+                    </div>
+                    <div class="icon-content icon-content-error">
+                        <i class="fas fa-times"></i>
+                        <span>(If checked) Please fill out form for cooling patient.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <label for="coolingPatient">Phototherapy</label>
+                <input id="startDate" type="date" class="sideBySide">
+                <input id="EndDate" type="date" class="sideBySide">
+                <select name="bloodType" class="sideBySide">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="triple">Triple</option>
+                </select>
                 <div class="icons-wrapper">
                     <div class="icon-content icon-content-info">
                         <i class="fas fa-info"></i>
