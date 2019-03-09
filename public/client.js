@@ -22,6 +22,14 @@ $(document).on('blur', 'input', function (event) {
 
 });
 
+$(".show-hide").click(function(){
+    $(".section-content").toggle(function(){
+        $(".show-hide").text("+");
+    }, function(){
+        $(".show-hide").text("-");
+    });
+  });
+
 
 //form trigger
 $(document).submit('form', function (event) {
