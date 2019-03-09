@@ -22,8 +22,9 @@ $(document).on('blur', 'input', function (event) {
 
 });
 
-$(".show-hide").click(function(){
-    $(".section-content").toggle(function(){
+$(".show-hide").click(function(event) {
+    event.preventDefault();
+    $(this).parent().find(".section-content").toggle(function(){
         $(".show-hide").text("+");
     }, function(){
         $(".show-hide").text("-");
