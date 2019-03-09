@@ -117,6 +117,17 @@ Content styles
     font-family: sans-serif;
 }
 
+.legend-show, .legend-hide {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
 
 /* -------------------------------------
 Footer styles

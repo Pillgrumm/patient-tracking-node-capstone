@@ -6,6 +6,8 @@ $(document).ready(function () {
     //do stuff
     $(".icon-content").hide();
     $(".section-content").hide();
+    $(".legend-show").show();
+     $(".legend-hide").hide();
 });
 
 //button triggers
@@ -22,16 +24,21 @@ $(document).on('blur', 'input', function (event) {
     $(this).parent().find(".icon-content-error").show();
 
 });
-
-$(".show-hide").click(function(event) {
+$(document).on('click', '.legend-show', function (event) {
     event.preventDefault();
-    $(this).parent().find(".section-content").toggle(function(){
-        $(".show-hide").text("+");
-    }, function(){
-        $(".show-hide").text("-");
-    });
+    console.log('inside legend show');
+         $(this).parent().find(".legend-show").hide();
+         $(this).parent().find(".legend-hide").show();
+        $(this).parent().parent().find(".section-content").show();
   });
 
+  $(document).on('click', '.legend-hide', function (event) {
+    event.preventDefault();
+    console.log('inside legend hide');
+         $(this).parent().find(".legend-hide").hide();
+         $(this).parent().find(".legend-show").show();
+        $(this).parent().parent().find(".section-content").hide();
+  });
 
 //form trigger
 $(document).submit('form', function (event) {
