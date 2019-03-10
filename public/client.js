@@ -26,7 +26,6 @@ $(document).on('blur', 'input', function (event) {
 });
 $(document).on('click', '.legend-show', function (event) {
     event.preventDefault();
-    console.log('inside legend show');
          $(this).parent().find(".legend-show").hide();
          $(this).parent().find(".legend-hide").show();
         $(this).parent().parent().find(".section-content").show();
@@ -34,7 +33,6 @@ $(document).on('click', '.legend-show', function (event) {
 
   $(document).on('click', '.legend-hide', function (event) {
     event.preventDefault();
-    console.log('inside legend hide');
          $(this).parent().find(".legend-hide").hide();
          $(this).parent().find(".legend-show").show();
         $(this).parent().parent().find(".section-content").hide();

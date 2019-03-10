@@ -35,7 +35,8 @@ Content styles
 */
 .form-wrapper {
     display: block;
-    width: 100%;
+    width: 80%;
+    margin: 2rem auto;
 }
 
 .form-wrapper .input-wrapper {
@@ -117,7 +118,7 @@ Content styles
     font-family: sans-serif;
 }
 
-.legend-show, .legend-hide {
+.legend-show button, .legend-hide button {
     display: inline-block;
     vertical-align: middle;
     padding: 12px;
