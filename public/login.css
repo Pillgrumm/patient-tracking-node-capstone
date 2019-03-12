@@ -1,11 +1,22 @@
 .box {
     background: white;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 6px;
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 70px 0px;
+    border: 1px solid blue;
+}
+
+.authentication-box {
+    background: white;
     width: 300px;
     border-radius: 6px;
     margin: 0 auto 0 auto;
     padding: 0px 0px 70px 0px;
     border: 1px solid blue;
 }
+
 
 p {
     margin-top: 10px;
@@ -24,7 +35,8 @@ p {
     border-radius: 4px;
 }
 
-.button {
+.button,
+.submit-button {
     background: #462ecc;
     width: 125px;
     padding-top: 5px;
@@ -40,13 +52,10 @@ p {
     font-size: 0.8em;
 }
 
-.button:hover {
+.button:hover,
+.submit-button:hover {
     background: #2CC06B;
-}
-
-.fpwd {
-    color: #f1c40f;
-    text-decoration: underline;
+    color: white;
 }
 
 #absoluteCenteredDiv {

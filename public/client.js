@@ -57,12 +57,14 @@ $('#login').on('click', function (event) {
     event.preventDefault();
     $('#login-form').addClass('hidden');
     $('#full-form').removeClass('hidden');
+    $('body').css('background', 'white');
 });
 
 $('#register').on('click', function (event) {
     event.preventDefault();
     $('#sign-up-form').addClass('hidden');
     $('#full-form').removeClass('hidden');
+    $('body').css('background', 'white');
 });
 
 $('#sign-up-link').on('click', function (event) {

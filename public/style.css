@@ -22,12 +22,11 @@ General styles */
 body {
     font-family: sans-serif;
     font-size: 16px;
+    background: url('/images/landing-background.jpg') no-repeat;
+    background-attachment: fixed;
 }
 
-header {
-    background-color: blue;
-    margin-bottom: 40px;
-}
+
 
 .hidden {
     display: none;
@@ -75,12 +74,15 @@ Content styles
     width: 69%;
     border: 1px solid gray;
 }
-.form-wrapper fieldset input.sideBySide, .form-wrapper fieldset select.sideBySide{
+
+.form-wrapper fieldset input.sideBySide,
+.form-wrapper fieldset select.sideBySide {
     display: inline-block;
     width: auto;
     margin-right: 1rem;
     margin-top: 1rem;
 }
+
 .form-wrapper fieldset .icons-wrapper {
     display: block;
     width: 100%;
@@ -126,7 +128,8 @@ Content styles
     font-family: sans-serif;
 }
 
-.legend-show button, .legend-hide button {
+.legend-show button,
+.legend-hide button {
     display: inline-block;
     vertical-align: middle;
     padding: 12px;
@@ -146,15 +149,14 @@ Footer styles
 /* -------------------------------------
 Responsive styles
 */
-input[type="date"]
-{
-    display:block;
-  
+input[type="date"] {
+    display: block;
+
     /* Solution 1 */
-     -webkit-appearance: textfield;
+    -webkit-appearance: textfield;
     -moz-appearance: textfield;
-    min-height: 1.2em; 
-  
+    min-height: 1.2em;
+
     /* Solution 2 */
     /* min-width: 96%; */
 }
