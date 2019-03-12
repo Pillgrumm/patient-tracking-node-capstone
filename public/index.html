@@ -243,7 +243,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please add patient's bed number.</span>
+                            <span>Please add patient's bed number.(Input at least one numerical character).</span>
                         </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please add gravida count.</span>
+                            <span>Please add gravida count. (Input at least one numerical character).</span>
                         </div>
                     </div>
                 </div>
@@ -310,7 +310,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please add para count.</span>
+                            <span>Please add para count. (Input at least one numerical character).</span>
                         </div>
                     </div>
                 </div>
@@ -324,7 +324,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please add mothers age.</span>
+                            <span>Please add mothers age. (Input at least one numerical character).</span>
                         </div>
                     </div>
                 </div>
@@ -342,7 +342,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please select one.</span>
+                            <span>Please select either Vaginal or C-Section.</span>
                         </div>
                     </div>
                 </div>
@@ -378,11 +378,11 @@
                     <div class="icons-wrapper">
                         <div class="icon-content icon-content-info">
                             <i class="fas fa-info"></i>
-                            <span>Vaginal or C-Section birth. Required.</span>
+                            <span>Patients APGAR score. Required.</span>
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please select one.</span>
+                            <span>Please add patients APGAR score. (Select one of each).</span>
                         </div>
                     </div>
                 </div>
@@ -403,11 +403,11 @@
                     <div class="icons-wrapper">
                         <div class="icon-content icon-content-info">
                             <i class="fas fa-info"></i>
-                            <span>Maternal history with at least 3 characters. Required.</span>
+                            <span>Maternal history for patient. Required.</span>
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please add maternal history.</span>
+                            <span>Please add maternal history. (Input at least three text characters).</span>
                         </div>
                     </div>
                 </div>
@@ -431,7 +431,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please add maternal blood type.</span>
+                            <span>Please add maternal blood type. (Select one option).</span>
                         </div>
                     </div>
                 </div>
@@ -454,10 +454,6 @@
                             <i class="fas fa-info"></i>
                             <span>Head Ultra Sound. Not Required.</span>
                         </div>
-                        <div class="icon-content icon-content-error">
-                            <i class="fas fa-times"></i>
-                            <span>If checked, add HUS text.</span>
-                        </div>
                     </div>
                 </div>
                 <div class="input-wrapper">
@@ -475,7 +471,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please select respiratory settings.</span>
+                            <span>Please select respiratory settings. (Select one option).</span>
                         </div>
                     </div>
                 </div>
@@ -489,7 +485,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please input FIO2.</span>
+                            <span>Please input FIO2. (Input at least one numerical character).</span>
                         </div>
                     </div>
                 </div>
@@ -619,11 +615,7 @@
                     <div class="icons-wrapper">
                         <div class="icon-content icon-content-info">
                             <i class="fas fa-info"></i>
-                            <span>Check if the patient has Hepatitis B Vaccine, then select date.If checked, required. </span>
-                        </div>
-                        <div class="icon-content icon-content-error">
-                            <i class="fas fa-times"></i>
-                            <span>If applicable please add date.</span>
+                            <span>Check if the patient has Hepatitis B Vaccine. Not Required. </span>
                         </div>
                     </div>
                 </div>
@@ -634,11 +626,7 @@
                     <div class="icons-wrapper">
                         <div class="icon-content icon-content-info">
                             <i class="fas fa-info"></i>
-                            <span>Check if the patient has Newborn Screen, then select date. Required. Interchangeable.</span>
-                        </div>
-                        <div class="icon-content icon-content-error">
-                            <i class="fas fa-times"></i>
-                            <span>If applicable please add date.</span>
+                            <span>Check if the patient has Newborn Screen, then select date. Not Required.</span>
                         </div>
                     </div>
                 </div>
@@ -704,7 +692,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label for="cpr">CPR</label>
-                    <select name="cpr" class="sideBySide">
+                    <select name="cpr" class="sideBySide" required>
                         <option value="" disabled selected>Select...</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -712,11 +700,11 @@
                     <div class="icons-wrapper">
                         <div class="icon-content icon-content-info">
                             <i class="fas fa-info"></i>
-                            <span>Check if the patients parents have watched CPR video. Required. Interchangeable.</span>
+                            <span>Iff the patients parents have watched CPR video. Required. Interchangeable.</span>
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Select if yes or no.</span>
+                            <span>Please specify if parents have watched CPR video.(Select one option).</span>
                         </div>
                     </div>
                 </div>
@@ -827,7 +815,7 @@
                         </div>
                         <div class="icon-content icon-content-error">
                             <i class="fas fa-times"></i>
-                            <span>Please input method of feeding.</span>
+                            <span>Please input method of feeding. (Select one option).</span>
                         </div>
                     </div>
                 </div>
@@ -976,7 +964,7 @@
                     </div>
                 </div>
                 <div class="input-wrapper">
-                    <label for="coolingPatient">Cooling Patient(If checked, become required to fill sub form)</label>
+                    <label for="coolingPatient">Cooling Patient</label>
                     <input type="checkbox" id="coolingPatient" class="sideBySide">
                     <input type="radio" class="sideBySide" id="consent" value="consent"> Consent
                     <input type="radio" class="sideBySide" id="hus" value="hus"> HUS
@@ -985,11 +973,7 @@
                     <div class="icons-wrapper">
                         <div class="icon-content icon-content-info">
                             <i class="fas fa-info"></i>
-                            <span>Cooling patient information. If checked, required.</span>
-                        </div>
-                        <div class="icon-content icon-content-error">
-                            <i class="fas fa-times"></i>
-                            <span>Please fill out form for cooling patient.</span>
+                            <span>Cooling patient information. Not required.</span>
                         </div>
                     </div>
                 </div>
