@@ -24,6 +24,21 @@ $(document).on('blur', 'input', function (event) {
     $(this).parent().find(".icon-content-error").show();
 
 });
+
+$(document).on('click', 'select', function (event) {
+    event.preventDefault();
+    $(this).parent().find(".icon-content-info").show();
+    $(".icon-content-error").hide();
+
+});
+
+$(document).on('blur', 'select', function (event) {
+    event.preventDefault();
+    $(this).parent().find(".icon-content-info").hide();
+    $(this).parent().find(".icon-content-error").show();
+
+});
+
 $(document).on('click', '.legend-show', function (event) {
     event.preventDefault();
     $(this).parent().find(".legend-show").hide();
