@@ -38,6 +38,24 @@ $(document).on('click', '.legend-show', function (event) {
         $(this).parent().parent().find(".section-content").hide();
   });
 
+$('#login').on('click', function(event){
+    event.preventDefault();
+    $('#login-form').addClass('hidden');
+    $('#full-form').removeClass('hidden');
+});
+
+$('#register').on('click', function(event){
+    event.preventDefault();
+    $('#sign-up-form').addClass('hidden');
+    $('#full-form').removeClass('hidden');
+});
+
+$('#sign-up-link').on('click', function(event){
+    event.preventDefault();
+    $('#login-form').addClass('hidden');
+    $('#sign-up-form').removeClass('hidden');
+});
+
 //form trigger
 $(document).submit('form', function (event) {
     event.preventDefault();

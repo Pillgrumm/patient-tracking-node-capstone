@@ -24,6 +24,14 @@ body {
     font-size: 16px;
 }
 
+header {
+    background-color: blue;
+    margin-bottom: 40px;
+}
+
+.hidden {
+    display: none;
+}
 
 /* -------------------------------------
 Header styles
