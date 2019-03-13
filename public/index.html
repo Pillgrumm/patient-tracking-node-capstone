@@ -17,7 +17,7 @@
     <main role="main" id="landing-page-info">
         <div class="app-summary">
             <h1>The NICU Patient Report application is for employees of the NICU to keep track of patients within their unit.</h1>
-            <h2>In order to get started either login or register an account to use this appplication.</h2>
+            <h4>In order to get started either login or register an account to use this appplication.</h4>
         </div>
     </main>
     <main role="main" id="login-form">
@@ -53,273 +53,275 @@
     <main role="main" id="full-form" class="hidden">
         <section class="form-wrapper">
             <fieldset>
-                <legend class="legend-show"><button>+</button> General Patient Information</legend>
-                <legend class="legend-hide"><button>-</button> General Patient Information</legend>
-                <section class="section-content">
-                    <div class="input-wrapper">
-                        <label for="firstName">First Name</label>
-                        <input id="firstName" type="text" value="" placeholder="John" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Patient's first name. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patients first name. (Input at least three text characters).</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="lastName">Last Name</label>
-                        <input id="lastName" type="text" value="" placeholder="Doe" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Patient's last name. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patients last name. (Input at least three text characters).</span>
+                <form class="general-information-form">
+                    <legend class="legend-show"><button>+</button> General Patient Information</legend>
+                    <legend class="legend-hide"><button>-</button> General Patient Information</legend>
+                    <section class="section-content">
+                        <div class="input-wrapper">
+                            <label for="firstName">First Name</label>
+                            <input class="firstName" name="firstName" type="text" value="" placeholder="John" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patient's first name. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patients first name. (Input at least three text characters).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="diagnosis">Diagnosis</label>
-                        <input id="diagnosis" type="text" value="" placeholder="Meningitis" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Patient's diagnosis. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patients diagnosis. (Input at least three text characters).</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="gestationalAge">GA</label>
-                        <input id="gestationalAge" type="number" value="" placeholder="29" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Gestational Age with at least 1 numerical character. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient Gestational Age. (Input at least one numerical character).</span>
+                        <div class="input-wrapper">
+                            <label for="lastName">Last Name</label>
+                            <input class="lastName" name="lastName" type="text" value="" placeholder="Doe" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patient's last name. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patients last name. (Input at least three text characters).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="correctedGestationalAge">CGA</label>
-                        <input id="correctedGestationalAge" class="sideBySide" type="number" value="" placeholder="7" required>days
-                        <input id="correctedGestationalAge" class="sideBySide" type="number" value="" placeholder="29" required>weeks
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Corrected Gestational Age with at least 1 numerical character. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's Corrected Gestational Age. (Input at least one numerical character).</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="dayOfLife">DOL</label>
-                        <input id="dayOfLife" type="number" value="" placeholder="18" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Day of Life with at least 1 numerical character. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's day of life. (Input at least one numerical character).</span>
+                        <div class="input-wrapper">
+                            <label for="diagnosis">Diagnosis</label>
+                            <input class="diagnosis" name="diagnosis" type="text" value="" placeholder="Meningitis" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Patient's diagnosis. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patients diagnosis. (Input at least three text characters).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="dateOfBirth">DOB</label>
-                        <input id="dayOfBirth" type="date" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Day the patient was born. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's date of birth.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="timeOfBirth">TOB</label>
-                        <input id="timeOfBirth" type="time" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>The time the patient was born. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's time of birth.</span>
+                        <div class="input-wrapper">
+                            <label for="gestationalAge">GA</label>
+                            <input class="gestationalAge" name="gestationalAge" type="number" value="" placeholder="29" class="sideBySide" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Gestational Age with at least 1 numerical character. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient Gestational Age. (Input at least one numerical character).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="birthWeight">Birth Wt (grams)</label>
-                        <input id="birthWeight" type="number" placeholder="1050" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>The weight of the patient at the time of birth. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's birth weight. (Input at least one numerical character). </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="currentWeight">Current Wt (grams)</label>
-                        <input id="currentWeight" type="number" placeholder="1500" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>The current weight of the patient. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's current weight. (Input at least one numerical character).</span>
+                        <div class="input-wrapper">
+                            <label for="correctedGestationalAge">CGA</label>
+                            <input class="correctedGestationalAgeDay sideBySide" name="correctedGestationalAgeDay" type="number" value="" placeholder="7" required>days
+                            <input class="correctedGestationalAgeWeek sideBySide" name="correctedGestationalAgeWeek" type="number" value="" placeholder="29" required>weeks
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Corrected Gestational Age with at least 1 numerical character. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's Corrected Gestational Age. (Input at least one numerical character).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="kaiserScore">Kaiser Score</label>
-                        <input id="kaiserScore" type="number" placeholder="2.3" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>The kaiser score of the patient. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's kaiser score. (Input at least one numerical character).</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="bloodType">Blood Type</label>
-                        <select name="bloodType" class="sideBySide">
-                            <option value="" disabled selected>Select...</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                        </select>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>The blood type of the patient. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's blood type. (Select one option).</span>
+                        <div class="input-wrapper">
+                            <label for="dayOfLife">DOL</label>
+                            <input class="dayOfLife sideBySide" name="dayOfLife" type="number" value="" placeholder="18" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Day of Life with at least 1 numerical character. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's day of life. (Input at least one numerical character).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="coombs">COOMBS</label>
-                        <select name="coombs" class='sideBySide'>
-                            <option value="" disabled selected>Select...</option>
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                        </select>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Coombs test results. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's coombs test results. (Select one option).</span>
+                        <div class="input-wrapper">
+                            <label for="dateOfBirth">DOB</label>
+                            <input class="dayOfBirth sideBySide" name="dayOfBirth" type="date" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Day the patient was born. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's date of birth.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="acuity">Acuity</label>
-                        <select name="acuity" class="sideBySide">
-                            <option value="" disabled selected>Select...</option>
-                            <option value="1:1">1:1</option>
-                            <option value="1:2">1:2</option>
-                            <option value="1:3">1:3</option>
-                            <option value="1:4">1:4</option>
-                            <option value="2:1">2:1</option>
-                        </select>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Acuity of the patient. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's acuity.(Select one option).</span>
+                        <div class="input-wrapper">
+                            <label for="timeOfBirth">TOB</label>
+                            <input class="timeOfBirth sideBySide" name="timeOfBirth" type="time" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The time the patient was born. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's time of birth.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="bedNumber">Bed Number</label>
-                        <input id="bedNumber" type="number" placeholder="12" class="sideBySide" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>The patients bed number. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's bed number.(Input at least one numerical character).</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="dateOfAdmission">Date of Admission</label>
-                        <input id="dateOfAdmission" class="sideBySide" type="date" required>
-                        <label for="timeOfAdmission">Time of Admission</label>
-                        <input id="timeOfAdmission" class="sideBySide" type="time" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Date and time the patient was admitted. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's date/time of admission.</span>
+                        <div class="input-wrapper">
+                            <label for="birthWeight">Birth Wt (grams)</label>
+                            <input class="birthWeight sideBySide" name="birthWeight" type="number" placeholder="1050" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The weight of the patient at the time of birth. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's birth weight. (Input at least one numerical character). </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="dateOfDischarge">Date of Discharge</label>
-                        <input id="dateOfDischarge" class="sideBySide" type="date">
-                        <label for="timeOfDischarge">Time of Discharge</label>
-                        <input id="timeOfDischarge" class="sideBySide" type="time">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Date and time the patient was discharged. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="currentWeight">Current Wt (grams)</label>
+                            <input class="currentWeight sideBySide" name="currentWeight" type="number" placeholder="1500" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The current weight of the patient. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's current weight. (Input at least one numerical character).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <input class="sideBySide submit-button" type="submit">
-                    </div>
-                </section>
+                        <div class="input-wrapper">
+                            <label for="kaiserScore">Kaiser Score</label>
+                            <input class="kaiserScore" name="kaiserScore" type="number" placeholder="2.3" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The kaiser score of the patient. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's kaiser score. (Input at least one numerical character).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="bloodType">Blood Type</label>
+                            <select class="bloodType sideBySide" name="bloodType" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The blood type of the patient. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's blood type. (Select one option).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="coombs">COOMBS</label>
+                            <select class="coombs sideBySide" name="coombs" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Coombs test results. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's coombs test results. (Select one option).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="acuity">Acuity</label>
+                            <select class="acuity sideBySide" name="acuity" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="1:1">1:1</option>
+                                <option value="1:2">1:2</option>
+                                <option value="1:3">1:3</option>
+                                <option value="1:4">1:4</option>
+                                <option value="2:1">2:1</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Acuity of the patient. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's acuity.(Select one option).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="bedNumber">Bed Number</label>
+                            <input class="bedNumber sideBySide" name="bedNumber" type="number" placeholder="Ex:12 " required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>The patients bed number. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's bed number.(Input at least one numerical character).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dateOfAdmission">Date of Admission</label>
+                            <input class="dateOfAdmission sideBySide" name="dateOfAdmission" type="date" required>
+                            <label for="timeOfAdmission">Time of Admission</label>
+                            <input class="timeOfAdmission sideBySide" name="timeOfAdmission" type="time" required>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date and time the patient was admitted. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's date/time of admission.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="dateOfDischarge">Date of Discharge</label>
+                            <input class="dateOfDischarge sideBySide" name="dateOfDischarge" type="date">
+                            <label for="timeOfDischarge">Time of Discharge</label>
+                            <input id="timeOfDischarge" class="sideBySide" type="time">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date and time the patient was discharged. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="sideBySide button" id="general-submit">Submit</button>
+                        </div>
+                    </section>
+                </form>
             </fieldset>
         </section>
         <section class="form-wrapper">
