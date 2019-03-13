@@ -193,10 +193,6 @@ $('#general-submit').on('click', function (event) {
         alert('Please enter date of admission');
     } else if (timeOfAdmission == "") {
         alert('Please enter time of admission');
-    } else if (dateOfDischarge == "") {
-        alert('Please enter date of discharge');
-    } else if (timeOfDischarge == "") {
-        alert('Please enter time of discharge');
     } else {
         const generalInformationObject = {
             firstName,
@@ -269,8 +265,6 @@ $('#maternal-submit').on('click', function (event) {
     } else if (apgar1 == "") {
         alert('Please enter digit for first APGAR selection');
     } else if (apgar2 == "") {
-        alert('Please enter digit for the second APGAR selection');
-    } else if (rom == "") {
         alert('Please enter maternal rupture of membranes');
     } else if (hx == "") {
         alert('Please enter maternal history');
