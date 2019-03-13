@@ -6,6 +6,7 @@
     padding: 0px 0px 70px 0px;
     border: 1px solid blue;
     display: block;
+    margin-bottom: 10px;
 }
 
 
@@ -32,7 +33,7 @@ p {
     width: 125px;
     padding-top: 5px;
     padding-bottom: 5px;
-    color: white;
+    color: white !important; 
     border-radius: 4px;
     border: #27ae60 1px solid;
     margin-top: 20px;
