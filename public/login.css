@@ -14,9 +14,11 @@ p {
     margin-top: 10px;
 }
 
-.username,
-.password,
-.email {
+.loginUsername,
+.loginPassword,
+.registerUsername,
+.registerPassword,
+.registerEmail {
     background: #ecf0f1;
     border: #ccc 1px solid;
     border-bottom: #ccc 2px solid;
