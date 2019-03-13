@@ -42,7 +42,12 @@ Header styles
     font-size: 20px;
 }
 
-
+#landing-page-info {
+    border: solid 1px blue;
+    background: white;
+    margin: auto;
+    width: 700px;
+}
 
 /* -------------------------------------
 Content styles
