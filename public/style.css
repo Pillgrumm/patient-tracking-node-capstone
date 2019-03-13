@@ -42,14 +42,18 @@ Header styles
     font-size: 20px;
 }
 
+
+
 /* -------------------------------------
 Content styles
 */
-.app-summary {
+.app-summary h1,
+.app-summary h2 {
     display: block;
     text-align: center;
     margin: 2rem auto;
     padding-top:10px;
+
 }
 
 .form-wrapper {
