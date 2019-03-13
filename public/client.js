@@ -133,6 +133,8 @@ $('#register').on('click', function (event) {
 
 });
 
+
+//General Information time of discharge returning undefined UNFINISHED
 $('#general-submit').on('click', function (event) {
     event.preventDefault();
     const firstName = $('.firstName').val();
@@ -224,6 +226,74 @@ $('#general-submit').on('click', function (event) {
                 url: '/users/create',
                 dataType: 'json',
                 data: JSON.stringify(generalInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
+
+//Maternal Information UNFINISHED
+$('#maternal-submit').on('click', function (event) {
+    event.preventDefault();
+    const gravida = $('.gravida').val();
+    const para = $('.para').val();
+    const age = $('.age').val();
+    const vagCs = $('.vagCs').val();
+    const apgar1 = $('.apgar1').val();
+    const apgar2 = $('.apgar2').val();
+    const rom = $('.rom').val();
+    const hx = $('.hx').val();
+    const maternalBloodType = $('.maternalBloodType').val();
+    if (gravida == '') {
+        alert('Please enter gravida count');
+    } else if (para == "") {
+        alert('Please enter para count');
+    } else if (age == "") {
+        alert('Please enter maternal age');
+    } else if (vagCs == "") {
+        alert('Please specify birth type');
+    } else if (apgar1 == "") {
+        alert('Please enter digit for first APGAR selection');
+    } else if (apgar2 == "") {
+        alert('Please enter digit for the second APGAR selection');
+    } else if (rom == "") {
+        alert('Please enter maternal rupture of membranes');
+    } else if (hx == "") {
+        alert('Please enter maternal history');
+    } else if (maternalBloodType == "") {
+        alert('Please enter maternal bloodtype');
+    } else {
+        const maternalInformationObject = {
+            gravida,
+            para,
+            age,
+            vagCs,
+            apgar1,
+            apgar2,
+            rom,
+            hx,
+            maternalBloodType
+        };
+        console.log(maternalInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(maternalInformationObject),
                 contentType: 'application/json'
             })
             .done(function (result) {
