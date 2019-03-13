@@ -21,9 +21,9 @@ app.use(express.static('public'));
 mongoose.Promise = global.Promise;
 
 
-/*app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
-});*/
+});
 
 
 
@@ -70,7 +70,7 @@ function closeServer() {
 
 // GET
 // Check for duplicate email in database for user sign up
-app.get('/check-duplicate-email/:inputEmail', (req, res)=>{
+app.get('/check-duplicate-email/:inputEmail', (req, res) => {
     let inputEmail = req.params.inputEmail;
     User
         .find({
@@ -86,7 +86,7 @@ app.get('/check-duplicate-email/:inputEmail', (req, res)=>{
             res.status(500).json({
                 message: 'Internal server error'
             });
-    });
+        });
 })
 
 
@@ -95,6 +95,7 @@ app.get('/check-duplicate-email/:inputEmail', (req, res)=>{
 
 app.post('/users/create', (req, res) => {
     let email = req.body.email;
+    let username = req.body.username;
     let password = req.body.password;
     password = password.trim();
     bcrypt.genSalt(10, (err, salt) => {
@@ -114,6 +115,7 @@ app.post('/users/create', (req, res) => {
             User.create({
                 email,
                 password: hash,
+                username
             }, (err, item) => {
                 if (err) {
                     return res.status(500).json({
@@ -132,11 +134,11 @@ app.post('/users/create', (req, res) => {
 
 
 // User log in
-app.post('/signin', function(req, res) {
+app.post('/signin', function (req, res) {
     User
         .findOne({
-            email: req.body.email
-        }, function(err, items) {
+            username: req.body.username
+        }, function (err, items) {
             if (err) {
                 return res.status(500).json({
                     message: "Internal server error"
@@ -148,7 +150,7 @@ app.post('/signin', function(req, res) {
                     message: "Not found"
                 });
             } else {
-                items.validatePassword(req.body.password, function(err, isValid) {
+                items.validatePassword(req.body.password, function (err, isValid) {
                     if (err) {
                         console.log('There was an error validating email or password.');
                     }
@@ -201,7 +203,9 @@ app.post('/sessions/create', (req, res) => {
 // Get sessions to populate total days in Dashboard
 app.get('/sessions-total/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id})
+        .find({
+            loggedInUserId: req.params.id
+        })
         .count()
         .then((sessions) => {
             res.json(sessions);
@@ -218,8 +222,14 @@ app.get('/sessions-total/:id', (req, res) => {
 // Get sessions to populate days in a row in Dashboard
 app.get('/sessions-streak/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id}, {sessionDateUnix: 1})
-        .sort({sessionDateUnix: -1})
+        .find({
+            loggedInUserId: req.params.id
+        }, {
+            sessionDateUnix: 1
+        })
+        .sort({
+            sessionDateUnix: -1
+        })
         .then((sessions) => {
             res.json(sessions);
         })
@@ -236,8 +246,14 @@ app.get('/sessions-streak/:id', (req, res) => {
 // Get sessions to populate last 10 days in Dashboard
 app.get('/sessions-ten/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id},{sessionDateUnix: 1})
-        .sort({sessionDateUnix: -1})
+        .find({
+            loggedInUserId: req.params.id
+        }, {
+            sessionDateUnix: 1
+        })
+        .sort({
+            sessionDateUnix: -1
+        })
         .then((sessions) => {
             res.json(sessions);
         })
@@ -253,7 +269,11 @@ app.get('/sessions-ten/:id', (req, res) => {
 // Get sessions to most used method in Dashboard
 app.get('/sessions-method/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id},{sessionType: 1})
+        .find({
+            loggedInUserId: req.params.id
+        }, {
+            sessionType: 1
+        })
         .then((sessions) => {
             res.json(sessions);
         })
@@ -269,7 +289,11 @@ app.get('/sessions-method/:id', (req, res) => {
 // Get sessions to populate avg session length in Dashboard
 app.get('/sessions-avg/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id},{sessionTime: 1})
+        .find({
+            loggedInUserId: req.params.id
+        }, {
+            sessionTime: 1
+        })
         .then((sessions) => {
             res.json(sessions);
         })
@@ -285,12 +309,16 @@ app.get('/sessions-avg/:id', (req, res) => {
 // Get sessions to populate journal sidebar on Home Page
 app.get('/sessions-journal-sb/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id})
-        .sort({sessionDate: -1})
+        .find({
+            loggedInUserId: req.params.id
+        })
+        .sort({
+            sessionDate: -1
+        })
         .limit(6)
         .then((sessions) => {
             let sessionOutput = [];
-            sessions.map(function(session) {
+            sessions.map(function (session) {
                 sessionOutput.push(session);
             });
             res.json(sessionOutput);
@@ -308,11 +336,15 @@ app.get('/sessions-journal-sb/:id', (req, res) => {
 // Get sessions to populate journal screen
 app.get('/sessions-journal/:id', (req, res) => {
     Session
-        .find({loggedInUserId: req.params.id})
-        .sort({sessionDate: -1})
+        .find({
+            loggedInUserId: req.params.id
+        })
+        .sort({
+            sessionDate: -1
+        })
         .then((sessions) => {
             let sessionOutput = [];
-            sessions.map(function(session) {
+            sessions.map(function (session) {
                 sessionOutput.push(session);
             });
             res.json(sessionOutput);
@@ -328,38 +360,40 @@ app.get('/sessions-journal/:id', (req, res) => {
 
 // UPDATE
 // Update user password
-app.put('/user-pw/:id', function(req, res) {
+app.put('/user-pw/:id', function (req, res) {
     let password = req.body.pw;
     password = password.trim();
-        bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.genSalt(10, (err, salt) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal server error on genSalt'
+            });
+        }
+
+        bcrypt.hash(password, salt, (err, hash) => {
             if (err) {
                 return res.status(500).json({
-                    message: 'Internal server error on genSalt'
+                    message: 'Internal server error on hash'
                 });
             }
 
-            bcrypt.hash(password, salt, (err, hash) => {
-                if (err) {
-                    return res.status(500).json({
-                        message: 'Internal server error on hash'
+            User
+                .findByIdAndUpdate(req.params.id, {
+                    $set: {
+                        password: hash
+                    }
+                })
+                .then((user) => {
+                    return res.json(user);
+                })
+                .catch(err => {
+                    console.error(err);
+                    res.status(500).json({
+                        message: 'Password was not modified'
                     });
-                }
-
-                User
-                    .findByIdAndUpdate(req.params.id, {
-                        $set: {password: hash}
-                    })
-                    .then((user) => {
-                        return res.json(user);
-                    })
-                    .catch(err => {
-                        console.error(err);
-                        res.status(500).json({
-                            message: 'Password was not modified'
-                        });
-                    });
-            });
+                });
         });
+    });
 });
 
 // DELETE

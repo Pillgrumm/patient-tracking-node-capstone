@@ -11,24 +11,24 @@
 </head>
 
 <body>
-<header>
-    <h1 class="title">NICU Patient Report</h1>
-</header>
-<main role="main" id="landing-page-info">
-    <div class="app-summary">
-        <h1>The NICU Patient Report application is for employees of the NICU to keep track of patients within their unit.</h1>
-        <h2>In order to get started either login or register an account to use this appplication.</h2>
-    </div>
-</main>
+    <header>
+        <h1 class="title">NICU Patient Report</h1>
+    </header>
+    <main role="main" id="landing-page-info">
+        <div class="app-summary">
+            <h1>The NICU Patient Report application is for employees of the NICU to keep track of patients within their unit.</h1>
+            <h2>In order to get started either login or register an account to use this appplication.</h2>
+        </div>
+    </main>
     <main role="main" id="login-form">
         <div id="absoluteCenteredDiv">
-            <form action="index.html" method="post">
+            <form class="login-form">
                 <div class="authentication-box">
                     <h1>Login</h1>
-                    <input class="username" name="username" type="text" placeholder="User Name" value="demo" required>
-                    <input class="password" name="password" type="password" placeholder="Password" value="123456" required>
-                    <p>Username: demo</p>
-                    <p>Password: 123456</p>
+                    <input class="loginUsername" name="username" type="text" placeholder="User Name" value="pillgrumm" required>
+                    <input class="loginPassword" name="password" type="password" placeholder="Password" value="123" required>
+                    <p>Username: pillgrumm</p>
+                    <p>Password: 123</p>
                     <button class="button" id="login">Login</button>
                 </div>
             </form>
@@ -38,12 +38,12 @@
 
     <main role="main" id="sign-up-form" class="hidden">
         <div id="absoluteCenteredDiv">
-            <form action="index.html" method="post">
+            <form class="sign-up-form">
                 <div class="authentication-box">
                     <h1>Sign Up</h1>
-                    <input class="username" name="username" type="text" placeholder="User Name" value="" required>
-                    <input class="password" name="password" type="password" placeholder="Password" value="" required>
-                    <input class="email" name="email" type="email" placeholder="Email" required>
+                    <input class="registerUsername" name="username" type="text" placeholder="User Name" value="" required>
+                    <input class="registerPassword" name="password" type="password" placeholder="Password" value="" required>
+                    <input class="registerEmail" name="email" type="email" placeholder="Email" required>
                     <button class="button" id="register">Register</button>
                 </div>
             </form>
