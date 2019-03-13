@@ -12,14 +12,12 @@ $(document).ready(function () {
 
 //button triggers
 $(document).on('click', 'input', function (event) {
-    event.preventDefault();
     $(this).parent().find(".icon-content-info").show();
     $(".icon-content-error").hide();
 
 });
 
 $(document).on('blur', 'input', function (event) {
-    event.preventDefault();
     $(this).parent().find(".icon-content-info").hide();
     $(this).parent().find(".icon-content-error").show();
 
