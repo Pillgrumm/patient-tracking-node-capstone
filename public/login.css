@@ -1,20 +1,11 @@
-.box {
-    background: white;
-    width: 2000px;
-    height: 2000px;
-    border-radius: 6px;
-    margin: 0 auto 0 auto;
-    padding: 0px 0px 70px 0px;
-    border: 1px solid blue;
-}
-
 .authentication-box {
     background: white;
     width: 300px;
     border-radius: 6px;
-    margin: 0 auto 0 auto;
+    margin: 2rem auto;
     padding: 0px 0px 70px 0px;
     border: 1px solid blue;
+    display: block;
 }
 
 

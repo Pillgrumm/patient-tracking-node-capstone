@@ -56,6 +56,7 @@ $(document).on('click', '.legend-hide', function (event) {
 $('#login').on('click', function (event) {
     event.preventDefault();
     $('#login-form').addClass('hidden');
+    $('#landing-page-info').addClass('hidden');
     $('#full-form').removeClass('hidden');
     $('body').css('background', 'white');
 });
@@ -63,6 +64,7 @@ $('#login').on('click', function (event) {
 $('#register').on('click', function (event) {
     event.preventDefault();
     $('#sign-up-form').addClass('hidden');
+    $('#landing-page-info').addClass('hidden');
     $('#full-form').removeClass('hidden');
     $('body').css('background', 'white');
 });

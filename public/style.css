@@ -36,10 +36,22 @@ body {
 Header styles
 */
 
+.title {
+    margin-top:10px;
+    text-align: center;
+    font-size: 20px;
+}
 
 /* -------------------------------------
 Content styles
 */
+.app-summary {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    padding-top:10px;
+}
+
 .form-wrapper {
     display: block;
     width: 80%;
