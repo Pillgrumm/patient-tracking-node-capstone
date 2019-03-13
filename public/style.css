@@ -22,7 +22,7 @@ General styles */
 body {
     font-family: sans-serif;
     font-size: 16px;
-    background: url('/images/landing-background.jpg') no-repeat;
+    background: url('./images/landing-background.jpg') no-repeat;
     background-attachment: fixed;
 }
 
