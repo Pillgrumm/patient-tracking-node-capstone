@@ -65,6 +65,7 @@ $('#login').on('click', function (event) {
             username: loginUsername,
             password: loginPassword
         };
+        console.log(loginObject);
         $.ajax({
                 type: 'POST',
                 url: '/signin',
