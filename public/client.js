@@ -308,6 +308,79 @@ $('#maternal-submit').on('click', function (event) {
 
 });
 
+//Assessment Information UNFINISHED
+//Note to self: make sure respiratory works.
+$('#assessment-submit').on('click', function (event) {
+    event.preventDefault();
+    const husCheck = $('.husCheck').val();
+    const husText = $('.husText').val();
+    const respiratory = $('.respiratory').val();
+    const respiratoryText = $('.respiratoryText').val();
+    const fio2 = $('.fio2').val();
+    const abdpb = $('.abdpb').val();
+    const murmur = $('.murmur').val();
+    const echo = $('.echo').val();
+    const cardiacResults = $('.cardiacResults').val();
+    const meds = $('.meds').val();
+    if (husCheck == '') {
+        alert('Please check HUS');
+    } else if (husText == "") {
+        alert('Please enter HUS text');
+    } else if (respiratory == "") {
+        alert('Please enter respiratory setting');
+    } else if (respiratoryText == "") {
+        alert('Please enter respiratory notes');
+    } else if (fio2 == "") {
+        alert('Please enter FIO2 percentage');
+    } else if (abdpb == "") {
+        alert('Please enter AB/Desat/PB information');
+    } else if (murmur == "") {
+        alert('Please check Murmur');
+    } else if (echo == "") {
+        alert('Please check ECHO');
+    } else if (cardiacResults == "") {
+        alert('Please input cardiac results');
+    } else if (meds == "") {
+        alert('Please input meds');
+    } else {
+        const assessmentInformationObject = {
+            husCheck,
+            husText,
+            respiratory,
+            respiratoryText,
+            fio2,
+            abdpb,
+            murmur,
+            echo,
+            cardiacResults,
+            meds
+        };
+        console.log(assessmentInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(assessmentInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
+
 $('#sign-up-link').on('click', function (event) {
     event.preventDefault();
     $('#login-form').addClass('hidden');

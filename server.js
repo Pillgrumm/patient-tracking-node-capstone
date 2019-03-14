@@ -167,6 +167,8 @@ app.post('/signin', function (req, res) {
         });
 });
 
+// POST
+// Add General Information
 
 // POST
 // Add a session

@@ -493,8 +493,9 @@
                     <legend class="legend-hide"><button>-</button> Assessment</legend>
                     <section class="section-content">
                         <div class="input-wrapper">
-                            <input id="neuroCheckBox" class="sideBySide" type="checkbox"> HUS
-                            <textarea name="neuroCheckBox" cols="40" rows="5" class="depth-notes"></textarea>
+                            <label for="hus">HUS</label>
+                            <input class="husCheck sideBySide" name="husCheck" type="checkbox" value="hus">
+                            <textarea class="husText depth-notes" name="husText" cols="40" rows="5"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -504,12 +505,12 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="respiratory">Respiratory</label>
-                            <input type="radio" class="sideBySide" id="ra" name="respiratory" value="ra"> RA
-                            <input type="radio" class="sideBySide" id="vent" name="respiratory" value="vent"> VENT
-                            <input type="radio" class="sideBySide" id="hfnc" name="respiratory" value="hfnc"> HFNC
-                            <input type="radio" class="sideBySide" id="vt" name="respiratory" value="vt"> VT
-                            <input type="radio" class="sideBySide" id="cpap" name="respiratory" value="cpap"> CPAP
-                            <input type="text" id="respiratory-text" name="respiratory" placeholder="Note:">
+                            <input type="radio" class="respiratory sideBySide" id="ra" name="respiratory" value="RA"> RA
+                            <input type="radio" class="respiratory sideBySide" id="vent" name="respiratory" value="VENT"> VENT
+                            <input type="radio" class="respiratory sideBySide" id="hfnc" name="respiratory" value="HFNC"> HFNC
+                            <input type="radio" class="respiratory sideBySide" id="vt" name="respiratory" value="VT"> VT
+                            <input type="radio" class="respiratory sideBySide" id="cpap" name="respiratory" value="CPAP"> CPAP
+                            <textarea class="respiratoryText depth-notes" name="respiratoryText" cols="40" rows="5"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -523,7 +524,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="fio2">FIO2</label>
-                            <input id="fio2" class="sideBySide" type="text" value="" placeholder="21" min="21" max="100" required>%
+                            <input class="fio2 sideBySide" name="fio2" type="number" min="21" max="100" required>%
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -537,7 +538,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="abdpb">ABs/Desats/PB</label>
-                            <input id="abdpb" type="text" value="" placeholder="???">
+                            <textarea class="abdpb depth-notes" name="abdpb" cols="40" rows="5"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -547,18 +548,16 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="cardiac">Cardiac</label><br>
-                            <input id="cardiac" class="sideBySide" type="checkbox">
-                            <label for="cardiac">Murmur</label>
-                            <input id="echo" class="sideBySide" type="checkbox">
-                            <label for="echo">ECHO</label>
+                            <input class="murmur sideBySide" name="murmur" type="checkbox" value="Murmur"> Murmur
+                            <input class="echo sideBySide" name="echo" type="checkbox" value="ECHO"> ECHO
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Checkbox for cardiac. Not Required.</span>
+                                    <span>Checkboxes for murmur and echo. Not Required.</span>
                                 </div>
                             </div>
-                            <label for="results">Results</label>
-                            <input id="results" type="text" placeholder="Results Here">
+                            <label for="cardiacResults">Cardiac Results</label>
+                            <textarea class="cardiacResults depth-notes" name="cardiacResults" cols="40" rows="5"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -568,7 +567,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="meds">Meds</label>
-                            <input id="meds" type="text" value="" placeholder="Caffeine">
+                            <textarea class="meds depth-notes" name="meds" cols="40" rows="5"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -577,7 +576,7 @@
                             </div>
                         </div>
                         <div>
-                            <input class="sideBySide submit-button" type="submit">
+                            <button class="sideBySide button" id="assessment-submit">Submit</button>
                         </div>
                     </section>
                 </form>
