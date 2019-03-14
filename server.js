@@ -2,6 +2,7 @@
 
 const User = require('./models/users');
 const Session = require('./models/sessions');
+const Patient = require('./models/patients');
 const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
@@ -172,21 +173,31 @@ app.post('/signin', function (req, res) {
 
 // POST
 // Add a session
-app.post('/sessions/create', (req, res) => {
-    let loggedInUserId = req.body.loggedInUserId;
-    let sessionDate = req.body.sessionDate;
-    let sessionDateUnix = req.body.sessionDateUnix;
-    let sessionTime = req.body.sessionTime;
-    let sessionType = req.body.sessionType;
-    let journalEntry = req.body.journalEntry;
+app.post('/patient/create', (req, res) => {
 
-    Session.create({
-        loggedInUserId,
-        sessionDate,
-        sessionDateUnix,
-        sessionTime,
-        sessionType,
-        journalEntry
+
+    Patient.create({
+        loggedInUser: req.body.loggedInUser,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        diagnosis: req.body.diagnosis,
+        gestationalAge: req.body.gestationalAge,
+        correctedGestationalAgeDay: req.body.correctedGestationalAgeDay,
+        correctedGestationalAgeWeek: req.body.correctedGestationalAgeWeek,
+        dayOfLife: req.body.dayOfLife,
+        dayOfBirth: req.body.dayOfBirth,
+        timeOfBirth: req.body.timeOfBirth,
+        birthWeight: req.body.birthWeight,
+        currentWeight: req.body.currentWeight,
+        kaiserScore: req.body.kaiserScore,
+        bloodType: req.body.bloodType,
+        coombs: req.body.coombs,
+        acuity: req.body.acuity,
+        bedNumber: req.body.bedNumber,
+        dateOfAdmission: req.body.dateOfAdmission,
+        timeOfAdmission: req.body.timeOfAdmission,
+        dateOfDischarge: req.body.dateOfDischarge,
+        timeOfDischarge: req.body.timeOfDischarge
     }, (err, item) => {
         if (err) {
             return res.status(500).json({

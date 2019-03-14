@@ -116,6 +116,7 @@ $('#register').on('click', function (event) {
                 contentType: 'application/json'
             })
             .done(function (result) {
+                $('.logged-in-user').val(result._id);
                 $('.js-signin-success').html('Thanks for signing up! Please sign in.');
                 $('.js-signin-success').addClass('change-status-success');
                 //            showLogInScreen();
@@ -137,6 +138,7 @@ $('#register').on('click', function (event) {
 //General Information time of discharge returning undefined UNFINISHED
 $('#general-submit').on('click', function (event) {
     event.preventDefault();
+    const loggedInUser = $('.logged-in-user').val();
     const firstName = $('.firstName').val();
     const lastName = $('.lastName').val();
     const diagnosis = $('.diagnosis').val();
@@ -195,6 +197,7 @@ $('#general-submit').on('click', function (event) {
         alert('Please enter time of admission');
     } else {
         const generalInformationObject = {
+            loggedInUser,
             firstName,
             lastName,
             diagnosis,
@@ -219,12 +222,13 @@ $('#general-submit').on('click', function (event) {
         console.log(generalInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/patient/create',
                 dataType: 'json',
                 data: JSON.stringify(generalInformationObject),
                 contentType: 'application/json'
             })
             .done(function (result) {
+                console.log(result);
                 $('.js-signin-success').html('Thanks for signing up! Please sign in.');
                 $('.js-signin-success').addClass('change-status-success');
                 //            showLogInScreen();
