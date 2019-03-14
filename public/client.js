@@ -136,7 +136,7 @@ $('#register').on('click', function (event) {
 
 
 //General Information time of discharge returning undefined UNFINISHED
-$('#general-submit').on('click', function (event) {
+$('#general-save').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
     const firstName = $('.firstName').val();
@@ -564,6 +564,94 @@ $('#other-submit').on('click', function (event) {
     };
 
 });
+
+$('#drugs-submit').on('click', function (event) {
+    event.preventDefault();
+    const pivCheck = $('.pivCheck').val();
+    const piccCheck = $('.piccCheck').val();
+    const uacCheck = $('.uacCheck').val();
+    const uvcCheck = $('.uvcCheck').val();
+    const salineLockCheck = $('.salineLockCheck').val();
+    const drugInput = $('.drugInput').val();
+    const ccDrug = $('.ccDrug').val();
+    const hrDrug = $('.hrDrug').val();
+    const tDrugInput = $('.tDrugInput').val();
+    const ccTDrug = $('.ccTDrug').val();
+    const hrTDrug = $('.hrTDrug').val();
+    const ccIl = $('.ccIl').val();
+    const hrIl = $('.hrIl').val();
+    const drugNotes = $('.drugNotes').val();
+    if (pivCheck == '') {
+        alert('Please check PIV');
+    } else if (piccCheck == "") {
+        alert('Please check PICC');
+    } else if (uacCheck == "") {
+        alert('Please check UAC');
+    } else if (uvcCheck == "") {
+        alert('Please check for UVC');
+    } else if (salineLockCheck == "") {
+        alert('Please check for Saline Lock');
+    } else if (drugInput == "") {
+        alert('Please input drug used');
+    } else if (ccDrug == "") {
+        alert('Please enter CC for drug usage');
+    } else if (hrDrug == "") {
+        alert('Please enter drug amount per hour');
+    } else if (tDrugInput == "") {
+        alert('Please input TPN Drug used');
+    } else if (ccTDrug == "") {
+        alert('Please enter TPN CC for drug usage');
+    } else if (hrTDrug == "") {
+        alert('Please enter TPN drug amount per hour');
+    } else if (ccIl == "") {
+        alert('Please enter IL CC drug usage');
+    } else if (hrIl == "") {
+        alert('Please enter IL drug amount per hour');
+    } else if (drugNotes == "") {
+        alert('Please input notes regarding drugs');
+    } else {
+        const drugInformationObject = {
+            pivCheck,
+            piccCheck,
+            uacCheck,
+            uvcCheck,
+            salineLockCheck,
+            drugInput,
+            ccDrug,
+            hrDrug,
+            tDrugInput,
+            ccTDrug,
+            hrTDrug,
+            ccIl,
+            hrIl,
+            drugNotes,
+        };
+        console.log(drugInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(drugInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
+
 
 $('#sign-up-link').on('click', function (event) {
     event.preventDefault();
