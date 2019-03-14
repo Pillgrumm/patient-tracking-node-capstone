@@ -584,69 +584,71 @@
         </section>
         <section class="form-wrapper">
             <fieldset>
-                <legend class="legend-show"><button>+</button> Labs/Tests</legend>
-                <legend class="legend-hide"><button>-</button> Labs/Tests</legend>
-                <section class="section-content">
-                    <div class="input-wrapper">
-                        <label for="labsTests">Labs/Tests</label>
-                        <input type="checkbox" class="sideBySide" id="cbc" name="labsTests" value="cbc"> CBC
-                        <input type="checkbox" class="sideBySide" id="tb" name="labsTests" value="tb"> TB
-                        <input type="checkbox" class="sideBySide" id="bmp" name="labsTests" value="bmp"> BMP
-                        <input type="checkbox" class="sideBySide" id="crp" name="labsTests" value="crp"> CRP
-                        <input type="checkbox" class="sideBySide" id="tg" name="labsTests" value="tb"> TG
-                        <input type="text" id="labsTestsText" name="labsTests" placeholder="Notes:">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Checkbox form for labs/tests. Not Required.</span>
+                <form class="labs-form">
+                    <legend class="legend-show"><button>+</button> Labs/Tests</legend>
+                    <legend class="legend-hide"><button>-</button> Labs/Tests</legend>
+                    <section class="section-content">
+                        <div class="input-wrapper">
+                            <label for="labsTests">Labs/Tests</label>
+                            <input type="checkbox" class="labsTests sideBySide" id="cbc" name="labsTests" value="cbc"> CBC
+                            <input type="checkbox" class="labsTests sideBySide" id="tb" name="labsTests" value="tb"> TB
+                            <input type="checkbox" class="labsTests sideBySide" id="bmp" name="labsTests" value="bmp"> BMP
+                            <input type="checkbox" class="labsTests sideBySide" id="crp" name="labsTests" value="crp"> CRP
+                            <input type="checkbox" class="labsTests sideBySide" id="tg" name="labsTests" value="tb"> TG
+                            <input type="text" class="labsTestsText" name="labsTestsText" placeholder="Notes:">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Checkbox form for labs/tests. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="qtuLabs">QTu Labs</label>
-                        <input id="qtuLabs" type="text" value="" placeholder="???">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Information regarding the QTu Labs. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="qtuLabs">QTu Labs</label>
+                            <textarea class="qtuLabs depth-notes" name="qtuLabs" cols="40" rows="5"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Information regarding the QTu Labs. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="trough">Trough</label>
-                        <input id="trough" class="sideBySide" type="checkbox">
-                        <input type="text" class="sideBySide" placeholder="Notes:">@
-                        <input id="dateOfTrough" class="sideBySide" type="date" required>
-                        <input id="timeOfTrough" class="sideBySide" type="time" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Date and time of trough.If box is checked, required. Consistent</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please add patient's date/time of trough.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="radiology">Radiology</label>
-                        <input id="cxr" type="checkbox" class="sideBySide"> CXR
-                        <input id="cxr" type="date" class="sideBySide">
-                        <input id="kub" type="checkbox" class="sideBySide">KUB
-                        <input id="kub" type="date" class="sideBySide">
-                        <input type="text" id="radiologyText" name="radiologyText" placeholder="Notes:" class="sideBySide">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Time of Radilogy. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="trough">Trough</label>
+                            <input class="troughCheck sideBySide" name="troughCheck" value="Trough" type="checkbox">
+                            <input class="troughText sideBySide" name="troughText" type="text" placeholder="Notes:">@
+                            <input class="dateOfTrough sideBySide" name="dateOfTrough" type="date">
+                            <input class="timeOfTrough sideBySide" name="timeOfTrough" type="time">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date and time of trough.If box is checked, required. Consistent</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please add patient's date/time of trough.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <input class="sideBySide submit-button" type="submit">
-                    </div>
-                </section>
+                        <div class="input-wrapper">
+                            <label for="radiology">Radiology</label>
+                            <input class="cxrCheck sideBySide" name="cxrCheck" type="checkbox" value="CXR"> CXR
+                            <input class="cxrDate sideBySide" name="cxrDate" type="date">
+                            <input class="kubChec sideBySidek" name="kubCheck" type="checkbox" value="KUB"> KUB
+                            <input class="kubDate sideBySide" name="kubDate" type="date">
+                            <input class="radiologyText sideBySide" name="radiologyText" type="text">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Time of Radilogy. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="sideBySide button" id="labs-submit">Submit</button>
+                        </div>
+                    </section>
+                </form>
             </fieldset>
         </section>
         <section class="form-wrapper">

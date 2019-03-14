@@ -381,6 +381,87 @@ $('#assessment-submit').on('click', function (event) {
 
 });
 
+//Labs/Tests Information UNFINISHED
+$('#labs-submit').on('click', function (event) {
+    event.preventDefault();
+    const labsTests = $('.labsTests').val();
+    const labsTestsText = $('.labsTestsText').val();
+    const qtuLabs = $('.qtuLabs').val();
+    const troughCheck = $('.troughCheck').val();
+    const troughText = $('.troughText').val();
+    const dateOfTrough = $('.dateOfTrough').val();
+    const timeOfTrough = $('.timeOfTrough').val();
+    const cxrCheck = $('.cxrCheck').val();
+    const cxrDate = $('.cxrDate').val();
+    const kubCheck = $('.kubCheck').val();
+    const kubDate = $('.kubDate').val();
+    const radiologyText = $('.radiologyText').val();
+    if (labsTests == '') {
+        alert('Please check labs');
+    } else if (labsTestsText == "") {
+        alert('Please input lab test results');
+    } else if (qtuLabs == "") {
+        alert('Please enter QTu Lab results');
+    } else if (troughCheck == "") {
+        alert('Please check trough');
+    } else if (troughText == "") {
+        alert('Please enter trough notes');
+    } else if (dateOfTrough == "") {
+        alert('Please enter date of trough');
+    } else if (timeOfTrough == "") {
+        alert('Please enter time of trough');
+    } else if (cxrCheck == "") {
+        alert('Please check CXR');
+    } else if (cxrDate == "") {
+        alert('Please input CXR date');
+    } else if (kubCheck == "") {
+        alert('Please check KUB');
+    } else if (kubDate == "") {
+        alert('Please input KUB date');
+    } else if (radiologyText == "") {
+        alert('Please input radiology report');
+    } else {
+        const labsInformationObject = {
+            labsTests,
+            labsTestsText,
+            qtuLabs,
+            troughCheck,
+            troughText,
+            dateOfTrough,
+            timeOfTrough,
+            cxrCheck,
+            cxrDate,
+            kubCheck,
+            kubDate,
+            radiologyText
+        };
+        console.log(labsInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(labsInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
+
+
 $('#sign-up-link').on('click', function (event) {
     event.preventDefault();
     $('#login-form').addClass('hidden');
