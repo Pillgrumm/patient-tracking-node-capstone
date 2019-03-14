@@ -653,126 +653,119 @@
         </section>
         <section class="form-wrapper">
             <fieldset>
-                <legend class="legend-show"><button>+</button> Other Tests</legend>
-                <legend class="legend-hide"><button>-</button> Other Tests</legend>
-                <section class="section-content">
-                    <div class="input-wrapper">
-                        <label for="hepB">Hepatitis B Vaccine</label>
-                        <input id="hepB" class="sideBySide" type="checkbox">
-                        <input id="hepB" class="sideBySide" type="date">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient has Hepatitis B Vaccine. Not Required. </span>
+                <form class="other-form">
+                    <legend class="legend-show"><button>+</button> Other Tests</legend>
+                    <legend class="legend-hide"><button>-</button> Other Tests</legend>
+                    <section class="section-content">
+                        <div class="input-wrapper">
+                            <label for="hepB">Hepatitis B Vaccine</label>
+                            <input class="hepBCheck sideBySide" name="hepBCheck" type="checkbox" value="Vaccinated">
+                            <input class="hepBDate sideBySide" name="hepBDate" type="date">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has Hepatitis B Vaccine. Not Required. </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="newbornScreen">Newborn Screen</label>
-                        <input type="checkbox" class="sideBySide">
-                        <input id="newbornScreen" class="sideBySide" type="date" required>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient has Newborn Screen, then select date. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="newbornScreen">Newborn Screen</label>
+                            <input class="newbornScreenCheck sideBySide" name="newbornScreenCheck" type="checkbox" value="Newborn Screened">
+                            <input class="newbornScreenDate sideBySide" name="newbornScreenDate" type="date">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has Newborn Screen, then select date. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="cchdEcho">CCHD/ECHO</label>
-                        <input id="cchdEcho" class="sideBySide" type="checkbox">
-                        <input id="cchdEcho" class="sideBySide" type="text" placeholder="Notes:">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span> Check if pateint has either CCHD/ECHO, then add text. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="cchdEcho">CCHD/ECHO</label>
+                            <input class="cchdEchoCheck sideBySide" name="cchdEchoCheck" type="checkbox" value="CCHD/ECHO">
+                            <input class="cchdEchoText sideBySide" name="cchdEchoText" type="text" placeholder="Notes:">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span> Check if pateint has either CCHD/ECHO, then add text. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="eyeExam">Eye Exam Date/Results</label>
-                        <input id="eyeExam" class="sideBySide" type="checkbox">
-                        <input id="eyeExam" class="sideBySide" type="date"> Results
-                        <input id="eyeExam" class="sideBySide" type="text">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient has had an eye exam, then add text. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="eyeExam">Eye Exam Date/Results</label>
+                            <input class="eyeExamCheck sideBySide" name="eyeExamCheck" type="checkbox" value="Eye Exam">
+                            <input class="eyeExamDate sideBySide" name="eyeExamDate" type="date"> Results
+                            <input class="eyeExamText sideBySide" name="eyeExamText" type="text">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has had an eye exam, then add text. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="fu">F/U</label>
-                        <input id="fu" class="sideBySide" type="checkbox">
-                        <input id="fu" class="sideBySide" type="date">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient has had a follow up, then add date. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="fu">F/U</label>
+                            <input class="fuCheck sideBySide" name="fuCheck" type="checkbox" value="Patient has had follow-up">
+                            <input class="fuDate" name="fuDate" type="date">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has had a follow up, then add date. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="hearing">Hearing</label>
-                        <input id="hearing" class="sideBySide" type="checkbox">
-                        <input id="hearing" class="sideBySide" type="text" placeholder="Notes:">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient has had hearing test. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="hearing">Hearing</label>
+                            <input class="hearingCheck sideBySide" name="hearingCheck" type="checkbox" value="Patient has had hearing checked out">
+                            <input class="hearingText sideBySide" name="hearingText" type="text" placeholder="Notes:">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient has had hearing test. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="carSeat">Car Seat</label>
-                        <select name="carSeat" class="sideBySide">
-                            <option value="" disabled selected>Select...</option>
-                            <option value="pass">Pass</option>
-                            <option value="fail">Fail</option>
-                        </select>
-                        <input id="carSeat" class="sideBySide" type="date">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient needs a car seat. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="carSeat">Car Seat</label>
+                            <input class="carSeatCheck sideBySide" name="carSeatCheck" type="checkbox" value="Patient needs car seat">
+                            <input class="carSeatDate sideBySide" name="carSeatDate" type="date">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient needs a car seat. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="cpr">CPR</label>
-                        <select name="cpr" class="sideBySide" required>
-                            <option value="" disabled selected>Select...</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Iff the patients parents have watched CPR video. Required. Interchangeable.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please specify if parents have watched CPR video.(Select one option).</span>
+                        <div class="input-wrapper">
+                            <label for="cpr">CPR</label>
+                            <input class="cprCheck sideBySide" name="cprCheck" type="checkbox" value="Patients parents have watched CPR video">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patients parents have watched CPR video. Not Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please check if parents have watched CPR video.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="circ">Circ</label>
-                        <input id="circ" class="sideBySide" type="checkbox">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if the patient is circumsized. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="circ">Circ</label>
+                            <input class="circCheck sideBySide" name="circCheck" type="checkbox" value="Patient has been circumsized">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if the patient is circumsized. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <input class="sideBySide submit-button" type="submit">
-                    </div>
-                </section>
+                        <div>
+                            <button class="sideBySide button" id="other-submit">Submit</button>
+                        </div>
+                    </section>
+                </form>
             </fieldset>
-        </section>
-        <!-- Everything above has been reviewed! -->
+        </section> <!-- Everything above has been reviewed! -->
         <section class="form-wrapper">
             <fieldset>
                 <legend class="legend-show"><button>+</button> Fluids/Drugs</legend>
