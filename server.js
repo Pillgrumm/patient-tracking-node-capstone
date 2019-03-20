@@ -298,6 +298,7 @@ app.post('/labs/create', (req, res) => {
     });
 });
 
+//Other tests
 app.post('/othertests/create', (req, res) => {
 
 
@@ -325,6 +326,37 @@ app.post('/othertests/create', (req, res) => {
     });
 });
 
+//Drugs
+app.post('/drugs/create', (req, res) => {
+
+
+    Drugs.create({
+        pivCheck: req.body.pivCheck,
+        piccCheck: req.body.piccCheck,
+        uacCheck: req.body.uacCheck,
+        uvcCheck: req.body.uvcCheck,
+        salineLockCheck: req.body.salineLockCheck,
+        drugInput: req.body.drugInput,
+        ccDrug: req.body.ccDrug,
+        hrDrug: req.body.hrDrug,
+        tDrugInput: req.body.tDrugInput,
+        ccTDrug: req.body.ccTDrug,
+        hrTDrug: req.body.hrTDrug,
+        ccIl: req.body.ccIl,
+        hrIl: req.body.hrIl,
+        drugNotes: req.body.drugNotes,
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
 
 // GET
 // Get sessions to populate total days in Dashboard
