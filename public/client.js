@@ -466,7 +466,7 @@ $('#labs-submit').on('click', function (event) {
 });
 
 //Other Tests Information UNFINISHED
-$('#other-submit').on('click', function (event) {
+$('#other-tests-submit').on('click', function (event) {
     event.preventDefault();
     const hepBCheck = $('.hepBCheck').val();
     const hepBDate = $('.hepBDate').val();
@@ -520,7 +520,7 @@ $('#other-submit').on('click', function (event) {
     } else if (circCheck == "") {
         alert('Please check if patient is circumsized');
     } else {
-        const otherInformationObject = {
+        const otherTestsInformationObject = {
             hepBCheck,
             hepBDate,
             newbornScreenCheck,
@@ -539,12 +539,12 @@ $('#other-submit').on('click', function (event) {
             cprCheck,
             circCheck
         };
-        console.log(otherInformationObject);
+        console.log(otherTestsInformationObject);
         $.ajax({
                 type: 'POST',
                 url: '/users/create',
                 dataType: 'json',
-                data: JSON.stringify(otherInformationObject),
+                data: JSON.stringify(otherTestsInformationObject),
                 contentType: 'application/json'
             })
             .done(function (result) {
@@ -734,6 +734,85 @@ $('#depth-submit').on('click', function (event) {
                 url: '/users/create',
                 dataType: 'json',
                 data: JSON.stringify(depthInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
+
+$('#other-submit').on('click', function (event) {
+    event.preventDefault();
+    const referalls = $('.referalls').val();
+    const synagis = $('.synagis').val();
+    const vaccine = $('.vaccine').val();
+    const pediatrician = $('.pediatrician').val();
+    const lastBath = $('.lastBath').val();
+    const consent = $('.consent').val();
+    const hus = $('.hus').val();
+    const cpDate = $('.cpDate').val();
+    const cpTime = $('.cpTime').val();
+    const phototherapyStartDate = $('.phototherapyStartDate').val();
+    const phototherapyEndDate = $('.phototherapyEndDate').val();
+    const phototherapySelect = $('.phototherapySelect').val();
+    if (referalls == '') {
+        alert('Please input referalls');
+    } else if (synagis == "") {
+        alert('Please check synagis');
+    } else if (vaccine == "") {
+        alert('Please check vaccines');
+    } else if (pediatrician == "") {
+        alert('Please input pediatrician information');
+    } else if (lastBath == "") {
+        alert('Please input date for patients last bath');
+    } else if (consent == "") {
+        alert('Please check cooling patient consent');
+    } else if (hus == "") {
+        alert('Please check cooling patient HUS');
+    } else if (cpDate == "") {
+        alert('Please enter cooling patient date');
+    } else if (cpTime == "") {
+        alert('Please enter cooling patient time');
+    } else if (phototherapyStartDate == "") {
+        alert('Please enter phototherapy start date');
+    } else if (phototherapyEndDate == "") {
+        alert('Please enter phototherapy end date');
+    } else if (phototherapySelect == "") {
+        alert('Please select phototherapy option');
+    } else {
+        const otherInformationObject = {
+            referalls,
+            synagis,
+            vaccine,
+            pediatrician,
+            lastBath,
+            consent,
+            hus,
+            cpDate,
+            cpTime,
+            phototherapyStartDate,
+            phototherapyEndDate,
+            phototherapySelect
+        };
+        console.log(otherInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(otherInformationObject),
                 contentType: 'application/json'
             })
             .done(function (result) {

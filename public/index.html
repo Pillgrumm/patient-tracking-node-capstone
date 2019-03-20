@@ -761,7 +761,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="sideBySide button" id="other-submit">Submit</button>
+                            <button class="sideBySide button" id="other-tests-submit">Submit</button>
                         </div>
                     </section>
                 </form>
@@ -915,135 +915,138 @@
         </section>
         <section class="form-wrapper">
             <fieldset>
-                <legend class="legend-show"><button>+</button> In Depth Patient Notes</legend>
-                <legend class="legend-hide"><button>-</button> In Depth Patient Notes</legend>
-                <section class="section-content">
-                    <div class="input-wrapper">
-                        <label for="planOfCare">Plan of Care</label>
-                        <textarea name="planOfCare" cols="40" rows="5" class="depth-notes planOfCare"></textarea>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Text field for Plan of Care. Not Required.</span>
+                <form class="depth-form">
+                    <legend class="legend-show"><button>+</button> In Depth Patient Notes</legend>
+                    <legend class="legend-hide"><button>-</button> In Depth Patient Notes</legend>
+                    <section class="section-content">
+                        <div class="input-wrapper">
+                            <label for="planOfCare">Plan of Care</label>
+                            <textarea name="planOfCare" cols="40" rows="5" class="depth-notes planOfCare"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for Plan of Care. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="socialConsiderations">Social Considerations</label>
-                        <textarea name="socialConsiderations" cols="40" rows="5" class="depth-notes socialConsiderations"></textarea>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Text field for social considerations. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="socialConsiderations">Social Considerations</label>
+                            <textarea name="socialConsiderations" cols="40" rows="5" class="depth-notes socialConsiderations"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for social considerations. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="historyChanges">History/Changes</label>
-                        <textarea name="historyChanges" cols="40" rows="5" class="depth-notes historyChanges"></textarea>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Text field for patient history and changes. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="historyChanges">History/Changes</label>
+                            <textarea name="historyChanges" cols="40" rows="5" class="depth-notes historyChanges"></textarea>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for patient history and changes. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <button class="sideBySide button" id="depth-submit">Submit</button>
-                    </div>
-                </section>
+                        <div>
+                            <button class="sideBySide button" id="depth-submit">Submit</button>
+                        </div>
+                    </section>
+                </form>
             </fieldset>
         </section>
         <section class="form-wrapper">
             <fieldset>
-                <legend class="legend-show"><button>+</button> Other</legend>
-                <legend class="legend-hide"><button>-</button> Other</legend>
-                <section class="section-content">
-                    <div class="input-wrapper">
-                        <label for="referals">Referrals</label>
-                        <input id="referals" type="text" value="">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Text field for referrals. Not Required.</span>
+                <form class="other-form">
+                    <legend class="legend-show"><button>+</button> Other</legend>
+                    <legend class="legend-hide"><button>-</button> Other</legend>
+                    <section class="section-content">
+                        <div class="input-wrapper">
+                            <label for="referalls">Referalls</label>
+                            <input class="referalls sideBySide" name="Referalls" type="text">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for referalls. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="synagis">Synagis</label>
-                        <input id="synagis" type="checkbox" id="adLib" class="sideBySide">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if child is using Synagis. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="synagis">Synagis</label>
+                            <input class="synagis sideBySide" name="synagis" type="checkbox" value="Synagis">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if child is using Synagis. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="vaccine">2mo Vaccine</label>
-                        <input id="vaccine" type="checkbox" id="adLib" class="sideBySide">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Check if child has had 2 month vaccine. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="vaccine">2mo Vaccine</label>
+                            <input class="vaccine sideBySide" name="vaccine" type="checkbox" value="Vaccine">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Check if child has had 2 month vaccine. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="pediatrician">Pediatrician</label>
-                        <input id="pediatrician" type="text" value="">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Text field for patients Pediatrician. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="pediatrician">Pediatrician</label>
+                            <input class="pediatrician sideBySide" name="pediatrician" type="text">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Text field for patients Pediatrician. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="lastBath">Last Bath</label>
-                        <input id="lastBath" type="date" value="" class="sideBySide">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Date for the patients last bath. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="lastBath">Last Bath</label>
+                            <input class="lastBath sideBySide" name="lastBath" type="date">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Date for the patients last bath. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="coolingPatient">Cooling Patient</label>
-                        <input type="checkbox" id="coolingPatient" class="sideBySide">
-                        <input type="radio" class="sideBySide" id="consent" value="consent"> Consent
-                        <input type="radio" class="sideBySide" id="hus" value="hus"> HUS
-                        <input type="date" class="sideBySide">Date
-                        <input type="time" class="sideBySide">Time
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Cooling patient information. Not required.</span>
+                        <div class="input-wrapper">
+                            <label for="coolingPatient">Cooling Patient</label>
+                            <input type="checkbox" class="consent sideBySide" name="consent" value="Consent"> Consent
+                            <input type="checkbox" class="hus sideBySide" name="hus" value="hus"> HUS
+                            <input type="date" class="cpDate sideBySide" name="cpDate">Date
+                            <input type="time" class="cpTime sideBySide" name="cpTime">Time
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Cooling patient information. Not required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="coolingPatient">Phototherapy</label>
-                        <input id="startDate" type="date" class="sideBySide">
-                        <input id="EndDate" type="date" class="sideBySide">
-                        <select name="bloodType" class="sideBySide">
-                            <option value="" disabled selected>Select...</option>
-                            <option value="single">Single</option>
-                            <option value="double">Double</option>
-                            <option value="triple">Triple</option>
-                        </select>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Phototherapy for patient. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="coolingPatient">Phototherapy</label>
+                            <input class="phototherapyStartDate sideBySide" type="date" name="phototherapyStartDate">
+                            <input class="phototherapyEndDate sideBySide" type="date" name="phototherapyEndDate">
+                            <select name="phototherapySelect" class="phototherapySelect sideBySide">
+                                <option value="" disabled selected>Select...</option>
+                                <option value="single">Single</option>
+                                <option value="double">Double</option>
+                                <option value="triple">Triple</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Phototherapy for patient. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <input class="sideBySide submit-button" type="submit">
-                    </div>
-                </section>
+                        <div>
+                            <button class="sideBySide button" id="other-submit">Submit</button>
+                        </div>
+                    </section>
+                </form>
             </fieldset>
         </section>
     </main>
