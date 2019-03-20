@@ -711,6 +711,49 @@ $('#feeding-submit').on('click', function (event) {
 
 });
 
+$('#depth-submit').on('click', function (event) {
+    event.preventDefault();
+    const planOfCare = $('.planOfCare').val();
+    const socialConsiderations = $('.socialConsiderations').val();
+    const historyChanges = $('.historyChanges').val();
+    if (planOfCare == '') {
+        alert('Please enter plan of care');
+    } else if (socialConsiderations == "") {
+        alert('Please enter social considerations');
+    } else if (historyChanges == "") {
+        alert('Please enter history/changes');
+    } else {
+        const depthInformationObject = {
+            planOfCare,
+            socialConsiderations,
+            historyChanges
+        };
+        console.log(depthInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(depthInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
+
 $('#sign-up-link').on('click', function (event) {
     event.preventDefault();
     $('#login-form').addClass('hidden');
