@@ -358,6 +358,31 @@ app.post('/drugs/create', (req, res) => {
     });
 });
 
+//Feeding
+app.post('/feeding/create', (req, res) => {
+
+
+    Feeding.create({
+        feedingMethod: req.body.feedingMethod,
+        adLib: req.body.adLib,
+        cueBased: req.body.cueBased,
+        fiCC: req.body.fiCC,
+        hrCC: req.body.hrCC,
+        feedingAttempts: req.body.feedingAttempts,
+        completedAttempts: req.body.completedAttempts,
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
+
 // GET
 // Get sessions to populate total days in Dashboard
 app.get('/sessions-total/:id', (req, res) => {
