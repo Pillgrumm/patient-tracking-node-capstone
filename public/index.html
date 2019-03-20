@@ -660,8 +660,7 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="hepB">Hepatitis B Vaccine</label>
-                            <input class="hepBCheck sideBySide" name="hepBCheck" type="checkbox" value="Vaccinated">
-                            <input class="hepBDate sideBySide" name="hepBDate" type="date">
+                            <input class="hepBDate sideBySide" name="hepBDate" type="date" value="2018-04-08">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -671,8 +670,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="newbornScreen">Newborn Screen</label>
-                            <input class="newbornScreenCheck sideBySide" name="newbornScreenCheck" type="checkbox" value="Newborn Screened">
-                            <input class="newbornScreenDate sideBySide" name="newbornScreenDate" type="date">
+                            <input class="newbornScreenDate sideBySide" name="newbornScreenDate" type="date" value="2018-05-09">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -682,31 +680,28 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="cchdEcho">CCHD/ECHO</label>
-                            <input class="cchdEchoCheck sideBySide" name="cchdEchoCheck" type="checkbox" value="CCHD/ECHO">
-                            <input class="cchdEchoText sideBySide" name="cchdEchoText" type="text" placeholder="Notes:">
+                            <textarea class="cchdEchoText depth-notes" name="cchdEchoText" cols="40" rows="5">lorem ipsum CCHD</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span> Check if pateint has either CCHD/ECHO, then add text. Not Required.</span>
+                                    <span> If pateint has either CCHD/ECHO, then add text. Not Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
                             <label for="eyeExam">Eye Exam Date/Results</label>
-                            <input class="eyeExamCheck sideBySide" name="eyeExamCheck" type="checkbox" value="Eye Exam">
-                            <input class="eyeExamDate sideBySide" name="eyeExamDate" type="date"> Results
-                            <input class="eyeExamText sideBySide" name="eyeExamText" type="text">
+                            <input class="eyeExamDate sideBySide" name="eyeExamDate" type="date" value="2018-06-04"> Results
+                            <textarea class="eyeExamText depth-notes" name="eyeExamText" cols="40" rows="5">lorem ipsum Eye Exam</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Check if the patient has had an eye exam, then add text. Not Required.</span>
+                                    <span> If the patient has had an eye exam, then add date and text. Not Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
                             <label for="fu">F/U</label>
-                            <input class="fuCheck sideBySide" name="fuCheck" type="checkbox" value="Patient has had follow-up">
-                            <input class="fuDate" name="fuDate" type="date">
+                            <input class="fuDate" name="fuDate" type="date" value="2018-06-07">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -717,18 +712,16 @@
                         <div class="input-wrapper">
                             <label for="hearing">Hearing</label>
                             <input class="hearingCheck sideBySide" name="hearingCheck" type="checkbox" value="Patient has had hearing checked out">
-                            <input class="hearingText sideBySide" name="hearingText" type="text" placeholder="Notes:">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
-                                    <span>Check if the patient has had hearing test. Not Required.</span>
+                                    <span>If the patient has had hearing test. Not Required.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="input-wrapper">
                             <label for="carSeat">Car Seat</label>
                             <input class="carSeatCheck sideBySide" name="carSeatCheck" type="checkbox" value="Patient needs car seat">
-                            <input class="carSeatDate sideBySide" name="carSeatDate" type="date">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -789,9 +782,9 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="drug">D(rug)</label>
-                            <input class="drugInput sideBySide" name="drugInput" type="text">@
-                            <input class="ccDrug sideBySide" name="cc" type="number">
-                            <input class="hrDrug sideBySide" name="hrDrug" type="number">
+                            <input class="drugInput sideBySide" name="drugInput" type="text" value="Dilaudid">@
+                            <input class="ccDrug sideBySide" name="cc" type="number" value="50">
+                            <input class="hrDrug sideBySide" name="hrDrug" type="number" value="2">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -801,9 +794,9 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="tpnDrug">TPN D(rug)</label>
-                            <input class="tDrugInput sideBySide" name="tDrugInput" type="text">@
-                            <input class="ccTDrug sideBySide" name="ccTDrug" type="number">
-                            <input class="hrTDrug sideBySide" name="hrTDrug" type="number">
+                            <input class="tDrugInput sideBySide" name="tDrugInput" type="text" value="Morphine">@
+                            <input class="ccTDrug sideBySide" name="ccTDrug" type="number" value="40">
+                            <input class="hrTDrug sideBySide" name="hrTDrug" type="number" value="1">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -813,8 +806,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="il">IL</label>@
-                            <input class="ccIl sideBySide" name="ccIl" type="number">
-                            <input class="hrIl sideBySide" name="hrIl" type="number">
+                            <input class="ccIl sideBySide" name="ccIl" type="number" value="30">
+                            <input class="hrIl sideBySide" name="hrIl" type="number" value="3">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -824,7 +817,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="other">Other</label>
-                            <textarea class="drugNotes depth-notes" name="drugNotes" cols="40" rows="5"></textarea>
+                            <textarea class="drugNotes depth-notes" name="drugNotes" cols="40" rows="5">loreum ipsum Other drug notes</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -851,7 +844,7 @@
                                 <option value="" disabled selected>Select...</option>
                                 <option value="ng">NG</option>
                                 <option value="nipple">NIPPLE</option>
-                                <option value="npo">NPO</option>
+                                <option value="npo" selected>NPO</option>
                             </select>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
@@ -866,7 +859,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="adLib">Ad Lib</label>
-                            <input type="checkbox" class="adLib sideBySide" name="adLib" value="Ad Lib">
+                            <input type="checkbox" class="adLib sideBySide" name="adLib" value="Patient uses ad libs">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -876,7 +869,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="cueBased">Cue-based</label>
-                            <input type="checkbox" class="cueBased sideBySide" name="cueBased" value="Cue Based">
+                            <input type="checkbox" class="cueBased sideBySide" name="cueBased" value="Patient is cue based">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -886,8 +879,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="foodItanke">Food Intake</label>
-                            <input class="fiCC sideBySide" name="fiCC" type="number" placeholder="160"> cc/kg/day
-                            <input class="hrCC sideBySide" name="hrCC" type="number" placeholder="27">
+                            <input class="fiCC sideBySide" name="fiCC" type="number" value="160"> cc/kg/day
+                            <input class="hrCC sideBySide" name="hrCC" type="number" value="27">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -897,8 +890,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="attemptedFeeding">Feeding Attempts</label>
-                            <input class="feedingAttempts sideBySide" name="feedingAttempts" type="number" value="" placeholder="7">Attempted
-                            <input class="completedAttempts sideBySide" name="completedAttempts" type="number" value="" placeholder="3">Completed
+                            <input class="feedingAttempts sideBySide" name="feedingAttempts" type="number" value="7" placeholder="7">Attempted
+                            <input class="completedAttempts sideBySide" name="completedAttempts" type="number" value="3" placeholder="3">Completed
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -921,7 +914,7 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="planOfCare">Plan of Care</label>
-                            <textarea name="planOfCare" cols="40" rows="5" class="depth-notes planOfCare"></textarea>
+                            <textarea name="planOfCare" cols="40" rows="5" class="depth-notes planOfCare">lorem ipsum plan of care</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -931,7 +924,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="socialConsiderations">Social Considerations</label>
-                            <textarea name="socialConsiderations" cols="40" rows="5" class="depth-notes socialConsiderations"></textarea>
+                            <textarea name="socialConsiderations" cols="40" rows="5" class="depth-notes socialConsiderations"> lorem ipsum social consideration</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -941,7 +934,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="historyChanges">History/Changes</label>
-                            <textarea name="historyChanges" cols="40" rows="5" class="depth-notes historyChanges"></textarea>
+                            <textarea name="historyChanges" cols="40" rows="5" class="depth-notes historyChanges">lorem ipsum history and changes</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -964,7 +957,7 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="referalls">Referalls</label>
-                            <input class="referalls sideBySide" name="Referalls" type="text">
+                            <input class="referalls sideBySide" name="Referalls" type="text" value="Saint Joes NICU">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -984,7 +977,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="vaccine">2mo Vaccine</label>
-                            <input class="vaccine sideBySide" name="vaccine" type="checkbox" value="Vaccine">
+                            <input class="vaccine sideBySide" name="vaccine" type="checkbox" value="2 month vaccine">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -994,7 +987,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="pediatrician">Pediatrician</label>
-                            <input class="pediatrician sideBySide" name="pediatrician" type="text">
+                            <input class="pediatrician sideBySide" name="pediatrician" type="text" value="Doctor Jones">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -1004,7 +997,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="lastBath">Last Bath</label>
-                            <input class="lastBath sideBySide" name="lastBath" type="date">
+                            <input class="lastBath sideBySide" name="lastBath" type="date" value="2019-04-05">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -1016,8 +1009,8 @@
                             <label for="coolingPatient">Cooling Patient</label>
                             <input type="checkbox" class="consent sideBySide" name="consent" value="Consent"> Consent
                             <input type="checkbox" class="hus sideBySide" name="hus" value="hus"> HUS
-                            <input type="date" class="cpDate sideBySide" name="cpDate">Date
-                            <input type="time" class="cpTime sideBySide" name="cpTime">Time
+                            <input type="date" class="cpDate sideBySide" name="cpDate" value="2019-03-03">Date
+                            <input type="time" class="cpTime sideBySide" name="cpTime" value="08:30">Time
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -1027,8 +1020,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="coolingPatient">Phototherapy</label>
-                            <input class="phototherapyStartDate sideBySide" type="date" name="phototherapyStartDate">
-                            <input class="phototherapyEndDate sideBySide" type="date" name="phototherapyEndDate">
+                            <input class="phototherapyStartDate sideBySide" type="date" name="phototherapyStartDate" value="2019-02-02">
+                            <input class="phototherapyEndDate sideBySide" type="date" name="phototherapyEndDate" value="2019-02-03">
                             <select name="phototherapySelect" class="phototherapySelect sideBySide">
                                 <option value="" disabled selected>Select...</option>
                                 <option value="single">Single</option>

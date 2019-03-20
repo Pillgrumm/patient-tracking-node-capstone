@@ -468,74 +468,46 @@ $('#labs-submit').on('click', function (event) {
 //Other Tests Information UNFINISHED
 $('#other-tests-submit').on('click', function (event) {
     event.preventDefault();
-    const hepBCheck = $('.hepBCheck').val();
     const hepBDate = $('.hepBDate').val();
-    const newbornScreenCheck = $('.newbornScreenCheck').val();
     const newbornScreenDate = $('.newbornScreenDate').val();
-    const cchdEchoCheck = $('.cchdEchoCheck').val();
     const cchdEchoText = $('.cchdEchoText').val();
-    const eyeExamCheck = $('.eyeExamCheck').val();
     const eyeExamDate = $('.eyeExamDate').val();
     const eyeExamText = $('.eyeExamText').val();
-    const fuCheck = $('.fuCheck').val();
     const fuDate = $('.fuDate').val();
     const hearingCheck = $('.hearingCheck').val();
-    const hearingText = $('.hearingText').val();
     const carSeatCheck = $('.carSeatCheck').val();
-    const carSeatDate = $('.carSeatDate').val();
     const cprCheck = $('.cprCheck').val();
     const circCheck = $('.circCheck').val();
-    if (hepBCheck == '') {
-        alert('Please check for hepatitis vaccine');
-    } else if (hepBDate == "") {
+    if (hepBDate == "") {
         alert('Please input date hepatitis B vaccine was received');
-    } else if (newbornScreenCheck == "") {
-        alert('Please check for Newborn Screen');
     } else if (newbornScreenDate == "") {
         alert('Please input date of Newborn Screen');
-    } else if (cchdEchoCheck == "") {
-        alert('Please check for CCHD/ECHO');
     } else if (cchdEchoText == "") {
         alert('Please input notes for CCHD/ECHO');
-    } else if (eyeExamCheck == "") {
-        alert('Please check for Eye Exam');
     } else if (eyeExamDate == "") {
         alert('Please input eye exam date');
     } else if (eyeExamText == "") {
         alert('Please input eye exam results');
-    } else if (fuCheck == "") {
-        alert('Please check for follow-up');
     } else if (fuDate == "") {
         alert('Please input follow-up date');
     } else if (hearingCheck == "") {
         alert('Please check if patient has had hearing exam');
-    } else if (hearingText == "") {
-        alert('Please input hearing exam results');
     } else if (carSeatCheck == "") {
         alert('Please check if patient needs carseat');
-    } else if (carSeatDate == "") {
-        alert('Please input date of carseat exam');
     } else if (cprCheck == "") {
         alert('Please check if parents have watched CPR video');
     } else if (circCheck == "") {
         alert('Please check if patient is circumsized');
     } else {
         const otherTestsInformationObject = {
-            hepBCheck,
             hepBDate,
-            newbornScreenCheck,
             newbornScreenDate,
-            cchdEchoCheck,
             cchdEchoText,
-            eyeExamCheck,
             eyeExamDate,
             eyeExamText,
-            fuCheck,
             fuDate,
             hearingCheck,
-            hearingText,
             carSeatCheck,
-            carSeatDate,
             cprCheck,
             circCheck
         };
@@ -790,7 +762,7 @@ $('#other-submit').on('click', function (event) {
         alert('Please enter phototherapy start date');
     } else if (phototherapyEndDate == "") {
         alert('Please enter phototherapy end date');
-    } else if (phototherapySelect == "") {
+    } else if (phototherapySelect == null) {
         alert('Please select phototherapy option');
     } else {
         const otherInformationObject = {
