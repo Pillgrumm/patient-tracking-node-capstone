@@ -13,7 +13,7 @@ const feedingSchema = new mongoose.Schema({
         required: false
     },
     cueBased: {
-        type: Number,
+        type: String,
         required: false
     },
     fiCC: {
@@ -21,15 +21,15 @@ const feedingSchema = new mongoose.Schema({
         required: false
     },
     hrCC: {
-        type: String,
+        type: Number,
         required: false
     },
     feedingAttempts: {
-        type: String,
+        type: Number,
         required: false
     },
     completedAttempts: {
-        type: String,
+        type: Number,
         required: false
     }
 });
