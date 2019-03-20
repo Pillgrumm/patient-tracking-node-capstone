@@ -5,11 +5,11 @@ const bcrypt = require('bcryptjs');
 
 const maternalSchema = new mongoose.Schema({
     gravida: {
-        type: String,
+        type: Number,
         required: false
     },
     para: {
-        type: String,
+        type: Number,
         required: false
     },
     age: {
@@ -17,7 +17,7 @@ const maternalSchema = new mongoose.Schema({
         required: false
     },
     vagCs: {
-        type: Number,
+        type: String,
         required: false
     },
     apgar1: {
@@ -29,7 +29,7 @@ const maternalSchema = new mongoose.Schema({
         required: false
     },
     rom: {
-        type: String,
+        type: Number,
         required: false
     },
     hx: {
