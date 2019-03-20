@@ -253,7 +253,7 @@ app.post('/assessment/create', (req, res) => {
         abdpb: req.body.abdpb,
         murmur: req.body.murmur,
         echo: req.body.echo,
-        cardiacResults: req.body.cardiacResults,
+        cardiacResults: req.body.cardiacResults
         meds: req.body.meds
     }, (err, item) => {
         if (err) {
@@ -312,7 +312,7 @@ app.post('/othertests/create', (req, res) => {
         hearingCheck: req.body.hearingCheck,
         carSeatCheck: req.body.carSeatCheck,
         cprCheck: req.body.cprCheck,
-        circCheck: req.body.circCheck,
+        circCheck: req.body.circCheck
     }, (err, item) => {
         if (err) {
             return res.status(500).json({
@@ -344,7 +344,7 @@ app.post('/drugs/create', (req, res) => {
         hrTDrug: req.body.hrTDrug,
         ccIl: req.body.ccIl,
         hrIl: req.body.hrIl,
-        drugNotes: req.body.drugNotes,
+        drugNotes: req.body.drugNotes
     }, (err, item) => {
         if (err) {
             return res.status(500).json({
@@ -369,7 +369,28 @@ app.post('/feeding/create', (req, res) => {
         fiCC: req.body.fiCC,
         hrCC: req.body.hrCC,
         feedingAttempts: req.body.feedingAttempts,
-        completedAttempts: req.body.completedAttempts,
+        completedAttempts: req.body.completedAttempts
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
+
+//Depth Notes
+app.post('/depth/create', (req, res) => {
+
+
+    Depth.create({
+        planOfCare: req.body.planOfCare,
+        socialConsiderations: req.body.socialConsiderations,
+        historyChanges: req.body.historyChanges
     }, (err, item) => {
         if (err) {
             return res.status(500).json({
