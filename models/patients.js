@@ -13,11 +13,11 @@ const patientSchema = new mongoose.Schema({
         required: false
     },
     lastName: {
-        type: Number,
+        type: String,
         required: false
     },
     diagnosis: {
-        type: Number,
+        type: String,
         required: false
     },
     gestationalAge: {
@@ -25,15 +25,15 @@ const patientSchema = new mongoose.Schema({
         required: false
     },
     correctedGestationalAgeDay: {
-        type: String,
+        type: Number,
         required: false
     },
     correctedGestationalAgeWeek: {
-        type: String,
+        type: Number,
         required: false
     },
     dayOfLife: {
-        type: String,
+        type: Number,
         required: false
     },
     dayOfBirth: {
@@ -45,11 +45,11 @@ const patientSchema = new mongoose.Schema({
         required: false
     },
     birthWeight: {
-        type: String,
+        type: Number,
         required: false
     },
     currentWeight: {
-        type: String,
+        type: Number,
         required: false
     },
     kaiserScore: {
@@ -69,7 +69,7 @@ const patientSchema = new mongoose.Schema({
         required: false
     },
     bedNumber: {
-        type: String,
+        type: Number,
         required: false
     },
     dateOfAdmission: {

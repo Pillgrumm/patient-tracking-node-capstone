@@ -13,7 +13,7 @@ const depthSchema = new mongoose.Schema({
         required: false
     },
     historyChanges: {
-        type: Number,
+        type: String,
         required: false
     }
 });
