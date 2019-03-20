@@ -841,74 +841,76 @@
         </section>
         <section class="form-wrapper">
             <fieldset>
-                <legend class="legend-show"><button>+</button> Diet/Feeding Schedule</legend>
-                <legend class="legend-hide"><button>-</button> Diet/Feeding Schedule</legend>
-                <section class="section-content">
-                    <div class="input-wrapper">
-                        <label for="feedingMethod">Method of Feeding</label>
-                        <select name="feeding" class="sideBySide" required>
-                            <option value="" disabled selected>Select...</option>
-                            <option value="ng">NG</option>
-                            <option value="nipple">NIPPLE</option>
-                            <option value="npo">NPO</option>
-                        </select>
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Method of feeding. Required.</span>
-                            </div>
-                            <div class="icon-content icon-content-error">
-                                <i class="fas fa-times"></i>
-                                <span>Please input method of feeding. (Select one option).</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="adLib">Ad Lib</label>
-                        <input type="checkbox" id="adLib" class="sideBySide">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>If patient can be fed as much as they want. Not Required.</span>
+                <form class="feeding-form">
+                    <legend class="legend-show"><button>+</button> Diet/Feeding Schedule</legend>
+                    <legend class="legend-hide"><button>-</button> Diet/Feeding Schedule</legend>
+                    <section class="section-content">
+                        <div class="input-wrapper">
+                            <label for="feedingMethod">Method of Feeding</label>
+                            <select class="feedingMethod sideBySide" name="feedingMethod" required>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="ng">NG</option>
+                                <option value="nipple">NIPPLE</option>
+                                <option value="npo">NPO</option>
+                            </select>
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Method of feeding. Required.</span>
+                                </div>
+                                <div class="icon-content icon-content-error">
+                                    <i class="fas fa-times"></i>
+                                    <span>Please input method of feeding. (Select one option).</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="cueBased">Cue-based</label>
-                        <input type="checkbox" id="adLib" class="sideBySide">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>If the patient gives cues when hungry. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="adLib">Ad Lib</label>
+                            <input type="checkbox" class="adLib sideBySide" name="adLib" value="Ad Lib">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>If patient can be fed as much as they want. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="foodItanke">Food Intake</label>
-                        <input id="cc" class="sideBySide" type="number" placeholder="160"> cc/kg/day
-                        <input id="hr" class="sideBySide" type="number" placeholder="27">
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Cubic Centimeters Per Kilogram Per Day of food intake. Not Required</span>
+                        <div class="input-wrapper">
+                            <label for="cueBased">Cue-based</label>
+                            <input type="checkbox" class="cueBased sideBySide" name="cueBased" value="Cue Based">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>If the patient gives cues when hungry. Not Required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="feedingAttempts">Feeding Attempts</label>
-                        <input id="feedingAttempts" class="sideBySide" type="number" value="" placeholder="7">Attempted
-                        <input id="completedAttempts" class="sideBySide" type="number" value="" placeholder="3">Completed
-                        <div class="icons-wrapper">
-                            <div class="icon-content icon-content-info">
-                                <i class="fas fa-info"></i>
-                                <span>Feeding attempts with at least 1 numerical character. Not Required.</span>
+                        <div class="input-wrapper">
+                            <label for="foodItanke">Food Intake</label>
+                            <input class="fiCC sideBySide" name="fiCC" type="number" placeholder="160"> cc/kg/day
+                            <input class="hrCC sideBySide" name="hrCC" type="number" placeholder="27">
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Cubic Centimeters Per Kilogram Per Day of food intake. Not Required</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <input class="sideBySide submit-button" type="submit">
-                    </div>
-                </section>
+                        <div class="input-wrapper">
+                            <label for="attemptedFeeding">Feeding Attempts</label>
+                            <input class="feedingAttempts sideBySide" name="feedingAttempts" type="number" value="" placeholder="7">Attempted
+                            <input class="completedAttempts sideBySide" name="completedAttempts" type="number" value="" placeholder="3">Completed
+                            <div class="icons-wrapper">
+                                <div class="icon-content icon-content-info">
+                                    <i class="fas fa-info"></i>
+                                    <span>Feeding attempts with at least 1 numerical character. Not Required.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="sideBySide button" id="feeding-submit">Submit</button>
+                        </div>
+                    </section>
+                </form>
             </fieldset>
         </section>
         <section class="form-wrapper">

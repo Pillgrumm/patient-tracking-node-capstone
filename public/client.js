@@ -624,7 +624,7 @@ $('#drugs-submit').on('click', function (event) {
             hrTDrug,
             ccIl,
             hrIl,
-            drugNotes,
+            drugNotes
         };
         console.log(drugInformationObject);
         $.ajax({
@@ -652,6 +652,64 @@ $('#drugs-submit').on('click', function (event) {
 
 });
 
+$('#feeding-submit').on('click', function (event) {
+    event.preventDefault();
+    const feedingMethod = $('.feedingMethod').val();
+    const adLib = $('.adLib').val();
+    const cueBased = $('.cueBased').val();
+    const fiCC = $('.fiCC').val();
+    const hrCC = $('.hrCC').val();
+    const feedingAttempts = $('.feedingAttempts').val();
+    const completedAttempts = $('.completedAttempts').val();
+    if (feedingMethod == '') {
+        alert('Please select feeding method');
+    } else if (adLib == "") {
+        alert('Please check for ad lib');
+    } else if (cueBased == "") {
+        alert('Please check if patient is cue based feeding');
+    } else if (fiCC == "") {
+        alert('Please input food intake');
+    } else if (hrCC == "") {
+        alert('Please check food intake per hour');
+    } else if (feedingAttempts == "") {
+        alert('Please input feeding attempts');
+    } else if (completedAttempts == "") {
+        alert('Please enter completed feeding attempts');
+    } else {
+        const feedingInformationObject = {
+            feedingMethod,
+            adLib,
+            cueBased,
+            fiCC,
+            hrCC,
+            feedingAttempts,
+            completedAttempts
+        };
+        console.log(feedingInformationObject);
+        $.ajax({
+                type: 'POST',
+                url: '/users/create',
+                dataType: 'json',
+                data: JSON.stringify(feedingInformationObject),
+                contentType: 'application/json'
+            })
+            .done(function (result) {
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
+                //            showLogInScreen();
+                //                $('#sign-up-form').addClass('hidden');
+                //                $('#landing-page-info').addClass('hidden');
+                //                $('#full-form').removeClass('hidden');
+                //                $('body').css('background', 'white');
+            })
+            .fail(function (jqXHR, error, errorThrown) {
+                console.log(jqXHR);
+                console.log(error);
+                console.log(errorThrown);
+            });
+    };
+
+});
 
 $('#sign-up-link').on('click', function (event) {
     event.preventDefault();
