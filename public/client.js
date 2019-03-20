@@ -183,11 +183,11 @@ $('#general-save').on('click', function (event) {
         alert('Please enter current weight');
     } else if (kaiserScore == "") {
         alert('Please enter kaiser score');
-    } else if (bloodType == "") {
+    } else if (bloodType == null) {
         alert('Please enter bloodtype');
-    } else if (coombs == "") {
+    } else if (coombs == null) {
         alert('Please enter COOMBS score');
-    } else if (acuity == "") {
+    } else if (acuity == null) {
         alert('Please enter acuity score');
     } else if (bedNumber == "") {
         alert('Please enter bed number');
@@ -264,15 +264,15 @@ $('#maternal-submit').on('click', function (event) {
         alert('Please enter para count');
     } else if (age == "") {
         alert('Please enter maternal age');
-    } else if (vagCs == "") {
+    } else if (vagCs == null) {
         alert('Please specify birth type');
-    } else if (apgar1 == "") {
+    } else if (apgar1 == null) {
         alert('Please enter digit for first APGAR selection');
-    } else if (apgar2 == "") {
+    } else if (apgar2 == null) {
         alert('Please enter maternal rupture of membranes');
     } else if (hx == "") {
         alert('Please enter maternal history');
-    } else if (maternalBloodType == "") {
+    } else if (maternalBloodType == null) {
         alert('Please enter maternal bloodtype');
     } else {
         const maternalInformationObject = {
@@ -633,7 +633,7 @@ $('#feeding-submit').on('click', function (event) {
     const hrCC = $('.hrCC').val();
     const feedingAttempts = $('.feedingAttempts').val();
     const completedAttempts = $('.completedAttempts').val();
-    if (feedingMethod == '') {
+    if (feedingMethod == null) {
         alert('Please select feeding method');
     } else if (adLib == "") {
         alert('Please check for ad lib');
