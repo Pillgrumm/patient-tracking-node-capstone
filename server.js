@@ -211,6 +211,31 @@ app.post('/patient/create', (req, res) => {
     });
 });
 
+app.post('/maternal/create', (req, res) => {
+
+
+    Maternal.create({
+        gravida: req.body.gravida,
+        para: req.body.para,
+        age: req.body.age,
+        vagCs: req.body.vagCs,
+        apgar1: req.body.apgar1,
+        apgar2: req.body.apgar2,
+        rom: req.body.rom,
+        hx: req.body.hx,
+        maternalBloodType: req.body.maternalBloodType
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
 
 // GET
 // Get sessions to populate total days in Dashboard
