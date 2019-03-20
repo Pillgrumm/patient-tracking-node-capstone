@@ -173,6 +173,8 @@ app.post('/signin', function (req, res) {
 
 // POST
 // Add a session
+
+//Patient
 app.post('/patient/create', (req, res) => {
 
 
@@ -211,6 +213,7 @@ app.post('/patient/create', (req, res) => {
     });
 });
 
+//Maternal
 app.post('/maternal/create', (req, res) => {
 
 
@@ -224,6 +227,64 @@ app.post('/maternal/create', (req, res) => {
         rom: req.body.rom,
         hx: req.body.hx,
         maternalBloodType: req.body.maternalBloodType
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
+
+//Assessment
+app.post('/assessment/create', (req, res) => {
+
+
+    Assessment.create({
+        husCheck: req.body.husCheck,
+        husText: req.body.husText,
+        respiratory: req.body.respiratory,
+        respiratoryText: req.body.respiratoryText,
+        fio2: req.body.fio2,
+        abdpb: req.body.abdpb,
+        murmur: req.body.murmur,
+        echo: req.body.echo,
+        cardiacResults: req.body.cardiacResults,
+        meds: req.body.meds
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
+
+//Labs
+app.post('/labs/create', (req, res) => {
+
+
+    Labs.create({
+        labsTests: req.body.labsTests,
+        labsTestsText: req.body.labsTestsText,
+        qtuLabs: req.body.qtuLabs,
+        troughCheck: req.body.troughCheck,
+        troughText: req.body.troughText,
+        dateOfTrough: req.body.dateOfTrough,
+        timeOfTrough: req.body.timeOfTrough,
+        cxrCheck: req.body.cxrCheck,
+        cxrDate: req.body.cxrDate,
+        kubCheck: req.body.kubCheck,
+        kubDate: req.body.kubDate,
+        radiologyText: req.body.radiologyText
     }, (err, item) => {
         if (err) {
             return res.status(500).json({

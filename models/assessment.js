@@ -3,45 +3,49 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-const maternalSchema = new mongoose.Schema({
-    gravida: {
+const assessmentSchema = new mongoose.Schema({
+    husCheck: {
         type: String,
         required: false
     },
-    para: {
+    husText: {
         type: String,
         required: false
     },
-    age: {
+    respiratory: {
         type: Number,
         required: false
     },
-    vagCs: {
+    respiratoryText: {
         type: Number,
         required: false
     },
-    apgar1: {
+    fio2: {
         type: String,
         required: false
     },
-    apgar2: {
+    abdpb: {
         type: String,
         required: false
     },
-    rom: {
+    murmur: {
         type: String,
         required: false
     },
-    hx: {
+    echo: {
         type: String,
         required: false
     },
-    maternalBloodType: {
+    cardiacResults: {
+        type: String,
+        required: false
+    },
+    meds: {
         type: String,
         required: false
     }
 });
 
-const Maternal = mongoose.model('Maternal', maternalSchema);
+const Assessment = mongoose.model('Assessment', assessmentSchema);
 
-module.exports = Maternal;
+module.exports = Assessment;
