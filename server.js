@@ -404,6 +404,37 @@ app.post('/depth/create', (req, res) => {
     });
 });
 
+//Other Info
+app.post('/other/create', (req, res) => {
+
+
+    Other.create({
+        referalls: req.body.referalls,
+        synagis: req.body.synagis,
+        vaccine: req.body.vaccine,
+        pediatrician: req.body.pediatrician,
+        lastBath: req.body.lastBath,
+        consent: req.body.consent,
+        hus: req.body.hus,
+        cpDate: req.body.cpDate,
+        cpTime: req.body.cpTime,
+        phototherapyStartDate: req.body.phototherapyStartDate,
+        phototherapyEndDate: req.body.phototherapyEndDate,
+        phototherapySelect: req.body.phototherapySelect
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
+
+
 // GET
 // Get sessions to populate total days in Dashboard
 app.get('/sessions-total/:id', (req, res) => {
