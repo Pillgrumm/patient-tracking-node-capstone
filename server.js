@@ -298,6 +298,34 @@ app.post('/labs/create', (req, res) => {
     });
 });
 
+app.post('/othertests/create', (req, res) => {
+
+
+    OtherTests.create({
+        hepBDate: req.body.hepBDate,
+        newbornScreenDate: req.body.newbornScreenDate,
+        cchdEchoText: req.body.cchdEchoText,
+        eyeExamDate: req.body.eyeExamDate,
+        eyeExamText: req.body.eyeExamText,
+        fuDate: req.body.fuDate,
+        hearingCheck: req.body.hearingCheck,
+        carSeatCheck: req.body.carSeatCheck,
+        cprCheck: req.body.cprCheck,
+        circCheck: req.body.circCheck,
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error on session.add'
+            });
+        }
+        if (item) {
+            console.log(`Session added for ${sessionDate}`);
+            return res.json(item);
+        }
+    });
+});
+
+
 // GET
 // Get sessions to populate total days in Dashboard
 app.get('/sessions-total/:id', (req, res) => {
