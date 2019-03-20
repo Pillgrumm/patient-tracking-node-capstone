@@ -13,15 +13,15 @@ const assessmentSchema = new mongoose.Schema({
         required: false
     },
     respiratory: {
-        type: Number,
+        type: String,
         required: false
     },
     respiratoryText: {
-        type: Number,
+        type: String,
         required: false
     },
     fio2: {
-        type: String,
+        type: Number,
         required: false
     },
     abdpb: {

@@ -13,11 +13,11 @@ const drugsSchema = new mongoose.Schema({
         required: false
     },
     uacCheck: {
-        type: Number,
+        type: String,
         required: false
     },
     uvcCheck: {
-        type: Number,
+        type: String,
         required: false
     },
     salineLockCheck: {
@@ -29,11 +29,11 @@ const drugsSchema = new mongoose.Schema({
         required: false
     },
     ccDrug: {
-        type: String,
+        type: Number,
         required: false
     },
     hrDrug: {
-        type: String,
+        type: Number,
         required: false
     },
     tDrugInput: {
@@ -41,19 +41,19 @@ const drugsSchema = new mongoose.Schema({
         required: false
     },
     ccTDrug: {
-        type: String,
+        type: Number,
         required: false
     },
     hrTDrug: {
-        type: String,
+        type: Number,
         required: false
     },
     ccIl: {
-        type: String,
+        type: Number,
         required: false
     },
     hrIl: {
-        type: String,
+        type: Number,
         required: false
     },
     drugNotes: {
