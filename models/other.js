@@ -13,11 +13,11 @@ const otherSchema = new mongoose.Schema({
         required: false
     },
     vaccine: {
-        type: Number,
+        type: String,
         required: false
     },
     pediatrician: {
-        type: Number,
+        type: String,
         required: false
     },
     lastBath: {
