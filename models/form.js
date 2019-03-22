@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-const patientSchema = new mongoose.Schema({
+const formSchema = new mongoose.Schema({
     loggedInUser: {
         type: String,
         required: false
@@ -398,6 +398,6 @@ const patientSchema = new mongoose.Schema({
     }
 });
 
-const Patient = mongoose.model('Patient', patientSchema);
+const Form = mongoose.model('Form', formSchema);
 
-module.exports = Patient;
+module.exports = Form;

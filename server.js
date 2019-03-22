@@ -2,7 +2,7 @@
 
 const User = require('./models/users');
 const Session = require('./models/sessions');
-const Patient = require('./models/patients');
+const Form = require('./models/form');
 const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
@@ -175,10 +175,10 @@ app.post('/signin', function (req, res) {
 // Add a session
 
 //Patient
-app.post('/patient/create', (req, res) => {
+app.post('/form/create', (req, res) => {
 
 
-    Patient.create({
+    Form.create({
         loggedInUser: req.body.loggedInUser,
         firstName: req.body.firstName,
         lastName: req.body.lastName,

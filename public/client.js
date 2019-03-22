@@ -528,7 +528,7 @@ $('#submit-button').on('click', function (event) {
         console.log(generalInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/patient/create',
+                url: '/form/create',
                 dataType: 'json',
                 data: JSON.stringify(generalInformationObject),
                 contentType: 'application/json'
