@@ -29,11 +29,11 @@ const drugsSchema = new mongoose.Schema({
         required: false
     },
     ccDrug: {
-        type: Number,
+        type: String,
         required: false
     },
     hrDrug: {
-        type: Number,
+        type: String,
         required: false
     },
     tDrugInput: {
@@ -41,19 +41,19 @@ const drugsSchema = new mongoose.Schema({
         required: false
     },
     ccTDrug: {
-        type: Number,
+        type: String,
         required: false
     },
     hrTDrug: {
-        type: Number,
+        type: String,
         required: false
     },
     ccIl: {
-        type: Number,
+        type: String,
         required: false
     },
     hrIl: {
-        type: Number,
+        type: String,
         required: false
     },
     drugNotes: {

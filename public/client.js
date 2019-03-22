@@ -136,7 +136,7 @@ $('#register').on('click', function (event) {
 
 
 //General Information time of discharge returning undefined UNFINISHED
-$('#general-save').on('click', function (event) {
+$('#submit-button').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
     const firstName = $('.firstName').val();
@@ -159,6 +159,83 @@ $('#general-save').on('click', function (event) {
     const timeOfAdmission = $('.timeOfAdmission').val();
     const dateOfDischarge = $('.dateOfDischarge').val();
     const timeOfDischarge = $('.timeOfDischarge').val();
+    const gravida = $('.gravida').val();
+    const para = $('.para').val();
+    const age = $('.age').val();
+    const vagCs = $('.vagCs').val();
+    const apgar1 = $('.apgar1').val();
+    const apgar2 = $('.apgar2').val();
+    const rom = $('.rom').val();
+    const hx = $('.hx').val();
+    const husCheck = $('.husCheck').val();
+    const husText = $('.husText').val();
+    const respiratory = $('.respiratory').val();
+    const respiratoryText = $('.respiratoryText').val();
+    const fio2 = $('.fio2').val();
+    const abdpb = $('.abdpb').val();
+    const murmur = $('.murmur').val();
+    const echo = $('.echo').val();
+    const cardiacResults = $('.cardiacResults').val();
+    const meds = $('.meds').val();
+    const maternalBloodType = $('.maternalBloodType').val();
+    const labsTests = $('.labsTests').val();
+    const labsTestsText = $('.labsTestsText').val();
+    const qtuLabs = $('.qtuLabs').val();
+    const troughCheck = $('.troughCheck').val();
+    const troughText = $('.troughText').val();
+    const dateOfTrough = $('.dateOfTrough').val();
+    const timeOfTrough = $('.timeOfTrough').val();
+    const cxrCheck = $('.cxrCheck').val();
+    const cxrDate = $('.cxrDate').val();
+    const kubCheck = $('.kubCheck').val();
+    const kubDate = $('.kubDate').val();
+    const radiologyText = $('.radiologyText').val();
+    const hepBDate = $('.hepBDate').val();
+    const newbornScreenDate = $('.newbornScreenDate').val();
+    const cchdEchoText = $('.cchdEchoText').val();
+    const eyeExamDate = $('.eyeExamDate').val();
+    const eyeExamText = $('.eyeExamText').val();
+    const fuDate = $('.fuDate').val();
+    const hearingCheck = $('.hearingCheck').val();
+    const carSeatCheck = $('.carSeatCheck').val();
+    const cprCheck = $('.cprCheck').val();
+    const circCheck = $('.circCheck').val();
+    const pivCheck = $('.pivCheck').val();
+    const piccCheck = $('.piccCheck').val();
+    const uacCheck = $('.uacCheck').val();
+    const uvcCheck = $('.uvcCheck').val();
+    const salineLockCheck = $('.salineLockCheck').val();
+    const drugInput = $('.drugInput').val();
+    const ccDrug = $('.ccDrug').val();
+    const hrDrug = $('.hrDrug').val();
+    const tDrugInput = $('.tDrugInput').val();
+    const ccTDrug = $('.ccTDrug').val();
+    const hrTDrug = $('.hrTDrug').val();
+    const ccIl = $('.ccIl').val();
+    const hrIl = $('.hrIl').val();
+    const drugNotes = $('.drugNotes').val();
+    const feedingMethod = $('.feedingMethod').val();
+    const adLib = $('.adLib').val();
+    const cueBased = $('.cueBased').val();
+    const fiCC = $('.fiCC').val();
+    const hrCC = $('.hrCC').val();
+    const feedingAttempts = $('.feedingAttempts').val();
+    const completedAttempts = $('.completedAttempts').val();
+    const planOfCare = $('.planOfCare').val();
+    const socialConsiderations = $('.socialConsiderations').val();
+    const historyChanges = $('.historyChanges').val();
+    const referalls = $('.referalls').val();
+    const synagis = $('.synagis').val();
+    const vaccine = $('.vaccine').val();
+    const pediatrician = $('.pediatrician').val();
+    const lastBath = $('.lastBath').val();
+    const consent = $('.consent').val();
+    const hus = $('.hus').val();
+    const cpDate = $('.cpDate').val();
+    const cpTime = $('.cpTime').val();
+    const phototherapyStartDate = $('.phototherapyStartDate').val();
+    const phototherapyEndDate = $('.phototherapyEndDate').val();
+    const phototherapySelect = $('.phototherapySelect').val();
     if (firstName == '') {
         alert('Please enter first name.');
     } else if (lastName == "") {
@@ -195,6 +272,158 @@ $('#general-save').on('click', function (event) {
         alert('Please enter date of admission');
     } else if (timeOfAdmission == "") {
         alert('Please enter time of admission');
+    } else if (gravida == '') {
+        alert('Please enter gravida count');
+    } else if (para == "") {
+        alert('Please enter para count');
+    } else if (age == "") {
+        alert('Please enter maternal age');
+    } else if (vagCs == null) {
+        alert('Please specify birth type');
+    } else if (apgar1 == null) {
+        alert('Please enter digit for first APGAR selection');
+    } else if (apgar2 == null) {
+        alert('Please enter maternal rupture of membranes');
+    } else if (hx == "") {
+        alert('Please enter maternal history');
+    } else if (maternalBloodType == null) {
+        alert('Please enter maternal bloodtype');
+    } else if (husCheck == '') {
+        alert('Please check HUS');
+    } else if (husText == "") {
+        alert('Please enter HUS text');
+    } else if (respiratory == "") {
+        alert('Please enter respiratory setting');
+    } else if (respiratoryText == "") {
+        alert('Please enter respiratory notes');
+    } else if (fio2 == "") {
+        alert('Please enter FIO2 percentage');
+    } else if (abdpb == "") {
+        alert('Please enter AB/Desat/PB information');
+    } else if (murmur == "") {
+        alert('Please check Murmur');
+    } else if (echo == "") {
+        alert('Please check ECHO');
+    } else if (cardiacResults == "") {
+        alert('Please input cardiac results');
+    } else if (meds == "") {
+        alert('Please input meds');
+    } else if (labsTests == '') {
+        alert('Please check labs');
+    } else if (labsTestsText == "") {
+        alert('Please input lab test results');
+    } else if (qtuLabs == "") {
+        alert('Please enter QTu Lab results');
+    } else if (troughCheck == "") {
+        alert('Please check trough');
+    } else if (troughText == "") {
+        alert('Please enter trough notes');
+    } else if (dateOfTrough == "") {
+        alert('Please enter date of trough');
+    } else if (timeOfTrough == "") {
+        alert('Please enter time of trough');
+    } else if (cxrCheck == "") {
+        alert('Please check CXR');
+    } else if (cxrDate == "") {
+        alert('Please input CXR date');
+    } else if (kubCheck == "") {
+        alert('Please check KUB');
+    } else if (kubDate == "") {
+        alert('Please input KUB date');
+    } else if (radiologyText == "") {
+        alert('Please input radiology report');
+    } else if (hepBDate == "") {
+        alert('Please input date hepatitis B vaccine was received');
+    } else if (newbornScreenDate == "") {
+        alert('Please input date of Newborn Screen');
+    } else if (cchdEchoText == "") {
+        alert('Please input notes for CCHD/ECHO');
+    } else if (eyeExamDate == "") {
+        alert('Please input eye exam date');
+    } else if (eyeExamText == "") {
+        alert('Please input eye exam results');
+    } else if (fuDate == "") {
+        alert('Please input follow-up date');
+    } else if (hearingCheck == "") {
+        alert('Please check if patient has had hearing exam');
+    } else if (carSeatCheck == "") {
+        alert('Please check if patient needs carseat');
+    } else if (cprCheck == "") {
+        alert('Please check if parents have watched CPR video');
+    } else if (circCheck == "") {
+        alert('Please check if patient is circumsized');
+    } else if (pivCheck == '') {
+        alert('Please check PIV');
+    } else if (piccCheck == "") {
+        alert('Please check PICC');
+    } else if (uacCheck == "") {
+        alert('Please check UAC');
+    } else if (uvcCheck == "") {
+        alert('Please check for UVC');
+    } else if (salineLockCheck == "") {
+        alert('Please check for Saline Lock');
+    } else if (drugInput == "") {
+        alert('Please input drug used');
+    } else if (ccDrug == "") {
+        alert('Please enter CC for drug usage');
+    } else if (hrDrug == "") {
+        alert('Please enter drug amount per hour');
+    } else if (tDrugInput == "") {
+        alert('Please input TPN Drug used');
+    } else if (ccTDrug == "") {
+        alert('Please enter TPN CC for drug usage');
+    } else if (hrTDrug == "") {
+        alert('Please enter TPN drug amount per hour');
+    } else if (ccIl == "") {
+        alert('Please enter IL CC drug usage');
+    } else if (hrIl == "") {
+        alert('Please enter IL drug amount per hour');
+    } else if (drugNotes == "") {
+        alert('Please input notes regarding drugs');
+    } else if (feedingMethod == null) {
+        alert('Please select feeding method');
+    } else if (adLib == "") {
+        alert('Please check for ad lib');
+    } else if (cueBased == "") {
+        alert('Please check if patient is cue based feeding');
+    } else if (fiCC == "") {
+        alert('Please input food intake');
+    } else if (hrCC == "") {
+        alert('Please check food intake per hour');
+    } else if (feedingAttempts == "") {
+        alert('Please input feeding attempts');
+    } else if (completedAttempts == "") {
+        alert('Please enter completed feeding attempts');
+    } else if (planOfCare == '') {
+        alert('Please enter plan of care');
+    } else if (socialConsiderations == "") {
+        alert('Please enter social considerations');
+    } else if (historyChanges == "") {
+        alert('Please enter history/changes');
+    } else if (referalls == '') {
+        alert('Please input referalls');
+    } else if (synagis == "") {
+        alert('Please check synagis');
+    } else if (vaccine == "") {
+        alert('Please check vaccines');
+    } else if (pediatrician == "") {
+        alert('Please input pediatrician information');
+    } else if (lastBath == "") {
+        alert('Please input date for patients last bath');
+    } else if (consent == "") {
+        alert('Please check cooling patient consent');
+    } else if (hus == "") {
+        alert('Please check cooling patient HUS');
+    } else if (cpDate == "") {
+        alert('Please enter cooling patient date');
+    } else if (cpTime == "") {
+        alert('Please enter cooling patient time');
+    } else if (phototherapyStartDate == "") {
+        alert('Please enter phototherapy start date');
+    } else if (phototherapyEndDate == "") {
+        alert('Please enter phototherapy end date');
+    } else if (phototherapySelect == null) {
+        alert('Please select phototherapy option');
     } else {
         const generalInformationObject = {
             loggedInUser,
@@ -217,7 +446,84 @@ $('#general-save').on('click', function (event) {
             dateOfAdmission,
             timeOfAdmission,
             dateOfDischarge,
-            timeOfDischarge
+            timeOfDischarge,
+            gravida,
+            para,
+            age,
+            vagCs,
+            apgar1,
+            apgar2,
+            rom,
+            hx,
+            maternalBloodType,
+            husCheck,
+            husText,
+            respiratory,
+            respiratoryText,
+            fio2,
+            abdpb,
+            murmur,
+            echo,
+            cardiacResults,
+            meds,
+            labsTests,
+            labsTestsText,
+            qtuLabs,
+            troughCheck,
+            troughText,
+            dateOfTrough,
+            timeOfTrough,
+            cxrCheck,
+            cxrDate,
+            kubCheck,
+            kubDate,
+            radiologyText,
+            hepBDate,
+            newbornScreenDate,
+            cchdEchoText,
+            eyeExamDate,
+            eyeExamText,
+            fuDate,
+            hearingCheck,
+            carSeatCheck,
+            cprCheck,
+            circCheck,
+            pivCheck,
+            piccCheck,
+            uacCheck,
+            uvcCheck,
+            salineLockCheck,
+            drugInput,
+            ccDrug,
+            hrDrug,
+            tDrugInput,
+            ccTDrug,
+            hrTDrug,
+            ccIl,
+            hrIl,
+            drugNotes,
+            feedingMethod,
+            adLib,
+            cueBased,
+            fiCC,
+            hrCC,
+            feedingAttempts,
+            completedAttempts,
+            planOfCare,
+            socialConsiderations,
+            historyChanges,
+            referalls,
+            synagis,
+            vaccine,
+            pediatrician,
+            lastBath,
+            consent,
+            hus,
+            cpDate,
+            cpTime,
+            phototherapyStartDate,
+            phototherapyEndDate,
+            phototherapySelect
         };
         console.log(generalInformationObject);
         $.ajax({
@@ -289,7 +595,7 @@ $('#maternal-submit').on('click', function (event) {
         console.log(maternalInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/maternal/create',
                 dataType: 'json',
                 data: JSON.stringify(maternalInformationObject),
                 contentType: 'application/json'
@@ -362,7 +668,7 @@ $('#assessment-submit').on('click', function (event) {
         console.log(assessmentInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/assessment/create',
                 dataType: 'json',
                 data: JSON.stringify(assessmentInformationObject),
                 contentType: 'application/json'
@@ -442,7 +748,7 @@ $('#labs-submit').on('click', function (event) {
         console.log(labsInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/labs/create',
                 dataType: 'json',
                 data: JSON.stringify(labsInformationObject),
                 contentType: 'application/json'
@@ -514,7 +820,7 @@ $('#other-tests-submit').on('click', function (event) {
         console.log(otherTestsInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/othertests/create',
                 dataType: 'json',
                 data: JSON.stringify(otherTestsInformationObject),
                 contentType: 'application/json'
@@ -601,7 +907,7 @@ $('#drugs-submit').on('click', function (event) {
         console.log(drugInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/drugs/create',
                 dataType: 'json',
                 data: JSON.stringify(drugInformationObject),
                 contentType: 'application/json'
@@ -660,7 +966,7 @@ $('#feeding-submit').on('click', function (event) {
         console.log(feedingInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/feeding/create',
                 dataType: 'json',
                 data: JSON.stringify(feedingInformationObject),
                 contentType: 'application/json'
@@ -703,7 +1009,7 @@ $('#depth-submit').on('click', function (event) {
         console.log(depthInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/depth/create',
                 dataType: 'json',
                 data: JSON.stringify(depthInformationObject),
                 contentType: 'application/json'
@@ -782,7 +1088,7 @@ $('#other-submit').on('click', function (event) {
         console.log(otherInformationObject);
         $.ajax({
                 type: 'POST',
-                url: '/users/create',
+                url: '/other/create',
                 dataType: 'json',
                 data: JSON.stringify(otherInformationObject),
                 contentType: 'application/json'

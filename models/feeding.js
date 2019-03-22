@@ -17,19 +17,19 @@ const feedingSchema = new mongoose.Schema({
         required: false
     },
     fiCC: {
-        type: Number,
+        type: String,
         required: false
     },
     hrCC: {
-        type: Number,
+        type: String,
         required: false
     },
     feedingAttempts: {
-        type: Number,
+        type: String,
         required: false
     },
     completedAttempts: {
-        type: Number,
+        type: String,
         required: false
     }
 });

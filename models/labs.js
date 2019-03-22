@@ -13,11 +13,11 @@ const labsSchema = new mongoose.Schema({
         required: false
     },
     qtuLabs: {
-        type: Number,
+        type: String,
         required: false
     },
     troughCheck: {
-        type: Number,
+        type: String,
         required: false
     },
     troughText: {

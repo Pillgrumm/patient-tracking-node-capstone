@@ -13,11 +13,11 @@ const otherTestsSchema = new mongoose.Schema({
         required: false
     },
     cchdEchoText: {
-        type: Number,
+        type: String,
         required: false
     },
     eyeExamDate: {
-        type: Number,
+        type: String,
         required: false
     },
     eyeExamText: {
@@ -46,6 +46,6 @@ const otherTestsSchema = new mongoose.Schema({
     }
 });
 
-const Assessment = mongoose.model('OtherTests', otherTestsSchema);
+const OtherTests = mongoose.model('OtherTests', otherTestsSchema);
 
 module.exports = OtherTests;
