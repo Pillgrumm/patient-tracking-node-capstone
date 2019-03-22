@@ -136,7 +136,7 @@ $('#register').on('click', function (event) {
 
 
 //General Information time of discharge returning undefined UNFINISHED
-$('#submit-button').on('click', function (event) {
+$('#form-submit-button').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
     const firstName = $('.firstName').val();
