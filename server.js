@@ -3,14 +3,14 @@
 const User = require('./models/users');
 const Session = require('./models/sessions');
 const Patient = require('./models/patients');
-const Maternal = require('./models/maternal');
-const Labs = require('./models/labs');
-const Assessment = require('./models/assessment');
-const OtherTests = require('./models/othertests');
-const Drugs = require('./models/drugs');
-const Feeding = require('./models/feeding');
-const Depth = require('./models/depth');
-const Other = require('./models/other');
+//const Maternal = require('./models/maternal');
+//const Labs = require('./models/labs');
+//const Assessment = require('./models/assessment');
+//const OtherTests = require('./models/othertests');
+//const Drugs = require('./models/drugs');
+//const Feeding = require('./models/feeding');
+//const Depth = require('./models/depth');
+//const Other = require('./models/other');
 const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
@@ -297,227 +297,227 @@ app.post('/patient/create', (req, res) => {
     });
 });
 
-//Maternal
-app.post('/maternal/create', (req, res) => {
-
-
-    Maternal.create({
-        gravida: req.body.gravida,
-        para: req.body.para,
-        age: req.body.age,
-        vagCs: req.body.vagCs,
-        apgar1: req.body.apgar1,
-        apgar2: req.body.apgar2,
-        rom: req.body.rom,
-        hx: req.body.hx,
-        maternalBloodType: req.body.maternalBloodType
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
+////Maternal
+//app.post('/maternal/create', (req, res) => {
 //
-//Assessment
-app.post('/assessment/create', (req, res) => {
-
-
-    Assessment.create({
-        husCheck: req.body.husCheck,
-        husText: req.body.husText,
-        respiratory: req.body.respiratory,
-        respiratoryText: req.body.respiratoryText,
-        fio2: req.body.fio2,
-        abdpb: req.body.abdpb,
-        murmur: req.body.murmur,
-        echo: req.body.echo,
-        cardiacResults: req.body.cardiacResults,
-        meds: req.body.meds
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
 //
-//Labs
-app.post('/labs/create', (req, res) => {
-
-
-    Labs.create({
-        labsTests: req.body.labsTests,
-        labsTestsText: req.body.labsTestsText,
-        qtuLabs: req.body.qtuLabs,
-        troughCheck: req.body.troughCheck,
-        troughText: req.body.troughText,
-        dateOfTrough: req.body.dateOfTrough,
-        timeOfTrough: req.body.timeOfTrough,
-        cxrCheck: req.body.cxrCheck,
-        cxrDate: req.body.cxrDate,
-        kubCheck: req.body.kubCheck,
-        kubDate: req.body.kubDate,
-        radiologyText: req.body.radiologyText
-    }, (err, item) => {
-        console.log(err, item);
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
-
-//Other tests
-app.post('/othertests/create', (req, res) => {
-
-
-    OtherTests.create({
-        hepBDate: req.body.hepBDate,
-        newbornScreenDate: req.body.newbornScreenDate,
-        cchdEchoText: req.body.cchdEchoText,
-        eyeExamDate: req.body.eyeExamDate,
-        eyeExamText: req.body.eyeExamText,
-        fuDate: req.body.fuDate,
-        hearingCheck: req.body.hearingCheck,
-        carSeatCheck: req.body.carSeatCheck,
-        cprCheck: req.body.cprCheck,
-        circCheck: req.body.circCheck
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
-
-//Drugs
-app.post('/drugs/create', (req, res) => {
-
-
-    Drugs.create({
-        pivCheck: req.body.pivCheck,
-        piccCheck: req.body.piccCheck,
-        uacCheck: req.body.uacCheck,
-        uvcCheck: req.body.uvcCheck,
-        salineLockCheck: req.body.salineLockCheck,
-        drugInput: req.body.drugInput,
-        ccDrug: req.body.ccDrug,
-        hrDrug: req.body.hrDrug,
-        tDrugInput: req.body.tDrugInput,
-        ccTDrug: req.body.ccTDrug,
-        hrTDrug: req.body.hrTDrug,
-        ccIl: req.body.ccIl,
-        hrIl: req.body.hrIl,
-        drugNotes: req.body.drugNotes
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
-
-//Feeding
-app.post('/feeding/create', (req, res) => {
-
-
-    Feeding.create({
-        feedingMethod: req.body.feedingMethod,
-        adLib: req.body.adLib,
-        cueBased: req.body.cueBased,
-        fiCC: req.body.fiCC,
-        hrCC: req.body.hrCC,
-        feedingAttempts: req.body.feedingAttempts,
-        completedAttempts: req.body.completedAttempts
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
-
-//Depth Notes
-app.post('/depth/create', (req, res) => {
-
-
-    Depth.create({
-        planOfCare: req.body.planOfCare,
-        socialConsiderations: req.body.socialConsiderations,
-        historyChanges: req.body.historyChanges
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
-
-//Other Info
-app.post('/other/create', (req, res) => {
-
-
-    Other.create({
-        referalls: req.body.referalls,
-        synagis: req.body.synagis,
-        vaccine: req.body.vaccine,
-        pediatrician: req.body.pediatrician,
-        lastBath: req.body.lastBath,
-        consent: req.body.consent,
-        hus: req.body.hus,
-        cpDate: req.body.cpDate,
-        cpTime: req.body.cpTime,
-        phototherapyStartDate: req.body.phototherapyStartDate,
-        phototherapyEndDate: req.body.phototherapyEndDate,
-        phototherapySelect: req.body.phototherapySelect
-    }, (err, item) => {
-        if (err) {
-            return res.status(500).json({
-                message: err
-            });
-        }
-        if (item) {
-
-            return res.json(item);
-        }
-    });
-});
+//    Maternal.create({
+//        gravida: req.body.gravida,
+//        para: req.body.para,
+//        age: req.body.age,
+//        vagCs: req.body.vagCs,
+//        apgar1: req.body.apgar1,
+//        apgar2: req.body.apgar2,
+//        rom: req.body.rom,
+//        hx: req.body.hx,
+//        maternalBloodType: req.body.maternalBloodType
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+////
+////Assessment
+//app.post('/assessment/create', (req, res) => {
+//
+//
+//    Assessment.create({
+//        husCheck: req.body.husCheck,
+//        husText: req.body.husText,
+//        respiratory: req.body.respiratory,
+//        respiratoryText: req.body.respiratoryText,
+//        fio2: req.body.fio2,
+//        abdpb: req.body.abdpb,
+//        murmur: req.body.murmur,
+//        echo: req.body.echo,
+//        cardiacResults: req.body.cardiacResults,
+//        meds: req.body.meds
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+////
+////Labs
+//app.post('/labs/create', (req, res) => {
+//
+//
+//    Labs.create({
+//        labsTests: req.body.labsTests,
+//        labsTestsText: req.body.labsTestsText,
+//        qtuLabs: req.body.qtuLabs,
+//        troughCheck: req.body.troughCheck,
+//        troughText: req.body.troughText,
+//        dateOfTrough: req.body.dateOfTrough,
+//        timeOfTrough: req.body.timeOfTrough,
+//        cxrCheck: req.body.cxrCheck,
+//        cxrDate: req.body.cxrDate,
+//        kubCheck: req.body.kubCheck,
+//        kubDate: req.body.kubDate,
+//        radiologyText: req.body.radiologyText
+//    }, (err, item) => {
+//        console.log(err, item);
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+//
+////Other tests
+//app.post('/othertests/create', (req, res) => {
+//
+//
+//    OtherTests.create({
+//        hepBDate: req.body.hepBDate,
+//        newbornScreenDate: req.body.newbornScreenDate,
+//        cchdEchoText: req.body.cchdEchoText,
+//        eyeExamDate: req.body.eyeExamDate,
+//        eyeExamText: req.body.eyeExamText,
+//        fuDate: req.body.fuDate,
+//        hearingCheck: req.body.hearingCheck,
+//        carSeatCheck: req.body.carSeatCheck,
+//        cprCheck: req.body.cprCheck,
+//        circCheck: req.body.circCheck
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+//
+////Drugs
+//app.post('/drugs/create', (req, res) => {
+//
+//
+//    Drugs.create({
+//        pivCheck: req.body.pivCheck,
+//        piccCheck: req.body.piccCheck,
+//        uacCheck: req.body.uacCheck,
+//        uvcCheck: req.body.uvcCheck,
+//        salineLockCheck: req.body.salineLockCheck,
+//        drugInput: req.body.drugInput,
+//        ccDrug: req.body.ccDrug,
+//        hrDrug: req.body.hrDrug,
+//        tDrugInput: req.body.tDrugInput,
+//        ccTDrug: req.body.ccTDrug,
+//        hrTDrug: req.body.hrTDrug,
+//        ccIl: req.body.ccIl,
+//        hrIl: req.body.hrIl,
+//        drugNotes: req.body.drugNotes
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+//
+////Feeding
+//app.post('/feeding/create', (req, res) => {
+//
+//
+//    Feeding.create({
+//        feedingMethod: req.body.feedingMethod,
+//        adLib: req.body.adLib,
+//        cueBased: req.body.cueBased,
+//        fiCC: req.body.fiCC,
+//        hrCC: req.body.hrCC,
+//        feedingAttempts: req.body.feedingAttempts,
+//        completedAttempts: req.body.completedAttempts
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+//
+////Depth Notes
+//app.post('/depth/create', (req, res) => {
+//
+//
+//    Depth.create({
+//        planOfCare: req.body.planOfCare,
+//        socialConsiderations: req.body.socialConsiderations,
+//        historyChanges: req.body.historyChanges
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
+//
+////Other Info
+//app.post('/other/create', (req, res) => {
+//
+//
+//    Other.create({
+//        referalls: req.body.referalls,
+//        synagis: req.body.synagis,
+//        vaccine: req.body.vaccine,
+//        pediatrician: req.body.pediatrician,
+//        lastBath: req.body.lastBath,
+//        consent: req.body.consent,
+//        hus: req.body.hus,
+//        cpDate: req.body.cpDate,
+//        cpTime: req.body.cpTime,
+//        phototherapyStartDate: req.body.phototherapyStartDate,
+//        phototherapyEndDate: req.body.phototherapyEndDate,
+//        phototherapySelect: req.body.phototherapySelect
+//    }, (err, item) => {
+//        if (err) {
+//            return res.status(500).json({
+//                message: err
+//            });
+//        }
+//        if (item) {
+//
+//            return res.json(item);
+//        }
+//    });
+//});
 
 
 // GET
