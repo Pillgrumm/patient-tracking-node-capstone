@@ -35,7 +35,7 @@ p {
     width: 125px;
     padding-top: 5px;
     padding-bottom: 5px;
-    color: white !important; 
+    color: white !important;
     border-radius: 4px;
     border: #27ae60 1px solid;
     margin-top: 20px;
@@ -46,14 +46,30 @@ p {
     font-size: 0.8em;
 }
 
+.select-previous-entries-button {
+    background: #462ecc;
+    width: 125px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white !important;
+    border-radius: 4px;
+    border: #27ae60 1px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 88px;
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
 .button:hover,
-.submit-button:hover {
+.submit-button:hover,
+.select-previous-entries-button:hover {
     background: #2CC06B;
     color: white;
 }
 
 #absoluteCenteredDiv {
-    
+
     top: 0;
     bottom: 0;
     left: 0;

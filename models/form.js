@@ -133,7 +133,23 @@ const formSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    respiratory: {
+    ra: {
+        type: String,
+        required: false
+    },
+    vent: {
+        type: String,
+        required: false
+    },
+    hfnc: {
+        type: String,
+        required: false
+    },
+    vt: {
+        type: String,
+        required: false
+    },
+    cpap: {
         type: String,
         required: false
     },
@@ -166,6 +182,26 @@ const formSchema = new mongoose.Schema({
         required: false
     },
     labsTests: {
+        type: String,
+        required: false
+    },
+    cbc: {
+        type: String,
+        required: false
+    },
+    tb: {
+        type: String,
+        required: false
+    },
+    bmp: {
+        type: String,
+        required: false
+    },
+    crp: {
+        type: String,
+        required: false
+    },
+    tg: {
         type: String,
         required: false
     },
@@ -374,7 +410,7 @@ const formSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    hus: {
+    husCP: {
         type: String,
         required: false
     },

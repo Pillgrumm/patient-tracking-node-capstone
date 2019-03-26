@@ -52,15 +52,19 @@
         </div>
     </main>
     <main role="main" id="full-form" class="hidden">
-        <section class="select-previous-entries">
-            <h2>Previous Entries</h2>
-            <select class="previous-entries-dropdown">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-            <button type="button" class="select-previous-entries-button">Select</button>
+        <section class="form-wrapper">
+            <fieldset>
+                <section class="select-previous-entries">
+                    <legend class="legend">Previous Entries</legend>
+                    <select class="previous-entries-dropdown sideBySide">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <button type="button" class="select-previous-entries-button">Select</button>
+                </section>
+            </fieldset>
         </section>
         <form class="general-information-form">
             <section class="form-wrapper">
@@ -585,12 +589,12 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="labsTests">Labs/Tests</label>
-                            <input type="checkbox" class="labsTests sideBySide" id="cbc" name="labsTests" value="cbc"> CBC
-                            <input type="checkbox" class="labsTests sideBySide" id="tb" name="labsTests" value="tb"> TB
-                            <input type="checkbox" class="labsTests sideBySide" id="bmp" name="labsTests" value="bmp"> BMP
-                            <input type="checkbox" class="labsTests sideBySide" id="crp" name="labsTests" value="crp"> CRP
-                            <input type="checkbox" class="labsTests sideBySide" id="tg" name="labsTests" value="tb"> TG
-                            <textarea class="labsTestsText depth-notes" name="meds" cols="40" rows="5">lorem ipsum Labs/Tests</textarea>
+                            <input type="checkbox" class="cbc sideBySide" name="cbc" value="cbc"> CBC
+                            <input type="checkbox" class="tb sideBySide" name="tb" value="tb"> TB
+                            <input type="checkbox" class="bmp sideBySide" name="bmp" value="bmp"> BMP
+                            <input type="checkbox" class="crp sideBySide" name="crp" value="crp"> CRP
+                            <input type="checkbox" class="tg sideBySide" name="tg" value="tg"> TG
+                            <textarea class="labsTestsText depth-notes" name="labsTestsText" cols="40" rows="5">lorem ipsum Labs/Tests</textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -977,7 +981,7 @@
                         <div class="input-wrapper">
                             <label for="coolingPatient">Cooling Patient</label>
                             <input type="checkbox" class="consent sideBySide" name="consent" value="Consent"> Consent
-                            <input type="checkbox" class="hus sideBySide" name="hus" value="hus"> HUS
+                            <input type="checkbox" class="husCP sideBySide" name="husCP" value="husCP"> HUS
                             <input type="date" class="cpDate sideBySide" name="cpDate" value="2019-03-03">Date
                             <input type="time" class="cpTime sideBySide" name="cpTime" value="08:30">Time
                             <div class="icons-wrapper">

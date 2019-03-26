@@ -194,27 +194,35 @@ $('#form-submit-button').on('click', function (event) {
     const apgar2 = $('.apgar2').val();
     const rom = $('.rom').val();
     const hx = $('.hx').val();
-    const husCheck = $('.husCheck').val();
+    const husCheck = $("input[name='husCheck']:checked").val();
     const husText = $('.husText').val();
-    const respiratory = $('.respiratory').val();
+    const ra = $("input[id='ra']:checked").val();
+    const vent = $("input[id='vent']:checked").val();
+    const hfnc = $("input[id='hfnc']:checked").val();
+    const vt = $("input[id='vt']:checked").val();
+    const cpap = $("input[id='cpap']:checked").val();
     const respiratoryText = $('.respiratoryText').val();
     const fio2 = $('.fio2').val();
     const abdpb = $('.abdpb').val();
-    const murmur = $('.murmur').val();
-    const echo = $('.echo').val();
+    const murmur = $("input[name='murmur']:checked").val();
+    const echo = $("input[name='echo']:checked").val();
     const cardiacResults = $('.cardiacResults').val();
     const meds = $('.meds').val();
     const maternalBloodType = $('.maternalBloodType').val();
-    const labsTests = $('.labsTests').val();
+    const cbc = $("input[name='cbc']:checked").val();
+    const tb = $("input[name='tb']:checked").val();
+    const bmp = $("input[name='bmp']:checked").val();
+    const crp = $("input[name='crp']:checked").val();
+    const tg = $("input[name='tg']:checked").val();
     const labsTestsText = $('.labsTestsText').val();
     const qtuLabs = $('.qtuLabs').val();
-    const troughCheck = $('.troughCheck').val();
+    const troughCheck = $("input[name='troughCheck']:checked").val();
     const troughText = $('.troughText').val();
     const dateOfTrough = $('.dateOfTrough').val();
     const timeOfTrough = $('.timeOfTrough').val();
-    const cxrCheck = $('.cxrCheck').val();
+    const cxrCheck = $("input[name='cxrCheck']:checked").val();
     const cxrDate = $('.cxrDate').val();
-    const kubCheck = $('.kubCheck').val();
+    const kubCheck = $("input[name='kubCheck']:checked").val();
     const kubDate = $('.kubDate').val();
     const radiologyText = $('.radiologyText').val();
     const hepBDate = $('.hepBDate').val();
@@ -223,15 +231,15 @@ $('#form-submit-button').on('click', function (event) {
     const eyeExamDate = $('.eyeExamDate').val();
     const eyeExamText = $('.eyeExamText').val();
     const fuDate = $('.fuDate').val();
-    const hearingCheck = $('.hearingCheck').val();
-    const carSeatCheck = $('.carSeatCheck').val();
-    const cprCheck = $('.cprCheck').val();
-    const circCheck = $('.circCheck').val();
-    const pivCheck = $('.pivCheck').val();
-    const piccCheck = $('.piccCheck').val();
-    const uacCheck = $('.uacCheck').val();
-    const uvcCheck = $('.uvcCheck').val();
-    const salineLockCheck = $('.salineLockCheck').val();
+    const hearingCheck = $("input[name='hearingCheck']:checked").val();
+    const carSeatCheck = $("input[name='carSeatCheck']:checked").val();
+    const cprCheck = $("input[name='cprCheck']:checked").val();
+    const circCheck = $("input[name='circCheck']:checked").val();
+    const pivCheck = $("input[name='pivCheck']:checked").val();
+    const piccCheck = $("input[name='piccCheck']:checked").val();
+    const uacCheck = $("input[name='uacCheck']:checked").val();
+    const uvcCheck = $("input[name='uvcCheck']:checked").val();
+    const salineLockCheck = $("input[name='salineLockCheck']:checked").val();
     const drugInput = $('.drugInput').val();
     const ccDrug = $('.ccDrug').val();
     const hrDrug = $('.hrDrug').val();
@@ -242,10 +250,8 @@ $('#form-submit-button').on('click', function (event) {
     const hrIl = $('.hrIl').val();
     const drugNotes = $('.drugNotes').val();
     const feedingMethod = $('.feedingMethod').val();
-    //    const adLib = $('.adLib').val();
     const adLib = $("input[name='adLib']:checked").val();
     console.log(adLib);
-    //    const cueBased = $('.cueBased').val();
     const cueBased = $("input[name='cueBased']:checked").val();
     console.log(cueBased);
     const fiCC = $('.fiCC').val();
@@ -256,12 +262,12 @@ $('#form-submit-button').on('click', function (event) {
     const socialConsiderations = $('.socialConsiderations').val();
     const historyChanges = $('.historyChanges').val();
     const referalls = $('.referalls').val();
-    const synagis = $('.synagis').val();
-    const vaccine = $('.vaccine').val();
+    const synagis = $("input[name='synagis']:checked").val();
+    const vaccine = $("input[name='vaccine']:checked").val();
     const pediatrician = $('.pediatrician').val();
     const lastBath = $('.lastBath').val();
-    const consent = $('.consent').val();
-    const hus = $('.hus').val();
+    const consent = $("input[name='consent']:checked").val();
+    const husCP = $("input[name='husCP']:checked").val();
     const cpDate = $('.cpDate').val();
     const cpTime = $('.cpTime').val();
     const phototherapyStartDate = $('.phototherapyStartDate').val();
@@ -323,8 +329,6 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please check HUS');
     } else if (husText == "") {
         alert('Please enter HUS text');
-    } else if (respiratory == "") {
-        alert('Please enter respiratory setting');
     } else if (respiratoryText == "") {
         alert('Please enter respiratory notes');
     } else if (fio2 == "") {
@@ -339,8 +343,6 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please input cardiac results');
     } else if (meds == "") {
         alert('Please input meds');
-    } else if (labsTests == '') {
-        alert('Please check labs');
     } else if (labsTestsText == "") {
         alert('Please input lab test results');
     } else if (qtuLabs == "") {
@@ -443,7 +445,7 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please input date for patients last bath');
     } else if (consent == "") {
         alert('Please check cooling patient consent');
-    } else if (hus == "") {
+    } else if (husCP == "") {
         alert('Please check cooling patient HUS');
     } else if (cpDate == "") {
         alert('Please enter cooling patient date');
@@ -489,7 +491,11 @@ $('#form-submit-button').on('click', function (event) {
             maternalBloodType,
             husCheck,
             husText,
-            respiratory,
+            ra,
+            vent,
+            hfnc,
+            vt,
+            cpap,
             respiratoryText,
             fio2,
             abdpb,
@@ -497,7 +503,11 @@ $('#form-submit-button').on('click', function (event) {
             echo,
             cardiacResults,
             meds,
-            labsTests,
+            cbc,
+            tb,
+            bmp,
+            crp,
+            tg,
             labsTestsText,
             qtuLabs,
             troughCheck,
@@ -549,7 +559,7 @@ $('#form-submit-button').on('click', function (event) {
             pediatrician,
             lastBath,
             consent,
-            hus,
+            husCP,
             cpDate,
             cpTime,
             phototherapyStartDate,
