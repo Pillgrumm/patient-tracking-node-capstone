@@ -6,7 +6,8 @@ const bcrypt = require('bcryptjs');
 const formSchema = new mongoose.Schema({
     loggedInUser: {
         type: String,
-        required: false
+        required: false,
+        default: ""
     },
     firstName: {
         type: String,
@@ -314,7 +315,8 @@ const formSchema = new mongoose.Schema({
     },
     adLib: {
         type: String,
-        required: false
+        required: false,
+        default: ""
     },
     cueBased: {
         type: String,
@@ -395,6 +397,10 @@ const formSchema = new mongoose.Schema({
     phototherapySelect: {
         type: String,
         required: false
+    },
+    addedToDB: {
+        type: Date,
+        default: Date.now
     }
 });
 

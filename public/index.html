@@ -52,9 +52,19 @@
         </div>
     </main>
     <main role="main" id="full-form" class="hidden">
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="general-information-form">
+        <section class="select-previous-entries">
+            <h2>Previous Entries</h2>
+            <select class="previous-entries-dropdown">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+            <button type="button" class="select-previous-entries-button">Select</button>
+        </section>
+        <form class="general-information-form">
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> General Patient Information</legend>
                     <legend class="legend-hide"><button>-</button> General Patient Information</legend>
                     <section class="section-content">
@@ -319,12 +329,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="maternal-information-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Maternal/Delivery Information</legend>
                     <legend class="legend-hide"><button>-</button> Maternal/Delivery Information</legend>
                     <section class="section-content">
@@ -477,12 +485,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="assessment-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Assessment</legend>
                     <legend class="legend-hide"><button>-</button> Assessment</legend>
                     <section class="section-content">
@@ -570,12 +576,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="labs-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Labs/Tests</legend>
                     <legend class="legend-hide"><button>-</button> Labs/Tests</legend>
                     <section class="section-content">
@@ -636,12 +640,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="other-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Other Tests</legend>
                     <legend class="legend-hide"><button>-</button> Other Tests</legend>
                     <section class="section-content">
@@ -741,12 +743,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="drugs-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Fluids/Drugs</legend>
                     <legend class="legend-hide"><button>-</button> Fluids/Drugs</legend>
                     <section class="section-content">
@@ -810,12 +810,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="feeding-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Diet/Feeding Schedule</legend>
                     <legend class="legend-hide"><button>-</button> Diet/Feeding Schedule</legend>
                     <section class="section-content">
@@ -881,12 +879,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="depth-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> In Depth Patient Notes</legend>
                     <legend class="legend-hide"><button>-</button> In Depth Patient Notes</legend>
                     <section class="section-content">
@@ -921,12 +917,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-        </section>
-        <section class="form-wrapper">
-            <fieldset>
-                <form class="other-form">
+                </fieldset>
+            </section>
+            <section class="form-wrapper">
+                <fieldset>
                     <legend class="legend-show"><button>+</button> Other</legend>
                     <legend class="legend-hide"><button>-</button> Other</legend>
                     <section class="section-content">
@@ -1011,10 +1005,10 @@
                             </div>
                         </div>
                     </section>
-                </form>
-            </fieldset>
-            <button class="sideBySide button" id="form-submit-button">Submit</button>
-        </section>
+                </fieldset>
+                <button class="sideBySide button" id="form-submit-button">Submit</button>
+            </section>
+        </form>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="client.js"></script>

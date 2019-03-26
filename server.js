@@ -1,7 +1,6 @@
 'use strict';
 
 const User = require('./models/users');
-const Session = require('./models/sessions');
 const Form = require('./models/form');
 const cors = require('cors');
 const express = require('express');
@@ -289,163 +288,163 @@ app.post('/form/create', (req, res) => {
     });
 });
 
-// GET
-// Get sessions to populate total days in Dashboard
-app.get('/sessions-total/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        })
-        .count()
-        .then((sessions) => {
-            res.json(sessions);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
-
-// GET
-// Get sessions to populate days in a row in Dashboard
-app.get('/sessions-streak/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        }, {
-            sessionDateUnix: 1
-        })
-        .sort({
-            sessionDateUnix: -1
-        })
-        .then((sessions) => {
-            res.json(sessions);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
-
-
-// GET
-// Get sessions to populate last 10 days in Dashboard
-app.get('/sessions-ten/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        }, {
-            sessionDateUnix: 1
-        })
-        .sort({
-            sessionDateUnix: -1
-        })
-        .then((sessions) => {
-            res.json(sessions);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
-
-// GET
-// Get sessions to most used method in Dashboard
-app.get('/sessions-method/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        }, {
-            sessionType: 1
-        })
-        .then((sessions) => {
-            res.json(sessions);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
-
-// GET
-// Get sessions to populate avg session length in Dashboard
-app.get('/sessions-avg/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        }, {
-            sessionTime: 1
-        })
-        .then((sessions) => {
-            res.json(sessions);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
-
-// GET
-// Get sessions to populate journal sidebar on Home Page
-app.get('/sessions-journal-sb/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        })
-        .sort({
-            sessionDate: -1
-        })
-        .limit(6)
-        .then((sessions) => {
-            let sessionOutput = [];
-            sessions.map(function (session) {
-                sessionOutput.push(session);
-            });
-            res.json(sessionOutput);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
-
-
-// GET
-// Get sessions to populate journal screen
-app.get('/sessions-journal/:id', (req, res) => {
-    Session
-        .find({
-            loggedInUserId: req.params.id
-        })
-        .sort({
-            sessionDate: -1
-        })
-        .then((sessions) => {
-            let sessionOutput = [];
-            sessions.map(function (session) {
-                sessionOutput.push(session);
-            });
-            res.json(sessionOutput);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json({
-                message: 'Internal Server Error getting session'
-            });
-        });
-});
+//// GET
+//// Get sessions to populate total days in Dashboard
+//app.get('/sessions-total/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        })
+//        .count()
+//        .then((sessions) => {
+//            res.json(sessions);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
+//
+//// GET
+//// Get sessions to populate days in a row in Dashboard
+//app.get('/sessions-streak/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        }, {
+//            sessionDateUnix: 1
+//        })
+//        .sort({
+//            sessionDateUnix: -1
+//        })
+//        .then((sessions) => {
+//            res.json(sessions);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
+//
+//
+//// GET
+//// Get sessions to populate last 10 days in Dashboard
+//app.get('/sessions-ten/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        }, {
+//            sessionDateUnix: 1
+//        })
+//        .sort({
+//            sessionDateUnix: -1
+//        })
+//        .then((sessions) => {
+//            res.json(sessions);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
+//
+//// GET
+//// Get sessions to most used method in Dashboard
+//app.get('/sessions-method/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        }, {
+//            sessionType: 1
+//        })
+//        .then((sessions) => {
+//            res.json(sessions);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
+//
+//// GET
+//// Get sessions to populate avg session length in Dashboard
+//app.get('/sessions-avg/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        }, {
+//            sessionTime: 1
+//        })
+//        .then((sessions) => {
+//            res.json(sessions);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
+//
+//// GET
+//// Get sessions to populate journal sidebar on Home Page
+//app.get('/sessions-journal-sb/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        })
+//        .sort({
+//            sessionDate: -1
+//        })
+//        .limit(6)
+//        .then((sessions) => {
+//            let sessionOutput = [];
+//            sessions.map(function (session) {
+//                sessionOutput.push(session);
+//            });
+//            res.json(sessionOutput);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
+//
+//
+//// GET
+//// Get sessions to populate journal screen
+//app.get('/sessions-journal/:id', (req, res) => {
+//    Session
+//        .find({
+//            loggedInUserId: req.params.id
+//        })
+//        .sort({
+//            sessionDate: -1
+//        })
+//        .then((sessions) => {
+//            let sessionOutput = [];
+//            sessions.map(function (session) {
+//                sessionOutput.push(session);
+//            });
+//            res.json(sessionOutput);
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error getting session'
+//            });
+//        });
+//});
 
 
 // UPDATE
@@ -486,22 +485,40 @@ app.put('/user-pw/:id', function (req, res) {
     });
 });
 
-// DELETE
-// Delete Journal entry from journal screen
-app.delete('/sessions/:id', (req, res) => {
-    Session
-        .findByIdAndRemove(req.params.id)
-        .then(() => {
-            console.log(`Deleted entry with id \`${req.params.id}\``);
-            res.status(204).end();
+app.get('/get-all-entries/', function (req, res) {
+
+    Form
+        .find()
+        .sort('addedToDB')
+        .then(function (entries) {
+            res.json({
+                entries
+            });
         })
-        .catch(err => {
+        .catch(function (err) {
             console.error(err);
             res.status(500).json({
-                message: 'Internal Server Error deleting entry'
-            })
+                message: 'Internal server error'
+            });
         });
 });
+
+// DELETE
+// Delete Journal entry from journal screen
+//app.delete('/sessions/:id', (req, res) => {
+//    Session
+//        .findByIdAndRemove(req.params.id)
+//        .then(() => {
+//            console.log(`Deleted entry with id \`${req.params.id}\``);
+//            res.status(204).end();
+//        })
+//        .catch(err => {
+//            console.error(err);
+//            res.status(500).json({
+//                message: 'Internal Server Error deleting entry'
+//            })
+//        });
+//});
 
 // ---------------MISC------------------------------
 // catch-all endpoint if client makes request to non-existent endpoint

@@ -1,5 +1,31 @@
 // Triggers
-
+function getPreviousEntries() {
+    $.ajax({
+            type: 'GET',
+            url: `/get-all-entries/`,
+            dataType: 'json',
+            contentType: 'application/json'
+        })
+        //if call is succefull
+        .done(function (result) {
+            console.log(result);
+            let htmlOutput = "";
+            for (i = 0; i < result.entries.length; i++) {
+                console.log(result.entries[i]._id);
+                console.log(result.entries[i].firstName);
+                console.log(result.entries[i].lastName);
+                console.log(result.entries[i].addedToDB);
+                htmlOutput += '<option value="' + result.entries[i]._id + '">' + result.entries[i].addedToDB + ' ' + result.entries[i].firstName + ' ' + result.entries[i].lastName + '</option>';
+            }
+            $(".previous-entries-dropdown").html(htmlOutput);
+        })
+        //if the call is failing
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
+}
 
 //when the page loads...
 $(document).ready(function () {
@@ -8,6 +34,7 @@ $(document).ready(function () {
     $(".section-content").hide();
     $(".legend-show").show();
     $(".legend-hide").hide();
+    getPreviousEntries();
 });
 
 //button triggers
@@ -215,8 +242,12 @@ $('#form-submit-button').on('click', function (event) {
     const hrIl = $('.hrIl').val();
     const drugNotes = $('.drugNotes').val();
     const feedingMethod = $('.feedingMethod').val();
-    const adLib = $('.adLib').val();
-    const cueBased = $('.cueBased').val();
+    //    const adLib = $('.adLib').val();
+    const adLib = $("input[name='adLib']:checked").val();
+    console.log(adLib);
+    //    const cueBased = $('.cueBased').val();
+    const cueBased = $("input[name='cueBased']:checked").val();
+    console.log(cueBased);
     const fiCC = $('.fiCC').val();
     const hrCC = $('.hrCC').val();
     const feedingAttempts = $('.feedingAttempts').val();
