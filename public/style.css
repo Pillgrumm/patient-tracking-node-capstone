@@ -66,6 +66,17 @@ Header styles
 /* -------------------------------------
 Content styles
 */
+
+.previous-entries-dropdown {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black !important;
+    border-radius: 4px;
+    border: #27ae60 1px solid;
+    margin: 2rem auto;
+}
+
 .app-summary {
     display: block;
     text-align: center;
@@ -96,7 +107,7 @@ Content styles
 .form-wrapper fieldset label,
 .form-wrapper fieldset input,
 .form-wrapper fieldset select {
-    display: inline-block;
+    display: block;
     width: 30%;
     padding: 0.5rem;
     font-size: 1.1rem;
