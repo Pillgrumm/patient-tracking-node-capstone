@@ -45,7 +45,8 @@ h2 {
     overflow: hidden;
 }
 
-input::placeholder {
+input,
+textarea::placeholder {
     color: #eee;
 }
 
