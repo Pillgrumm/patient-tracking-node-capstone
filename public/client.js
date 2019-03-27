@@ -1,8 +1,8 @@
 // Triggers
-function getPreviousEntries() {
+function getPreviousEntries(userId) {
     $.ajax({
             type: 'GET',
-            url: `/get-all-entries/`,
+            url: `/get-all-entries/${userId}`,
             dataType: 'json',
             contentType: 'application/json'
         })
@@ -34,7 +34,6 @@ $(document).ready(function () {
     $(".section-content").hide();
     $(".legend-show").show();
     $(".legend-hide").hide();
-    getPreviousEntries();
 });
 
 //button triggers
@@ -102,7 +101,7 @@ $('#login').on('click', function (event) {
             })
             .done(function (result) {
                 $('.logged-in-user').val(result._id);
-                //                showDashboardScreen();
+                getPreviousEntries(result._id);
                 $('#login-form').addClass('hidden');
                 $('#landing-page-info').addClass('hidden');
                 $('#full-form').removeClass('hidden');
@@ -146,7 +145,7 @@ $('#register').on('click', function (event) {
                 $('.logged-in-user').val(result._id);
                 $('.js-signin-success').html('Thanks for signing up! Please sign in.');
                 $('.js-signin-success').addClass('change-status-success');
-                //            showLogInScreen();
+                getPreviousEntries(result._id);
                 $('#sign-up-form').addClass('hidden');
                 $('#landing-page-info').addClass('hidden');
                 $('#full-form').removeClass('hidden');

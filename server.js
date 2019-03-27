@@ -489,11 +489,13 @@ app.put('/user-pw/:id', function (req, res) {
     });
 });
 
-app.get('/get-all-entries/', function (req, res) {
+app.get('/get-all-entries/:userId', function (req, res) {
 
     Form
-        .find()
-        .sort('addedToDB')
+        .find({
+            loggedInUser: req.params.userId
+        })
+        .sort('-addedToDB')
         .then(function (entries) {
             res.json({
                 entries
