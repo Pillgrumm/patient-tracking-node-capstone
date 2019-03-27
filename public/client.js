@@ -10,12 +10,20 @@ function getPreviousEntries(userId) {
         .done(function (result) {
             console.log(result);
             let htmlOutput = "";
+            let formattedDataOutput = "";
             for (i = 0; i < result.entries.length; i++) {
-                console.log(result.entries[i]._id);
-                console.log(result.entries[i].firstName);
-                console.log(result.entries[i].lastName);
-                console.log(result.entries[i].addedToDB);
-                htmlOutput += '<option value="' + result.entries[i]._id + '">' + result.entries[i].addedToDB + ' ' + result.entries[i].firstName + ' ' + result.entries[i].lastName + '</option>';
+                //                console.log(result.entries[i]._id);
+                //                console.log(result.entries[i].firstName);
+                //                console.log(result.entries[i].lastName);
+                //                console.log(result.entries[i].addedToDB);
+                formattedDataOutput = result.entries[i].addedToDB;
+                let partsOfDataInput = formattedDataOutput.split('T');
+                let dataOutputOnly = partsOfDataInput[0];
+                let timeOutputOnly = partsOfDataInput[1];
+                console.log(timeOutputOnly, dataOutputOnly);
+                let splitDataOutputOnly = dataOutputOnly.split('-');
+                let splitTimeOutputOnly = timeOutputOnly.split(':');
+                htmlOutput += '<option value="' + result.entries[i]._id + '">' + splitDataOutputOnly[1] + '/' + splitDataOutputOnly[2] + '/' + splitDataOutputOnly[0] + ' ' + splitTimeOutputOnly[0] + ':' + splitTimeOutputOnly[1] + '(UTC)  ' + result.entries[i].firstName + ' ' + result.entries[i].lastName + '</option>';
             }
             $(".previous-entries-dropdown").html(htmlOutput);
         })
