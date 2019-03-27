@@ -113,7 +113,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="gestationalAge">GA</label>
-                            <input class="gestationalAge" name="gestationalAge" type="number" value="29" placeholder="29" class="sideBySide" required>
+                            <input class="gestationalAge" name="gestationalAge" type="number" value="" placeholder="29" class="sideBySide" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -127,8 +127,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="correctedGestationalAge">CGA</label>
-                            <input class="correctedGestationalAgeDay sideBySide" name="correctedGestationalAgeDay" type="number" value="7" placeholder="7" required>days
-                            <input class="correctedGestationalAgeWeek sideBySide" name="correctedGestationalAgeWeek" type="number" value="29" placeholder="29" required>weeks
+                            <input class="correctedGestationalAgeDay sideBySide" name="correctedGestationalAgeDay" type="number" value="" placeholder="7" required>days
+                            <input class="correctedGestationalAgeWeek sideBySide" name="correctedGestationalAgeWeek" type="number" value="" placeholder="29" required>weeks
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="dayOfLife">DOL</label>
-                            <input class="dayOfLife sideBySide" name="dayOfLife" type="number" value="18" placeholder="18" required>
+                            <input class="dayOfLife sideBySide" name="dayOfLife" type="number" value="" placeholder="18" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="dateOfBirth">DOB</label>
-                            <input class="dayOfBirth sideBySide" name="dayOfBirth" type="date" value="1993-03-03" required>
+                            <input class="dayOfBirth sideBySide" name="dayOfBirth" type="date" value="" placeholder="1993-03-03" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -170,7 +170,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="timeOfBirth">TOB</label>
-                            <input class="timeOfBirth sideBySide" name="timeOfBirth" type="time" value="15:02" required>
+                            <input class="timeOfBirth sideBySide" name="timeOfBirth" type="time" value="" placeholder="15:02" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -184,7 +184,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="birthWeight">Birth Wt (grams)</label>
-                            <input class="birthWeight sideBySide" name="birthWeight" type="number" placeholder="1050" value="1050" required>
+                            <input class="birthWeight sideBySide" name="birthWeight" type="number" placeholder="1050" value="" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -198,7 +198,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="currentWeight">Current Wt (grams)</label>
-                            <input class="currentWeight sideBySide" name="currentWeight" type="number" placeholder="1600" value="1600" required>
+                            <input class="currentWeight sideBySide" name="currentWeight" type="number" placeholder="1600" value="" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -212,7 +212,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="kaiserScore">Kaiser Score</label>
-                            <input class="kaiserScore" name="kaiserScore" type="number" placeholder="2.3" value="2.3" required>
+                            <input class="kaiserScore" name="kaiserScore" type="number" placeholder="2.3" value="" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -227,10 +227,10 @@
                         <div class="input-wrapper">
                             <label for="bloodType">Blood Type</label>
                             <select class="bloodType sideBySide" name="bloodType" required>
-                                <option value="" disabled>Select...</option>
+                                <option value="" disabled selected>Select...</option>
                                 <option value="O+">O+</option>
                                 <option value="O-">O-</option>
-                                <option value="A+" selected>A+</option>
+                                <option value="A+">A+</option>
                                 <option value="A-">A-</option>
                                 <option value="B+">B+</option>
                                 <option value="B-">B-</option>
@@ -251,8 +251,8 @@
                         <div class="input-wrapper">
                             <label for="coombs">COOMBS</label>
                             <select class="coombs sideBySide" name="coombs" required>
-                                <option value="" disabled>Select...</option>
-                                <option value="+" selected>+</option>
+                                <option value="" disabled selected>Select...</option>
+                                <option value="+">+</option>
                                 <option value="-">-</option>
                             </select>
                             <div class="icons-wrapper">
@@ -269,9 +269,9 @@
                         <div class="input-wrapper">
                             <label for="acuity">Acuity</label>
                             <select class="acuity sideBySide" name="acuity" required>
-                                <option value="" disabled>Select...</option>
+                                <option value="" disabled selected>Select...</option>
                                 <option value="1:1">1:1</option>
-                                <option value="1:2" selected>1:2</option>
+                                <option value="1:2">1:2</option>
                                 <option value="1:3">1:3</option>
                                 <option value="1:4">1:4</option>
                                 <option value="2:1">2:1</option>
@@ -289,7 +289,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="bedNumber">Bed Number</label>
-                            <input class="bedNumber sideBySide" name="bedNumber" type="number" placeholder="12" value="12" required>
+                            <input class="bedNumber sideBySide" name="bedNumber" type="number" placeholder="12" value="" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -303,9 +303,9 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="dateOfAdmission">Date of Admission</label>
-                            <input class="dateOfAdmission sideBySide" name="dateOfAdmission" type="date" value="1993-04-04" required>
+                            <input class="dateOfAdmission sideBySide" name="dateOfAdmission" type="date" value="" placeholder="1993-04-04" required>
                             <label for="timeOfAdmission">Time of Admission</label>
-                            <input class="timeOfAdmission sideBySide" name="timeOfAdmission" type="time" value="16:03" required>
+                            <input class="timeOfAdmission sideBySide" name="timeOfAdmission" type="time" value="" placeholder="16:03" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -319,9 +319,9 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="dateOfDischarge">Date of Discharge</label>
-                            <input class="dateOfDischarge sideBySide" name="dateOfDischarge" type="date" value="1993-05-05" required>
+                            <input class="dateOfDischarge sideBySide" name="dateOfDischarge" type="date" value="" placeholder="1993-05-05" required>
                             <label for="timeOfDischarge">Time of Discharge</label>
-                            <input class="timeOfDischarge sideBySide" name="timeOfDischarge" type="time" value="17:03" required>
+                            <input class="timeOfDischarge sideBySide" name="timeOfDischarge" type="time" value="" placeholder="17:03" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -339,7 +339,7 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="gravida">Gravida</label>
-                            <input class="gravida sideBySide" name="gravida" type="number" value="4" required>
+                            <input class="gravida sideBySide" name="gravida" type="number" value="" placeholder="4" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -353,7 +353,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="para">Para</label>
-                            <input class="para sideBySide" name="para" type="number" value="3" required>
+                            <input class="para sideBySide" name="para" type="number" value="" placeholder="3" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -367,7 +367,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="age">Age</label>
-                            <input class="age sideBySide" name="age" type="number" value="30" required>
+                            <input class="age sideBySide" name="age" type="number" value="" placeholder="30" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -384,7 +384,7 @@
                             <select class=" vagCs sideBySide" name="vagCs" required>
                                 <option value="" disabled selected>Select...</option>
                                 <option value="vag">VAG</option>
-                                <option value="cs" selected>CS</option>
+                                <option value="cs">CS</option>
                             </select>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
@@ -404,7 +404,7 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
-                                <option value="4" selected>4</option>
+                                <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
@@ -418,7 +418,7 @@
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
-                                <option value="5" selected>5</option>
+                                <option value="5">5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                                 <option value="8">8</option>
@@ -439,7 +439,7 @@
                         <div class="input-wrapper">
                             <label for="rom">ROM</label>
 
-                            <input class="rom sideBySide" name="rom" type="number" value="50" required>hours
+                            <input class="rom sideBySide" name="rom" type="number" value="" placeholder="50" required>hours
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -449,7 +449,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="hx">HX</label>
-                            <input class="hx sideBySide" name="hx" type="text" value="" required>
+                            <input class="hx sideBySide" name="hx" type="text" value="" placeholder="Drug Abuse" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -470,7 +470,7 @@
                                 <option value="A+">A+</option>
                                 <option value="A-">A-</option>
                                 <option value="B+">B+</option>
-                                <option value="B-" selected>B-</option>
+                                <option value="B-">B-</option>
                                 <option value="AB+">AB+</option>
                                 <option value="AB-">AB-</option>
                             </select>
@@ -496,7 +496,7 @@
                         <div class="input-wrapper">
                             <label for="hus">HUS</label>
                             <input class="husCheck sideBySide" name="husCheck" type="checkbox" value="Patient has had HUS">
-                            <textarea class="husText depth-notes" name="husText" cols="40" rows="5">lorem ipsum HUS text</textarea>
+                            <textarea class="husText depth-notes" name="husText" cols="40" rows="5" placeholder="lorem ipsum HUS text"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -511,7 +511,7 @@
                             <input type="radio" class="respiratory sideBySide" id="hfnc" name="respiratory" value="HFNC"> HFNC
                             <input type="radio" class="respiratory sideBySide" id="vt" name="respiratory" value="VT"> VT
                             <input type="radio" class="respiratory sideBySide" id="cpap" name="respiratory" value="CPAP"> CPAP
-                            <textarea class="respiratoryText depth-notes" name="respiratoryText" cols="40" rows="5">lorem ipsum Respiratory text</textarea>
+                            <textarea class="respiratoryText depth-notes" name="respiratoryText" cols="40" rows="5" placeholder="lorem ipsum Respiratory text"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -525,7 +525,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="fio2">FIO2</label>
-                            <input class="fio2 sideBySide" name="fio2" type="number" min="21" max="100" value="21" required>%
+                            <input class="fio2 sideBySide" name="fio2" type="number" min="21" max="100" value="" placeholder="21" required>%
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -539,7 +539,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="abdpb">ABs/Desats/PB</label>
-                            <textarea class="abdpb depth-notes" name="abdpb" cols="40" rows="5">lorem ipsum ABS</textarea>
+                            <textarea class="abdpb depth-notes" name="abdpb" cols="40" rows="5" placeholder="lorem ipsum ABS"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -558,7 +558,7 @@
                                 </div>
                             </div>
                             <label for="cardiacResults">Cardiac Results</label>
-                            <textarea class="cardiacResults depth-notes" name="cardiacResults" cols="40" rows="5">lorem ipsum Cardiac Results</textarea>
+                            <textarea class="cardiacResults depth-notes" name="cardiacResults" cols="40" rows="5" placeholder="lorem ipsum Cardiac Results"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -568,7 +568,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="meds">Meds</label>
-                            <textarea class="meds depth-notes" name="meds" cols="40" rows="5">lorem ipsum med notes</textarea>
+                            <textarea class="meds depth-notes" name="meds" cols="40" rows="5" placeholder="lorem ipsum med notes"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -591,7 +591,7 @@
                             <input type="checkbox" class="bmp sideBySide" name="bmp" value="bmp"> BMP
                             <input type="checkbox" class="crp sideBySide" name="crp" value="crp"> CRP
                             <input type="checkbox" class="tg sideBySide" name="tg" value="tg"> TG
-                            <textarea class="labsTestsText depth-notes" name="labsTestsText" cols="40" rows="5">lorem ipsum Labs/Tests</textarea>
+                            <textarea class="labsTestsText depth-notes" name="labsTestsText" cols="40" rows="5" placeholder="lorem ipsum Labs/Tests"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -601,7 +601,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="qtuLabs">QTu Labs</label>
-                            <textarea class="qtuLabs depth-notes" name="qtuLabs" cols="40" rows="5">lorem ipsum QTu Labs</textarea>
+                            <textarea class="qtuLabs depth-notes" name="qtuLabs" cols="40" rows="5" placeholder="lorem ipsum QTu Labs"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -611,8 +611,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="trough">Trough</label>
-                            <input class="troughCheck sideBySide" name="troughCheck" value="" type="checkbox">
-                            <input class="troughText sideBySide" name="troughText" type="text" value="">@
+                            <input class="troughCheck sideBySide" name="troughCheck" value="Trough Check" type="checkbox">
+                            <input class="troughText sideBySide" name="troughText" type="text" value="" placeholder="Trough active">@
                             <input class="dateOfTrough sideBySide" name="dateOfTrough" type="date" value="">
                             <input class="timeOfTrough sideBySide" name="timeOfTrough" type="time" value="">
                             <div class="icons-wrapper">
@@ -632,7 +632,7 @@
                             <input class="cxrDate sideBySide" name="cxrDate" type="date" value="">
                             <input class="kubCheck sideBySidek" name="kubCheck" type="checkbox" value="KUB"> KUB
                             <input class="kubDate sideBySide" name="kubDate" type="date" value="">
-                            <input class="radiologyText sideBySide" name="radiologyText" type="text" value="">
+                            <input class="radiologyText sideBySide" name="radiologyText" type="text" value="" placeholder="X-rays pending">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -640,6 +640,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </section>
                 </fieldset>
             </section>
@@ -650,7 +651,7 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="hepB">Hepatitis B Vaccine</label>
-                            <input class="hepBDate sideBySide" name="hepBDate" type="date" value="2018-04-08">
+                            <input class="hepBDate sideBySide" name="hepBDate" type="date" value="">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -660,7 +661,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="newbornScreen">Newborn Screen</label>
-                            <input class="newbornScreenDate sideBySide" name="newbornScreenDate" type="date" value="2018-05-09">
+                            <input class="newbornScreenDate sideBySide" name="newbornScreenDate" type="date" value="">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -670,7 +671,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="cchdEcho">CCHD/ECHO</label>
-                            <textarea class="cchdEchoText depth-notes" name="cchdEchoText" cols="40" rows="5">lorem ipsum CCHD</textarea>
+                            <textarea class="cchdEchoText depth-notes" name="cchdEchoText" cols="40" rows="5" placeholder="lorem ipsum CCHD"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -680,8 +681,8 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="eyeExam">Eye Exam Date/Results</label>
-                            <input class="eyeExamDate sideBySide" name="eyeExamDate" type="date" value="2018-06-04"> Results
-                            <textarea class="eyeExamText depth-notes" name="eyeExamText" cols="40" rows="5">lorem ipsum Eye Exam</textarea>
+                            <input class="eyeExamDate sideBySide" name="eyeExamDate" type="date" value=""> Results
+                            <textarea class="eyeExamText depth-notes" name="eyeExamText" cols="40" rows="5" placeholder="lorem ipsum Eye Exam"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -691,7 +692,7 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="fu">F/U</label>
-                            <input class="fuDate" name="fuDate" type="date" value="2018-06-07">
+                            <input class="fuDate" name="fuDate" type="date" value="">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
