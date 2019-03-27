@@ -196,11 +196,7 @@ $('#form-submit-button').on('click', function (event) {
     const hx = $('.hx').val();
     const husCheck = $("input[name='husCheck']:checked").val();
     const husText = $('.husText').val();
-    const ra = $("input[id='ra']:checked").val();
-    const vent = $("input[id='vent']:checked").val();
-    const hfnc = $("input[id='hfnc']:checked").val();
-    const vt = $("input[id='vt']:checked").val();
-    const cpap = $("input[id='cpap']:checked").val();
+    const respiratoryOptions = $("input[name='respiratory']:checked").val();
     const respiratoryText = $('.respiratoryText').val();
     const fio2 = $('.fio2').val();
     const abdpb = $('.abdpb').val();
@@ -491,11 +487,7 @@ $('#form-submit-button').on('click', function (event) {
             maternalBloodType,
             husCheck,
             husText,
-            ra,
-            vent,
-            hfnc,
-            vt,
-            cpap,
+            respiratoryOptions,
             respiratoryText,
             fio2,
             abdpb,

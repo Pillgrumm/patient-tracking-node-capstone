@@ -133,26 +133,11 @@ const formSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    ra: {
+    respiratoryOptions: {
         type: String,
         required: false
     },
-    vent: {
-        type: String,
-        required: false
-    },
-    hfnc: {
-        type: String,
-        required: false
-    },
-    vt: {
-        type: String,
-        required: false
-    },
-    cpap: {
-        type: String,
-        required: false
-    },
+
     respiratoryText: {
         type: String,
         required: false

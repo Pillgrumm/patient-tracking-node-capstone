@@ -24,6 +24,7 @@ body {
     font-size: 16px;
     background: url('./images/landing-background.jpg') no-repeat;
     background-attachment: fixed;
+    position: relative;
 }
 
 
@@ -184,6 +185,26 @@ Content styles
     background-color: transparent;
     border: 1px solid blue;
     border-radius: 5px;
+}
+
+.fixed-cta {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10000;
+    margin: 0;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.fixed-cta fieldset {
+    border: 0;
+    border-top: 1px solid blue;
+}
+
+.last-wrapper {
+    margin-bottom: 200px;
 }
 
 /* -------------------------------------
