@@ -45,6 +45,10 @@ h2 {
     overflow: hidden;
 }
 
+input::placeholder {
+    color: #eee;
+}
+
 /* -------------------------------------
 Header styles
 */
