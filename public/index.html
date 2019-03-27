@@ -12,6 +12,7 @@
 
 <body>
     <input type="hidden" class="logged-in-user" value="">
+    <input type="hidden" class="selected-entry-id" value="">
     <header>
         <h1 class="title">NICU Patient Report</h1>
     </header>
@@ -57,10 +58,6 @@
                 <section class="select-previous-entries">
                     <legend class="legend">Previous Entries</legend>
                     <select class="previous-entries-dropdown">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
                     </select>
                     <button type="button" class="select-previous-entries-button">Select</button>
                 </section>
@@ -74,7 +71,7 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="firstName">First Name</label>
-                            <input class="firstName" name="firstName" type="text" value="John" placeholder="John" required>
+                            <input class="firstName" name="firstName" type="text" value="" placeholder="Jane" required>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>

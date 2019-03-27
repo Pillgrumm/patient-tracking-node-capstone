@@ -508,6 +508,24 @@ app.get('/get-all-entries/:userId', function (req, res) {
             });
         });
 });
+app.get('/get-entry-by-id/:selectedEntryID', function (req, res) {
+
+    Form
+        .find({
+            _id: req.params.selectedEntryID
+        })
+        .then(function (entries) {
+            res.json({
+                entries
+            });
+        })
+        .catch(function (err) {
+            console.error(err);
+            res.status(500).json({
+                message: 'Internal server error'
+            });
+        });
+});
 
 // DELETE
 // Delete Journal entry from journal screen
