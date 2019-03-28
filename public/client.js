@@ -9,7 +9,7 @@ function getPreviousEntries(userId) {
         //if call is succefull
         .done(function (result) {
             console.log(result);
-            let htmlOutput = "";
+            let htmlOutput = "<option value=''>Add new entry</option>";
             let formattedDataOutput = "";
             for (i = 0; i < result.entries.length; i++) {
                 //                console.log(result.entries[i]._id);
@@ -33,6 +33,14 @@ function getPreviousEntries(userId) {
             console.log(error);
             console.log(errorThrown);
         });
+}
+
+function checkInputByValue(result, fieldName, expectedValue) {
+    //console.log(result.entries[0][fieldName], expectedValue);
+    if (result.entries[0][fieldName] == expectedValue) {
+        //console.log($("input[value='" + expectedValue + "']"));
+        $("input[value='" + expectedValue + "']").attr("checked", "checked");
+    }
 }
 
 function prePopulateFormBasedOnEntryID(selectedEntryID) {
@@ -75,31 +83,47 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.apgar2').val(result.entries[0].apgar2);
             $('.rom').val(result.entries[0].rom);
             $('.hx').val(result.entries[0].hx);
-            $("input[name='husCheck']:checked").val(result.entries[0].husCheck);
+            //            $("input[name='husCheck']:checked").val(result.entries[0].husCheck);
+            checkInputByValue(result, 'husCheck', 'husCheck');
             $('.husText').val(result.entries[0].husText);
-            $("input[name='respiratory']:checked").val(result.entries[0].respiratoryOptions);
+            checkInputByValue(result, 'respiratoryOptions', 'RA');
+            checkInputByValue(result, 'respiratoryOptions', 'VENT');
+            checkInputByValue(result, 'respiratoryOptions', 'HFNC');
+            checkInputByValue(result, 'respiratoryOptions', 'VT');
+            checkInputByValue(result, 'respiratoryOptions', 'CPAP');
+            //$("input[name='respiratory']:checked").val(result.entries[0].respiratoryOptions);
             $('.respiratoryText').val(result.entries[0].respiratoryText);
             $('.fio2').val(result.entries[0].fio2);
             $('.abdpb').val(result.entries[0].abdpb);
-            $("input[name='murmur']:checked").val(result.entries[0].murmur);
-            $("input[name='echo']:checked").val(result.entries[0].echo);
+            //            $("input[name='murmur']:checked").val(result.entries[0].murmur);
+            checkInputByValue(result, 'murmur', 'murmur');
+            //            $("input[name='echo']:checked").val(result.entries[0].echo);
+            checkInputByValue(result, 'echo', 'echo');
             $('.cardiacResults').val(result.entries[0].cardiacResults);
             $('.meds').val(result.entries[0].meds);
             $('.maternalBloodType').val(result.entries[0].maternalBloodType);
-            $("input[name='cbc']:checked").val(result.entries[0].cbc);
-            $("input[name='tb']:checked").val(result.entries[0].tb);
-            $("input[name='bmp']:checked").val(result.entries[0].bmp);
-            $("input[name='crp']:checked").val(result.entries[0].crp);
-            $("input[name='tg']:checked").val(result.entries[0].tg);
+            //$("input[name='cbc']:checked").val(result.entries[0].cbc);
+            checkInputByValue(result, 'cbc', 'cbc');
+            //            $("input[name='tb']:checked").val(result.entries[0].tb);
+            checkInputByValue(result, 'tb', 'tb');
+            //            $("input[name='bmp']:checked").val(result.entries[0].bmp);
+            checkInputByValue(result, 'bmp', 'bmp');
+            //            $("input[name='crp']:checked").val(result.entries[0].crp);
+            checkInputByValue(result, 'crp', 'crp');
+            //            $("input[name='tg']:checked").val(result.entries[0].tg);
+            checkInputByValue(result, 'tg', 'tg');
             $('.labsTestsText').val(result.entries[0].labsTestsText);
             $('.qtuLabs').val(result.entries[0].qtuLabs);
-            $("input[name='troughCheck']:checked").val(result.entries[0].troughCheck);
+            //            $("input[name='troughCheck']:checked").val(result.entries[0].troughCheck);
+            checkInputByValue(result, 'troughCheck', 'troughCheck');
             $('.troughText').val(result.entries[0].troughText);
             $('.dateOfTrough').val(result.entries[0].dateOfTrough);
             $('.timeOfTrough').val(result.entries[0].timeOfTrough);
-            $("input[name='cxrCheck']:checked").val(result.entries[0].cxrCheck);
+            //            $("input[name='cxrCheck']:checked").val(result.entries[0].cxrCheck);
+            checkInputByValue(result, 'cxrCheck', 'cxrCheck');
             $('.cxrDate').val(result.entries[0].cxrDate);
-            $("input[name='kubCheck']:checked").val(result.entries[0].kubCheck);
+            //            $("input[name='kubCheck']:checked").val(result.entries[0].kubCheck);
+            checkInputByValue(result, 'kubCheck', 'kubCheck');
             $('.kubDate').val(result.entries[0].kubDate);
             $('.radiologyText').val(result.entries[0].radiologyText);
             $('.hepBDate').val(result.entries[0].hepBDate);
@@ -108,15 +132,24 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.eyeExamDate').val(result.entries[0].eyeExamDate);
             $('.eyeExamText').val(result.entries[0].eyeExamText);
             $('.fuDate').val(result.entries[0].fuDate);
-            $("input[name='hearingCheck']:checked").val(result.entries[0].hearingCheck);
-            $("input[name='carSeatCheck']:checked").val(result.entries[0].carSeatCheck);
-            $("input[name='cprCheck']:checked").val(result.entries[0].cprCheck);
-            $("input[name='circCheck']:checked").val(result.entries[0].circCheck);
-            $("input[name='pivCheck']:checked").val(result.entries[0].pivCheck);
-            $("input[name='piccCheck']:checked").val(result.entries[0].piccCheck);
-            $("input[name='uacCheck']:checked").val(result.entries[0].uacCheck);
-            $("input[name='uvcCheck']:checked").val(result.entries[0].uvcCheck);
-            $("input[name='salineLockCheck']:checked").val(result.entries[0].salineLockCheck);
+            //            $("input[name='hearingCheck']:checked").val(result.entries[0].hearingCheck);
+            checkInputByValue(result, 'hearingCheck', 'hearingCheck');
+            //            $("input[name='carSeatCheck']:checked").val(result.entries[0].carSeatCheck);
+            checkInputByValue(result, 'carSeatCheck', 'carSeatCheck');
+            //            $("input[name='cprCheck']:checked").val(result.entries[0].cprCheck);
+            checkInputByValue(result, 'cprCheck', 'cprCheck');
+            //            $("input[name='circCheck']:checked").val(result.entries[0].circCheck);
+            checkInputByValue(result, 'circCheck', 'circCheck');
+            //            $("input[name='pivCheck']:checked").val(result.entries[0].pivCheck);
+            checkInputByValue(result, 'pivCheck', 'pivCheck');
+            //            $("input[name='piccCheck']:checked").val(result.entries[0].piccCheck);
+            checkInputByValue(result, 'piccCheck', 'piccCheck');
+            //            $("input[name='uacCheck']:checked").val(result.entries[0].uacCheck);
+            checkInputByValue(result, 'uacCheck', 'uacCheck');
+            //            $("input[name='uvcCheck']:checked").val(result.entries[0].uvcCheck);
+            checkInputByValue(result, 'uvcCheck', 'uvcCheck');
+            //            $("input[name='salineLockCheck']:checked").val(result.entries[0].salineLockCheck);
+            checkInputByValue(result, 'salineLockCheck', 'salineLockCheck');
             $('.drugInput').val(result.entries[0].drugInput);
             $('.ccDrug').val(result.entries[0].ccDrug);
             $('.hrDrug').val(result.entries[0].hrDrug);
@@ -127,8 +160,10 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.hrIl').val(result.entries[0].hrIl);
             $('.drugNotes').val(result.entries[0].drugNotes);
             $('.feedingMethod').val(result.entries[0].feedingMethod);
-            $("input[name='adLib']:checked").val(result.entries[0].adLib);
-            $("input[name='cueBased']:checked").val(result.entries[0].cueBased);
+            //            $("input[name='adLib']:checked").val(result.entries[0].adLib);
+            checkInputByValue(result, 'adLib', 'adLib');
+            //            $("input[name='cueBased']:checked").val(result.entries[0].cueBased);
+            checkInputByValue(result, 'cueBased', 'cueBased');
             $('.fiCC').val(result.entries[0].fiCC);
             $('.hrCC').val(result.entries[0].hrCC);
             $('.feedingAttempts').val(result.entries[0].feedingAttempts);
@@ -137,18 +172,21 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.socialConsiderations').val(result.entries[0].socialConsiderations);
             $('.historyChanges').val(result.entries[0].historyChanges);
             $('.referalls').val(result.entries[0].referalls);
-            $("input[name='synagis']:checked").val(result.entries[0].synagis);
-            $("input[name='vaccine']:checked").val(result.entries[0].vaccine);
+            //            $("input[name='synagis']:checked").val(result.entries[0].synagis);
+            checkInputByValue(result, 'synagis', 'synagis');
+            //            $("input[name='vaccine']:checked").val(result.entries[0].vaccine);
+            checkInputByValue(result, 'vaccine', 'vaccine');
             $('.pediatrician').val(result.entries[0].pediatrician);
             $('.lastBath').val(result.entries[0].lastBath);
-            $("input[name='consent']:checked").val(result.entries[0].consent);
-            $("input[name='husCP']:checked").val(result.entries[0].husCP);
+            //            $("input[name='consent']:checked").val(result.entries[0].consent);
+            checkInputByValue(result, 'consent', 'consent');
+            //            $("input[name='husCP']:checked").val(result.entries[0].husCP);
+            checkInputByValue(result, 'husCP', 'husCP');
             $('.cpDate').val(result.entries[0].cpDate);
             $('.cpTime').val(result.entries[0].cpTime);
             $('.phototherapyStartDate').val(result.entries[0].phototherapyStartDate);
             $('.phototherapyEndDate').val(result.entries[0].phototherapyEndDate);
             $('.phototherapySelect').val(result.entries[0].phototherapySelect);
-
         })
         //if the call is failing
         .fail(function (jqXHR, error, errorThrown) {
@@ -201,11 +239,44 @@ $(document).on('click', '.legend-show', function (event) {
     $(this).parent().parent().find(".section-content").show();
 });
 
-$(document).on('click', '.select-previous-entries-button', function (event) {
+$(document).on('change', '.previous-entries-dropdown', function (event) {
     event.preventDefault();
     let selectedEntryID = $(".previous-entries-dropdown").val();
     $(".selected-entry-id").val(selectedEntryID);
-    prePopulateFormBasedOnEntryID(selectedEntryID);
+    if (selectedEntryID != "") {
+        prePopulateFormBasedOnEntryID(selectedEntryID);
+
+    } else {
+        $('.logged-in-user').val();
+        $('.firstName').val(result.entries[0].firstName);
+        $('.lastName').val(result.entries[0].lastName);
+        $('.diagnosis').val(result.entries[0].diagnosis);
+        $('.gestationalAge').val(result.entries[0].gestationalAge);
+        $('.correctedGestationalAgeDay').val(result.entries[0].correctedGestationalAgeDay);
+        $('.correctedGestationalAgeWeek').val(result.entries[0].correctedGestationalAgeWeek);
+        $('.dayOfLife').val(result.entries[0].dayOfLife);
+        $('.dayOfBirth').val(result.entries[0].dayOfBirth);
+        $('.timeOfBirth').val(result.entries[0].timeOfBirth);
+        $('.birthWeight').val(result.entries[0].birthWeight);
+        $('.currentWeight').val(result.entries[0].currentWeight);
+        $('.kaiserScore').val(result.entries[0].kaiserScore);
+        $('.bloodType').val(result.entries[0].bloodType);
+        $('.coombs').val(result.entries[0].coombs);
+        $('.acuity').val(result.entries[0].acuity);
+        $('.bedNumber').val(result.entries[0].bedNumber);
+        $('.dateOfAdmission').val(result.entries[0].dateOfAdmission);
+        $('.timeOfAdmission').val(result.entries[0].timeOfAdmission);
+        $('.dateOfDischarge').val(result.entries[0].dateOfDischarge);
+        $('.timeOfDischarge').val(result.entries[0].timeOfDischarge);
+        $('.gravida').val(result.entries[0].gravida);
+        $('.para').val(result.entries[0].para);
+        $('.age').val(result.entries[0].age);
+        $('.vagCs').val(result.entries[0].vagCs);
+        $('.apgar1').val(result.entries[0].apgar1);
+        $('.apgar2').val(result.entries[0].apgar2);
+        $('.rom').val(result.entries[0].rom);
+        $('.hx').val(result.entries[0].hx);
+    }
 });
 
 $(document).on('click', '.legend-hide', function (event) {
@@ -303,6 +374,7 @@ $('#register').on('click', function (event) {
 $('#form-submit-button').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
+    const selectedEntryID = $('.selected-entry-id').val();
     const firstName = $('.firstName').val();
     const lastName = $('.lastName').val();
     const diagnosis = $('.diagnosis').val();
@@ -385,7 +457,7 @@ $('#form-submit-button').on('click', function (event) {
     const feedingMethod = $('.feedingMethod').val();
     const adLib = $("input[name='adLib']:checked").val();
     console.log(adLib);
-    const cueBased = $("input[name='cueBased']:checked").val();
+    const cueBased = $("input[name='cueBased']").val();
     console.log(cueBased);
     const fiCC = $('.fiCC').val();
     const hrCC = $('.hrCC').val();
@@ -696,28 +768,58 @@ $('#form-submit-button').on('click', function (event) {
             phototherapySelect
         };
         console.log(generalInformationObject);
-        $.ajax({
-                type: 'POST',
-                url: '/form/create',
-                dataType: 'json',
-                data: JSON.stringify(generalInformationObject),
-                contentType: 'application/json'
-            })
-            .done(function (result) {
-                console.log(result);
-                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
-                $('.js-signin-success').addClass('change-status-success');
-                //            showLogInScreen();
-                //                $('#sign-up-form').addClass('hidden');
-                //                $('#landing-page-info').addClass('hidden');
-                //                $('#full-form').removeClass('hidden');
-                //                $('body').css('background', 'white');
-            })
-            .fail(function (jqXHR, error, errorThrown) {
-                console.log(jqXHR);
-                console.log(error);
-                console.log(errorThrown);
-            });
+        //if no entry was selected add new one
+        console.log(selectedEntryID);
+        if (selectedEntryID == "") {
+            $.ajax({
+                    type: 'POST',
+                    url: '/form/create',
+                    dataType: 'json',
+                    data: JSON.stringify(generalInformationObject),
+                    contentType: 'application/json'
+                })
+                .done(function (result) {
+                    console.log(result);
+                    $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                    $('.js-signin-success').addClass('change-status-success');
+                    //            showLogInScreen();
+                    //                $('#sign-up-form').addClass('hidden');
+                    //                $('#landing-page-info').addClass('hidden');
+                    //                $('#full-form').removeClass('hidden');
+                    //                $('body').css('background', 'white');
+                })
+                .fail(function (jqXHR, error, errorThrown) {
+                    console.log(jqXHR);
+                    console.log(error);
+                    console.log(errorThrown);
+                });
+        }
+        //else update the existing one
+        else {
+            $.ajax({
+                    type: 'PUT',
+                    url: '/form/update/' + selectedEntryID,
+                    dataType: 'json',
+                    data: JSON.stringify(generalInformationObject),
+                    contentType: 'application/json'
+                })
+                .done(function (result) {
+                    console.log(result);
+                    $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                    $('.js-signin-success').addClass('change-status-success');
+                    //            showLogInScreen();
+                    //                $('#sign-up-form').addClass('hidden');
+                    //                $('#landing-page-info').addClass('hidden');
+                    //                $('#full-form').removeClass('hidden');
+                    //                $('body').css('background', 'white');
+                })
+                .fail(function (jqXHR, error, errorThrown) {
+                    console.log(jqXHR);
+                    console.log(error);
+                    console.log(errorThrown);
+                });
+        }
+
     };
 
 });

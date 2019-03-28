@@ -292,163 +292,149 @@ app.post('/form/create', (req, res) => {
     });
 });
 
-//// GET
-//// Get sessions to populate total days in Dashboard
-//app.get('/sessions-total/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        })
-//        .count()
-//        .then((sessions) => {
-//            res.json(sessions);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
-//
-//// GET
-//// Get sessions to populate days in a row in Dashboard
-//app.get('/sessions-streak/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        }, {
-//            sessionDateUnix: 1
-//        })
-//        .sort({
-//            sessionDateUnix: -1
-//        })
-//        .then((sessions) => {
-//            res.json(sessions);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
-//
-//
-//// GET
-//// Get sessions to populate last 10 days in Dashboard
-//app.get('/sessions-ten/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        }, {
-//            sessionDateUnix: 1
-//        })
-//        .sort({
-//            sessionDateUnix: -1
-//        })
-//        .then((sessions) => {
-//            res.json(sessions);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
-//
-//// GET
-//// Get sessions to most used method in Dashboard
-//app.get('/sessions-method/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        }, {
-//            sessionType: 1
-//        })
-//        .then((sessions) => {
-//            res.json(sessions);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
-//
-//// GET
-//// Get sessions to populate avg session length in Dashboard
-//app.get('/sessions-avg/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        }, {
-//            sessionTime: 1
-//        })
-//        .then((sessions) => {
-//            res.json(sessions);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
-//
-//// GET
-//// Get sessions to populate journal sidebar on Home Page
-//app.get('/sessions-journal-sb/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        })
-//        .sort({
-//            sessionDate: -1
-//        })
-//        .limit(6)
-//        .then((sessions) => {
-//            let sessionOutput = [];
-//            sessions.map(function (session) {
-//                sessionOutput.push(session);
-//            });
-//            res.json(sessionOutput);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
-//
-//
-//// GET
-//// Get sessions to populate journal screen
-//app.get('/sessions-journal/:id', (req, res) => {
-//    Session
-//        .find({
-//            loggedInUserId: req.params.id
-//        })
-//        .sort({
-//            sessionDate: -1
-//        })
-//        .then((sessions) => {
-//            let sessionOutput = [];
-//            sessions.map(function (session) {
-//                sessionOutput.push(session);
-//            });
-//            res.json(sessionOutput);
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error getting session'
-//            });
-//        });
-//});
+
+
+app.put('/form/update/:id', function (req, res) {
+    let toUpdate = {};
+    let updateableFields = ['loggedInUser', 'firstName', 'lastName', 'diagnosis', 'gestationalAge', 'correctedGestationalAgeDay', 'correctedGestationalAgeWeek', 'dayOfLife', 'dayOfBirth', 'timeOfBirth', 'birthWeight', 'currentWeight', 'kaiserScore', 'bloodType', 'coombs', 'acuity', 'bedNumber', 'dateOfAdmission', 'timeOfAdmission', 'dateOfDischarge', 'timeOfDischarge', 'gravida', 'para', 'age', 'vagCs', 'apgar1', 'apgar2', 'rom', 'hx', 'maternalBloodType', 'husCheck', 'husText', 'respiratoryOptions', 'respiratoryText', 'fio2', 'abdpb', 'murmur', 'echo', 'cardiacResults', 'meds', 'cbc', 'tb', 'bmp', 'crp', 'tg', 'labsTestsText', 'qtuLabs', 'troughCheck', 'troughText', 'dateOfTrough', 'timeOfTrough', 'cxrCheck', 'cxrDate', 'kubCheck', 'kubDate', 'radiologyText', 'hepBDate', 'newbornScreenDate', 'cchdEchoText', 'eyeExamDate', 'eyeExamText', 'fuDate', 'hearingCheck', 'carSeatCheck', 'cprCheck', 'circCheck', 'pivCheck', 'piccCheck', 'uacCheck', 'uvcCheck', 'salineLockCheck', 'drugInput', 'ccDrug', 'hrDrug', 'tDrugInput', 'ccTDrug', 'hrTDrug', 'ccIl', 'hrIl', 'drugNotes', 'feedingMethod', 'adLib', 'cueBased', 'fiCC', 'hrCC', 'feedingAttempts', 'completedAttempts', 'planOfCare', 'socialConsiderations', 'historyChanges', 'referalls', 'synagis', 'vaccine', 'pediatrician', 'lastBath', 'consent', 'husCP', 'cpDate', 'cpTime', 'phototherapyStartDate', 'phototherapyEndDate', 'phototherapySelect'];
+    updateableFields.forEach(function (field) {
+        if (field in req.body) {
+            toUpdate[field] = req.body[field];
+        }
+    });
+    console.log(toUpdate);
+    Form
+        .findByIdAndUpdate(req.params.id, {
+            $set: toUpdate
+        }).exec().then(function (achievement) {
+            return res.status(204).end();
+        }).catch(function (err) {
+            return res.status(500).json({
+                message: 'Internal Server Error'
+            });
+        });
+});
+
+
+app.post('/form/create', (req, res) => {
+
+
+    Form.create({
+        loggedInUser: req.body.loggedInUser,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        diagnosis: req.body.diagnosis,
+        gestationalAge: req.body.gestationalAge,
+        correctedGestationalAgeDay: req.body.correctedGestationalAgeDay,
+        correctedGestationalAgeWeek: req.body.correctedGestationalAgeWeek,
+        dayOfLife: req.body.dayOfLife,
+        dayOfBirth: req.body.dayOfBirth,
+        timeOfBirth: req.body.timeOfBirth,
+        birthWeight: req.body.birthWeight,
+        currentWeight: req.body.currentWeight,
+        kaiserScore: req.body.kaiserScore,
+        bloodType: req.body.bloodType,
+        coombs: req.body.coombs,
+        acuity: req.body.acuity,
+        bedNumber: req.body.bedNumber,
+        dateOfAdmission: req.body.dateOfAdmission,
+        timeOfAdmission: req.body.timeOfAdmission,
+        dateOfDischarge: req.body.dateOfDischarge,
+        timeOfDischarge: req.body.timeOfDischarge,
+        gravida: req.body.gravida,
+        para: req.body.para,
+        age: req.body.age,
+        vagCs: req.body.vagCs,
+        apgar1: req.body.apgar1,
+        apgar2: req.body.apgar2,
+        rom: req.body.rom,
+        hx: req.body.hx,
+        maternalBloodType: req.body.maternalBloodType,
+        husCheck: req.body.husCheck,
+        husText: req.body.husText,
+        respiratoryOptions: req.body.respiratoryOptions,
+        respiratoryText: req.body.respiratoryText,
+        fio2: req.body.fio2,
+        abdpb: req.body.abdpb,
+        murmur: req.body.murmur,
+        echo: req.body.echo,
+        cardiacResults: req.body.cardiacResults,
+        meds: req.body.meds,
+        cbc: req.body.cbc,
+        tb: req.body.tb,
+        bmp: req.body.bmp,
+        crp: req.body.crp,
+        tg: req.body.tg,
+        labsTestsText: req.body.labsTestsText,
+        qtuLabs: req.body.qtuLabs,
+        troughCheck: req.body.troughCheck,
+        troughText: req.body.troughText,
+        dateOfTrough: req.body.dateOfTrough,
+        timeOfTrough: req.body.timeOfTrough,
+        cxrCheck: req.body.cxrCheck,
+        cxrDate: req.body.cxrDate,
+        kubCheck: req.body.kubCheck,
+        kubDate: req.body.kubDate,
+        radiologyText: req.body.radiologyText,
+        hepBDate: req.body.hepBDate,
+        newbornScreenDate: req.body.newbornScreenDate,
+        cchdEchoText: req.body.cchdEchoText,
+        eyeExamDate: req.body.eyeExamDate,
+        eyeExamText: req.body.eyeExamText,
+        fuDate: req.body.fuDate,
+        hearingCheck: req.body.hearingCheck,
+        carSeatCheck: req.body.carSeatCheck,
+        cprCheck: req.body.cprCheck,
+        circCheck: req.body.circCheck,
+        pivCheck: req.body.pivCheck,
+        piccCheck: req.body.piccCheck,
+        uacCheck: req.body.uacCheck,
+        uvcCheck: req.body.uvcCheck,
+        salineLockCheck: req.body.salineLockCheck,
+        drugInput: req.body.drugInput,
+        ccDrug: req.body.ccDrug,
+        hrDrug: req.body.hrDrug,
+        tDrugInput: req.body.tDrugInput,
+        ccTDrug: req.body.ccTDrug,
+        hrTDrug: req.body.hrTDrug,
+        ccIl: req.body.ccIl,
+        hrIl: req.body.hrIl,
+        drugNotes: req.body.drugNotes,
+        feedingMethod: req.body.feedingMethod,
+        adLib: req.body.adLib,
+        cueBased: req.body.cueBased,
+        fiCC: req.body.fiCC,
+        hrCC: req.body.hrCC,
+        feedingAttempts: req.body.feedingAttempts,
+        completedAttempts: req.body.completedAttempts,
+        planOfCare: req.body.planOfCare,
+        socialConsiderations: req.body.socialConsiderations,
+        historyChanges: req.body.historyChanges,
+        referalls: req.body.referalls,
+        synagis: req.body.synagis,
+        vaccine: req.body.vaccine,
+        pediatrician: req.body.pediatrician,
+        lastBath: req.body.lastBath,
+        consent: req.body.consent,
+        husCP: req.body.husCP,
+        cpDate: req.body.cpDate,
+        cpTime: req.body.cpTime,
+        phototherapyStartDate: req.body.phototherapyStartDate,
+        phototherapyEndDate: req.body.phototherapyEndDate,
+        phototherapySelect: req.body.phototherapySelect
+    }, (err, item) => {
+        if (err) {
+            return res.status(500).json({
+                message: err
+            });
+        }
+        if (item) {
+            return res.json(item);
+        }
+    });
+});
+
+
 
 
 // UPDATE

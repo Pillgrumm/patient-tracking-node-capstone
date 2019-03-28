@@ -45,10 +45,16 @@ h2 {
     overflow: hidden;
 }
 
-input,
-textarea::placeholder {
+input::placeholder {
     color: #eee;
 }
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin-left: 2rem;
+    margin-right: 0.1rem !important;
+}
+
 
 /* -------------------------------------
 Header styles
