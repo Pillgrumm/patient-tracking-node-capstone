@@ -277,31 +277,55 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.apgar2').val("");
         $('.rom').val("");
         $('.hx').val("");
-        $("input[name='husCheck']:checked").val("");
+        $("input[name='husCheck']:checked").attr({
+            checked: false
+        });
         $('.husText').val("");
-        $("input[name='respiratory']:checked").val("");
+        $("input[name='respiratory']:checked").attr({
+            checked: false
+        });
         $('.respiratoryText').val("");
         $('.fio2').val("");
         $('.abdpb').val("");
-        $("input[name='murmur']:checked").val("");
-        $("input[name='echo']:checked").val("");
+        $("input[name='murmur']:checked").attr({
+            checked: false
+        });
+        $("input[name='echo']:checked").attr({
+            checked: false
+        });
         $('.cardiacResults').val("");
         $('.meds').val("");
         $('.maternalBloodType').val("");
-        $("input[name='cbc']:checked").val("");
-        $("input[name='tb']:checked").val("");
-        $("input[name='bmp']:checked").val("");
-        $("input[name='crp']:checked").val("");
-        $("input[name='tg']:checked").val("");
+        $("input[name='cbc']:checked").attr({
+            checked: false
+        });
+        $("input[name='tb']:checked").attr({
+            checked: false
+        });
+        $("input[name='bmp']:checked").attr({
+            checked: false
+        });
+        $("input[name='crp']:checked").attr({
+            checked: false
+        });
+        $("input[name='tg']:checked").attr({
+            checked: false
+        });
         $('.labsTestsText').val("");
         $('.qtuLabs').val("");
-        $("input[name='troughCheck']:checked").val("");
+        $("input[name='troughCheck']:checked").attr({
+            checked: false
+        });
         $('.troughText').val("");
         $('.dateOfTrough').val("");
         $('.timeOfTrough').val("");
-        $("input[name='cxrCheck']:checked").val("");
+        $("input[name='cxrCheck']:checked").attr({
+            checked: false
+        });
         $('.cxrDate').val("");
-        $("input[name='kubCheck']:checked").val("");
+        $("input[name='kubCheck']:checked").attr({
+            checked: false
+        });
         $('.kubDate').val("");
         $('.radiologyText').val("");
         $('.hepBDate').val("");
@@ -310,15 +334,33 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.eyeExamDate').val("");
         $('.eyeExamText').val("");
         $('.fuDate').val("");
-        $("input[name='hearingCheck']:checked").val("");
-        $("input[name='carSeatCheck']:checked").val("");
-        $("input[name='cprCheck']:checked").val("");
-        $("input[name='circCheck']:checked").val("");
-        $("input[name='pivCheck']:checked").val("");
-        $("input[name='piccCheck']:checked").val("");
-        $("input[name='uacCheck']:checked").val("");
-        $("input[name='uvcCheck']:checked").val("");
-        $("input[name='salineLockCheck']:checked").val("");
+        $("input[name='hearingCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='carSeatCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='cprCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='circCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='pivCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='piccCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='uacCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='uvcCheck']:checked").attr({
+            checked: false
+        });
+        $("input[name='salineLockCheck']:checked").attr({
+            checked: false
+        });
         $('.drugInput').val("");
         $('.ccDrug').val("");
         $('.hrDrug').val("");
@@ -329,8 +371,12 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.hrIl').val("");
         $('.drugNotes').val("");
         $('.feedingMethod').val("");
-        $("input[name='adLib']:checked").val("");
-        $("input[name='cueBased']").val("");
+        $("input[name='adLib']:checked").attr({
+            checked: false
+        });
+        $("input[name='cueBased':checked]").attr({
+            checked: false
+        });
         $('.fiCC').val("");
         $('.hrCC').val("");
         $('.feedingAttempts').val("");
@@ -339,12 +385,20 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $('.socialConsiderations').val("");
         $('.historyChanges').val("");
         $('.referalls').val("");
-        $("input[name='synagis']:checked").val("");
-        $("input[name='vaccine']:checked").val("");
+        $("input[name='synagis']:checked").attr({
+            checked: false
+        });
+        $("input[name='vaccine']:checked").attr({
+            checked: false
+        });
         $('.pediatrician').val("");
         $('.lastBath').val("");
-        $("input[name='consent']:checked").val("");
-        $("input[name='husCP']:checked").val("");
+        $("input[name='consent']:checked").attr({
+            checked: false
+        });
+        $("input[name='husCP']:checked").attr({
+            checked: false
+        });
         $('.cpDate').val("");
         $('.cpTime').val("");
         $('.phototherapyStartDate').val("");
