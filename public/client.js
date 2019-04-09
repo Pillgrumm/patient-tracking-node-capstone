@@ -639,8 +639,6 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter gestational age');
     } else if (correctedGestationalAgeDay == "") {
         alert('Please enter gestational age day');
-    } else if (correctedGestationalAgeWeek == "") {
-        alert('Please enter gestational age week');
     } else if (dayOfLife == "") {
         alert('Please enter day of life');
     } else if (dayOfBirth == "") {
@@ -681,136 +679,10 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please enter maternal history');
     } else if (maternalBloodType == null) {
         alert('Please enter maternal bloodtype');
-    } else if (husCheck == '') {
-        alert('Please check HUS');
-    } else if (husText == "") {
-        alert('Please enter HUS text');
-    } else if (respiratoryText == "") {
-        alert('Please enter respiratory notes');
     } else if (fio2 == "") {
         alert('Please enter FIO2 percentage');
-    } else if (abdpb == "") {
-        alert('Please enter AB/Desat/PB information');
-    } else if (murmur == "") {
-        alert('Please check Murmur');
-    } else if (echo == "") {
-        alert('Please check ECHO');
-    } else if (cardiacResults == "") {
-        alert('Please input cardiac results');
-    } else if (meds == "") {
-        alert('Please input meds');
-    } else if (labsTestsText == "") {
-        alert('Please input lab test results');
-    } else if (qtuLabs == "") {
-        alert('Please enter QTu Lab results');
-    } else if (troughCheck == "") {
-        alert('Please check trough');
-    } else if (troughText == "") {
-        alert('Please enter trough notes');
-    } else if (dateOfTrough == "") {
-        alert('Please enter date of trough');
-    } else if (timeOfTrough == "") {
-        alert('Please enter time of trough');
-    } else if (cxrCheck == "") {
-        alert('Please check CXR');
-    } else if (cxrDate == "") {
-        alert('Please input CXR date');
-    } else if (kubCheck == "") {
-        alert('Please check KUB');
-    } else if (kubDate == "") {
-        alert('Please input KUB date');
-    } else if (radiologyText == "") {
-        alert('Please input radiology report');
-    } else if (newbornScreenDate == "") {
-        alert('Please input date of Newborn Screen');
-    } else if (cchdEchoText == "") {
-        alert('Please input notes for CCHD/ECHO');
-    } else if (eyeExamDate == "") {
-        alert('Please input eye exam date');
-    } else if (eyeExamText == "") {
-        alert('Please input eye exam results');
-    } else if (fuDate == "") {
-        alert('Please input follow-up date');
-    } else if (hearingCheck == "") {
-        alert('Please check if patient has had hearing exam');
-    } else if (carSeatCheck == "") {
-        alert('Please check if patient needs carseat');
-    } else if (cprCheck == "") {
-        alert('Please check if parents have watched CPR video');
-    } else if (circCheck == "") {
-        alert('Please check if patient is circumsized');
-    } else if (pivCheck == '') {
-        alert('Please check PIV');
-    } else if (piccCheck == "") {
-        alert('Please check PICC');
-    } else if (uacCheck == "") {
-        alert('Please check UAC');
-    } else if (uvcCheck == "") {
-        alert('Please check for UVC');
-    } else if (salineLockCheck == "") {
-        alert('Please check for Saline Lock');
-    } else if (drugInput == "") {
-        alert('Please input drug used');
-    } else if (ccDrug == "") {
-        alert('Please enter CC for drug usage');
-    } else if (hrDrug == "") {
-        alert('Please enter drug amount per hour');
-    } else if (tDrugInput == "") {
-        alert('Please input TPN Drug used');
-    } else if (ccTDrug == "") {
-        alert('Please enter TPN CC for drug usage');
-    } else if (hrTDrug == "") {
-        alert('Please enter TPN drug amount per hour');
-    } else if (ccIl == "") {
-        alert('Please enter IL CC drug usage');
-    } else if (hrIl == "") {
-        alert('Please enter IL drug amount per hour');
-    } else if (drugNotes == "") {
-        alert('Please input notes regarding drugs');
     } else if (feedingMethod == null) {
         alert('Please select feeding method');
-    } else if (adLib == "") {
-        alert('Please check for ad lib');
-    } else if (cueBased == "") {
-        alert('Please check if patient is cue based feeding');
-    } else if (fiCC == "") {
-        alert('Please input food intake');
-    } else if (hrCC == "") {
-        alert('Please check food intake per hour');
-    } else if (feedingAttempts == "") {
-        alert('Please input feeding attempts');
-    } else if (completedAttempts == "") {
-        alert('Please enter completed feeding attempts');
-    } else if (planOfCare == '') {
-        alert('Please enter plan of care');
-    } else if (socialConsiderations == "") {
-        alert('Please enter social considerations');
-    } else if (historyChanges == "") {
-        alert('Please enter history/changes');
-    } else if (referalls == '') {
-        alert('Please input referalls');
-    } else if (synagis == "") {
-        alert('Please check synagis');
-    } else if (vaccine == "") {
-        alert('Please check vaccines');
-    } else if (pediatrician == "") {
-        alert('Please input pediatrician information');
-    } else if (lastBath == "") {
-        alert('Please input date for patients last bath');
-    } else if (consent == "") {
-        alert('Please check cooling patient consent');
-    } else if (husCP == "") {
-        alert('Please check cooling patient HUS');
-    } else if (cpDate == "") {
-        alert('Please enter cooling patient date');
-    } else if (cpTime == "") {
-        alert('Please enter cooling patient time');
-    } else if (phototherapyStartDate == "") {
-        alert('Please enter phototherapy start date');
-    } else if (phototherapyEndDate == "") {
-        alert('Please enter phototherapy end date');
-    } else if (phototherapySelect == null) {
-        alert('Please select phototherapy option');
     } else {
         const generalInformationObject = {
             loggedInUser,
