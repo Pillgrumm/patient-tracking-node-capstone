@@ -414,11 +414,21 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="respiratory">Respiratory</label>
-                            <input type="radio" class="respiratory sideBySide" id="ra" name="respiratory" value="RA"> RA
-                            <input type="radio" class="respiratory sideBySide" id="vent" name="respiratory" value="VENT"> VENT
-                            <input type="radio" class="respiratory sideBySide" id="hfnc" name="respiratory" value="HFNC"> HFNC
-                            <input type="radio" class="respiratory sideBySide" id="vt" name="respiratory" value="VT"> VT
-                            <input type="radio" class="respiratory sideBySide" id="cpap" name="respiratory" value="CPAP"> CPAP
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="ra" name="respiratory" value="RA"> RA
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="vent" name="respiratory" value="VENT"> VENT
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="hfnc" name="respiratory" value="HFNC"> HFNC
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="vt" name="respiratory" value="VT"> VT
+                            </div>
+                            <div class="radioCheck">
+                                <input type="radio" class="respiratory sideBySide" id="cpap" name="respiratory" value="CPAP"> CPAP
+                            </div>
                             <textarea class="respiratoryText depth-notes" name="respiratoryText" cols="40" rows="5" placeholder="lorem ipsum Respiratory text"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
@@ -449,8 +459,12 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="cardiac">Cardiac</label><br>
-                            <input class="murmur sideBySide" name="murmur" type="checkbox" value="murmur"> Murmur
-                            <input class="echo sideBySide" name="echo" type="checkbox" value="echo"> ECHO
+                            <div class="radioCheck">
+                                <input class="murmur sideBySide" name="murmur" type="checkbox" value="murmur"> Murmur
+                            </div>
+                            <div class="radioCheck">
+                                <input class="echo sideBySide" name="echo" type="checkbox" value="echo"> ECHO
+                            </div>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -486,11 +500,21 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="labsTests">Labs/Tests</label>
-                            <input type="checkbox" class="cbc sideBySide" name="cbc" value="cbc"> CBC
-                            <input type="checkbox" class="tb sideBySide" name="tb" value="tb"> TB
-                            <input type="checkbox" class="bmp sideBySide" name="bmp" value="bmp"> BMP
-                            <input type="checkbox" class="crp sideBySide" name="crp" value="crp"> CRP
-                            <input type="checkbox" class="tg sideBySide" name="tg" value="tg"> TG
+                            <div class="radioCheck">
+                                <input type="checkbox" class="cbc sideBySide" name="cbc" value="cbc"> CBC
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="tb sideBySide" name="tb" value="tb"> TB
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="bmp sideBySide" name="bmp" value="bmp"> BMP
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="crp sideBySide" name="crp" value="crp"> CRP
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="tg sideBySide" name="tg" value="tg"> TG
+                            </div>
                             <textarea class="labsTestsText depth-notes" name="labsTestsText" cols="40" rows="5" placeholder="lorem ipsum Labs/Tests"></textarea>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
@@ -513,8 +537,10 @@
                             <label for="trough">Trough</label>
                             <input class="troughCheck sideBySide" name="troughCheck" value="troughCheck" type="checkbox">
                             <input class="troughText sideBySide" name="troughText" type="text" value="" placeholder="Trough active">@
-                            <input class="dateOfTrough sideBySide" name="dateOfTrough" type="date" value="">
-                            <input class="timeOfTrough sideBySide" name="timeOfTrough" type="time" value="">
+                            <div class="radioCheck">
+                                <input class="dateOfTrough sideBySide" name="dateOfTrough" type="date" value="">
+                                <input class="timeOfTrough sideBySide" name="timeOfTrough" type="time" value="">
+                            </div>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
@@ -524,10 +550,14 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="radiology">Radiology</label>
-                            <input class="cxrCheck sideBySide" name="cxrCheck" type="checkbox" value="cxrCheck"> CXR
-                            <input class="cxrDate sideBySide" name="cxrDate" type="date" value="">
-                            <input class="kubCheck sideBySidek" name="kubCheck" type="checkbox" value="kubCheck"> KUB
-                            <input class="kubDate sideBySide" name="kubDate" type="date" value="">
+                            <div class="radioCheck">
+                                <input class="cxrCheck sideBySide" name="cxrCheck" type="checkbox" value="cxrCheck"> CXR
+                                <input class="cxrDate sideBySide" name="cxrDate" type="date" value="">
+                            </div>
+                            <div class="radioCheck">
+                                <input class="kubCheck sideBySide" name="kubCheck" type="checkbox" value="kubCheck"> KUB
+                                <input class="kubDate sideBySide" name="kubDate" type="date" value="">
+                            </div>
                             <input class="radiologyText sideBySide" name="radiologyText" type="text" value="" placeholder="X-rays pending">
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
@@ -646,11 +676,21 @@
                     <section class="section-content">
                         <div class="input-wrapper">
                             <label for="ivFluids">IV Fluids</label>
-                            <input class="pivCheck sideBySide" name="pivCheck" type="checkbox" value="pivCheck"> PIV
-                            <input class="piccCheck sideBySide" name="piccCheck" type="checkbox" value="piccCheck"> PICC
-                            <input class="uacCheck sideBySide" name="uacCheck" type="checkbox" value="uacCheck"> UAC
-                            <input class="uvcCheck sideBySide" name="uvcCheck" type="checkbox" value="uvcCheck"> UVC
-                            <input class="salineLockCheck sideBySide" name="salineLockCheck" type="checkbox" value="salineLockCheck"> Saline Lock
+                            <div class="radioCheck">
+                                <input class="pivCheck sideBySide" name="pivCheck" type="checkbox" value="pivCheck"> PIV
+                            </div>
+                            <div class="radioCheck">
+                                <input class="piccCheck sideBySide" name="piccCheck" type="checkbox" value="piccCheck"> PICC
+                            </div>
+                            <div class="radioCheck">
+                                <input class="uacCheck sideBySide" name="uacCheck" type="checkbox" value="uacCheck"> UAC
+                            </div>
+                            <div class="radioCheck">
+                                <input class="uvcCheck sideBySide" name="uvcCheck" type="checkbox" value="uvcCheck"> UVC
+                            </div>
+                            <div class="radioCheck">
+                                <input class="salineLockCheck sideBySide" name="salineLockCheck" type="checkbox" value="salineLockCheck"> Saline Lock
+                            </div>
                             <div class="icons-wrapper">
                                 <div class="icon-content icon-content-info">
                                     <i class="fas fa-info"></i>
