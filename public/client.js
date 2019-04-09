@@ -511,6 +511,7 @@ $('#form-delete-button').on('click', function (event) {
         //if call is succefull
         .done(function (result) {
             console.log(result);
+            getPreviousEntries(loggedInUser);
             alert("Entry deleted");
         })
         //if the call is failing
