@@ -513,6 +513,7 @@ $('#form-delete-button').on('click', function (event) {
             console.log(result);
             getPreviousEntries(loggedInUser);
             alert("Entry deleted");
+            $("#form-delete-button").hide();
         })
         //if the call is failing
         .fail(function (jqXHR, error, errorThrown) {
@@ -804,6 +805,7 @@ $('#form-submit-button').on('click', function (event) {
                     console.log(result);
                     alert("Entry Added!");
                     getPreviousEntries(loggedInUser);
+                    $("#form-delete-button").hide();
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
@@ -824,6 +826,7 @@ $('#form-submit-button').on('click', function (event) {
                     console.log(result);
                     alert("Entry Updated!");
                     getPreviousEntries(loggedInUser);
+                    $("#form-delete-button").hide();
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
