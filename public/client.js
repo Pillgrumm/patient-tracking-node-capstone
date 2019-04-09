@@ -801,6 +801,7 @@ $('#form-submit-button').on('click', function (event) {
                 })
                 .done(function (result) {
                     console.log(result);
+                    alert("Entry Added!");
                     getPreviousEntries(loggedInUser);
                 })
                 .fail(function (jqXHR, error, errorThrown) {
@@ -820,6 +821,7 @@ $('#form-submit-button').on('click', function (event) {
                 })
                 .done(function (result) {
                     console.log(result);
+                    alert("Entry Updated!");
                     getPreviousEntries(loggedInUser);
                 })
                 .fail(function (jqXHR, error, errorThrown) {
