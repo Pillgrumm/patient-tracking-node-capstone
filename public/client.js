@@ -698,8 +698,6 @@ $('#form-submit-button').on('click', function (event) {
         alert('Please input KUB date');
     } else if (radiologyText == "") {
         alert('Please input radiology report');
-    } else if (hepBDate == "") {
-        alert('Please input date hepatitis B vaccine was received');
     } else if (newbornScreenDate == "") {
         alert('Please input date of Newborn Screen');
     } else if (cchdEchoText == "") {
