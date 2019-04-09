@@ -247,7 +247,6 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
 
     } else {
         $("#form-delete-button").hide();
-        $('.logged-in-user').val("");
         $('.selected-entry-id').val("");
         $('.firstName').val("");
         $('.lastName').val("");
@@ -511,9 +510,166 @@ $('#form-delete-button').on('click', function (event) {
         //if call is succefull
         .done(function (result) {
             console.log(result);
-            getPreviousEntries(loggedInUser);
             alert("Entry deleted");
+            getPreviousEntries(loggedInUser);
+            $('.selected-entry-id').val("");
             $("#form-delete-button").hide();
+            $('.selected-entry-id').val("");
+            $('.firstName').val("");
+            $('.lastName').val("");
+            $('.diagnosis').val("");
+            $('.gestationalAge').val("");
+            $('.correctedGestationalAgeDay').val("");
+            $('.correctedGestationalAgeWeek').val("");
+            $('.dayOfLife').val("");
+            $('.dayOfBirth').val("");
+            $('.timeOfBirth').val("");
+            $('.birthWeight').val("");
+            $('.currentWeight').val("");
+            $('.kaiserScore').val("");
+            $('.bloodType').val("");
+            $('.coombs').val("");
+            $('.acuity').val("");
+            $('.bedNumber').val("");
+            $('.dateOfAdmission').val("");
+            $('.timeOfAdmission').val("");
+            $('.dateOfDischarge').val("");
+            $('.timeOfDischarge').val("");
+            $('.gravida').val("");
+            $('.para').val("");
+            $('.age').val("");
+            $('.vagCs').val("");
+            $('.apgar1').val("");
+            $('.apgar2').val("");
+            $('.rom').val("");
+            $('.hx').val("");
+            $("input[name='husCheck']:checked").attr({
+                checked: false
+            });
+            $('.husText').val("");
+            $("input[name='respiratory']:checked").attr({
+                checked: false
+            });
+            $('.respiratoryText').val("");
+            $('.fio2').val("");
+            $('.abdpb').val("");
+            $("input[name='murmur']:checked").attr({
+                checked: false
+            });
+            $("input[name='echo']:checked").attr({
+                checked: false
+            });
+            $('.cardiacResults').val("");
+            $('.meds').val("");
+            $('.maternalBloodType').val("");
+            $("input[name='cbc']:checked").attr({
+                checked: false
+            });
+            $("input[name='tb']:checked").attr({
+                checked: false
+            });
+            $("input[name='bmp']:checked").attr({
+                checked: false
+            });
+            $("input[name='crp']:checked").attr({
+                checked: false
+            });
+            $("input[name='tg']:checked").attr({
+                checked: false
+            });
+            $('.labsTestsText').val("");
+            $('.qtuLabs').val("");
+            $("input[name='troughCheck']:checked").attr({
+                checked: false
+            });
+            $('.troughText').val("");
+            $('.dateOfTrough').val("");
+            $('.timeOfTrough').val("");
+            $("input[name='cxrCheck']:checked").attr({
+                checked: false
+            });
+            $('.cxrDate').val("");
+            $("input[name='kubCheck']:checked").attr({
+                checked: false
+            });
+            $('.kubDate').val("");
+            $('.radiologyText').val("");
+            $('.hepBDate').val("");
+            $('.newbornScreenDate').val("");
+            $('.cchdEchoText').val("");
+            $('.eyeExamDate').val("");
+            $('.eyeExamText').val("");
+            $('.fuDate').val("");
+            $("input[name='hearingCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='carSeatCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='cprCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='circCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='pivCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='piccCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='uacCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='uvcCheck']:checked").attr({
+                checked: false
+            });
+            $("input[name='salineLockCheck']:checked").attr({
+                checked: false
+            });
+            $('.drugInput').val("");
+            $('.ccDrug').val("");
+            $('.hrDrug').val("");
+            $('.tDrugInput').val("");
+            $('.ccTDrug').val("");
+            $('.hrTDrug').val("");
+            $('.ccIl').val("");
+            $('.hrIl').val("");
+            $('.drugNotes').val("");
+            $('.feedingMethod').val("");
+            $("input[name='adLib']:checked").attr({
+                checked: false
+            });
+            $("input[name='cueBased']:checked").attr({
+                checked: false
+            });
+            $('.fiCC').val("");
+            $('.hrCC').val("");
+            $('.feedingAttempts').val("");
+            $('.completedAttempts').val("");
+            $('.planOfCare').val("");
+            $('.socialConsiderations').val("");
+            $('.historyChanges').val("");
+            $('.referalls').val("");
+            $("input[name='synagis']:checked").attr({
+                checked: false
+            });
+            $("input[name='vaccine']:checked").attr({
+                checked: false
+            });
+            $('.pediatrician').val("");
+            $('.lastBath').val("");
+            $("input[name='consent']:checked").attr({
+                checked: false
+            });
+            $("input[name='husCP']:checked").attr({
+                checked: false
+            });
+            $('.cpDate').val("");
+            $('.cpTime').val("");
+            $('.phototherapyStartDate').val("");
+            $('.phototherapyEndDate').val("");
+            $('.phototherapySelect').val("");
         })
         //if the call is failing
         .fail(function (jqXHR, error, errorThrown) {
@@ -686,6 +842,7 @@ $('#form-submit-button').on('click', function (event) {
     } else if (feedingMethod == null) {
         alert('Please select feeding method');
     } else {
+
         const generalInformationObject = {
             loggedInUser,
             firstName,
@@ -805,7 +962,6 @@ $('#form-submit-button').on('click', function (event) {
                     console.log(result);
                     alert("Entry Added!");
                     getPreviousEntries(loggedInUser);
-                    $("#form-delete-button").hide();
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
@@ -826,7 +982,6 @@ $('#form-submit-button').on('click', function (event) {
                     console.log(result);
                     alert("Entry Updated!");
                     getPreviousEntries(loggedInUser);
-                    $("#form-delete-button").hide();
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
