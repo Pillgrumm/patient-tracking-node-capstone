@@ -34,7 +34,7 @@
                     <button class="button" id="login">Login</button>
                 </div>
             </form>
-            <p>Don't have an account? <a id="sign-up-link" href="#">Register here.</a></p>
+            <p class="loginRegister">Don't have an account? <a id="sign-up-link" href="#">Register here.</a></p>
         </div>
     </main>
 
@@ -49,7 +49,7 @@
                     <button class="button" id="register">Register</button>
                 </div>
             </form>
-            <p>Already have an account? <a id="sign-in-link" href="#">Click here.</a></p>
+            <p class="loginRegister">Already have an account? <a id="sign-in-link" href="#">Click here.</a></p>
         </div>
     </main>
     <main role="main" id="full-form" class="hidden">
@@ -906,8 +906,12 @@
                         </div>
                         <div class="input-wrapper">
                             <label for="coolingPatient">Cooling Patient</label>
-                            <input type="checkbox" class="consent sideBySide" name="consent" value="consent"> Consent
-                            <input type="checkbox" class="husCP sideBySide" name="husCP" value="husCP"> HUS
+                            <div class="radioCheck">
+                                <input type="checkbox" class="consent sideBySide" name="consent" value="consent"> Consent
+                            </div>
+                            <div class="radioCheck">
+                                <input type="checkbox" class="husCP sideBySide" name="husCP" value="husCP"> HUS
+                            </div>
                             <input type="date" class="cpDate sideBySide" name="cpDate" value="">Date
                             <input type="time" class="cpTime sideBySide" name="cpTime" value="">Time
                             <div class="icons-wrapper">
