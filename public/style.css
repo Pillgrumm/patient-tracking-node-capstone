@@ -27,6 +27,9 @@ body {
     position: relative;
 }
 
+.greyText::placeholder {
+    color: grey !important;
+}
 
 
 .hidden {
