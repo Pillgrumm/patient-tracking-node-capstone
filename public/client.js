@@ -1,5 +1,6 @@
 // Triggers
 function getPreviousEntries(userId) {
+    console.log(userId);
     $.ajax({
             type: 'GET',
             url: `/get-all-entries/${userId}`,
@@ -12,10 +13,6 @@ function getPreviousEntries(userId) {
             let htmlOutput = "<option value=''>Add new entry</option>";
             let formattedDataOutput = "";
             for (i = 0; i < result.entries.length; i++) {
-                //                console.log(result.entries[i]._id);
-                //                console.log(result.entries[i].firstName);
-                //                console.log(result.entries[i].lastName);
-                //                console.log(result.entries[i].addedToDB);
                 formattedDataOutput = result.entries[i].addedToDB;
                 let partsOfDataInput = formattedDataOutput.split('T');
                 let dataOutputOnly = partsOfDataInput[0];
@@ -203,6 +200,7 @@ $(document).ready(function () {
     $(".section-content").hide();
     $(".legend-show").show();
     $(".legend-hide").hide();
+    $("#form-delete-button").hide();
 });
 
 //button triggers
@@ -245,8 +243,10 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
     $(".selected-entry-id").val(selectedEntryID);
     if (selectedEntryID != "") {
         prePopulateFormBasedOnEntryID(selectedEntryID);
+        $("#form-delete-button").show();
 
     } else {
+        $("#form-delete-button").hide();
         $('.logged-in-user').val("");
         $('.selected-entry-id').val("");
         $('.firstName').val("");
@@ -374,7 +374,7 @@ $(document).on('change', '.previous-entries-dropdown', function (event) {
         $("input[name='adLib']:checked").attr({
             checked: false
         });
-        $("input[name='cueBased':checked]").attr({
+        $("input[name='cueBased']:checked").attr({
             checked: false
         });
         $('.fiCC').val("");
@@ -497,6 +497,29 @@ $('#register').on('click', function (event) {
 
 });
 
+$('#form-delete-button').on('click', function (event) {
+    event.preventDefault();
+    const loggedInUser = $('.logged-in-user').val();
+    const selectedEntryID = $('.selected-entry-id').val();
+    console.log(loggedInUser, selectedEntryID);
+    $.ajax({
+            type: 'DELETE',
+            url: `/delete-entry/${selectedEntryID}`,
+            dataType: 'json',
+            contentType: 'application/json'
+        })
+        //if call is succefull
+        .done(function (result) {
+            console.log(result);
+            alert("Entry deleted");
+        })
+        //if the call is failing
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
+});
 
 //General Information time of discharge returning undefined UNFINISHED
 $('#form-submit-button').on('click', function (event) {
@@ -906,13 +929,7 @@ $('#form-submit-button').on('click', function (event) {
                 })
                 .done(function (result) {
                     console.log(result);
-                    $('.js-signin-success').html('Thanks for signing up! Please sign in.');
-                    $('.js-signin-success').addClass('change-status-success');
-                    //            showLogInScreen();
-                    //                $('#sign-up-form').addClass('hidden');
-                    //                $('#landing-page-info').addClass('hidden');
-                    //                $('#full-form').removeClass('hidden');
-                    //                $('body').css('background', 'white');
+                    getPreviousEntries(loggedInUser);
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
@@ -931,13 +948,7 @@ $('#form-submit-button').on('click', function (event) {
                 })
                 .done(function (result) {
                     console.log(result);
-                    $('.js-signin-success').html('Thanks for signing up! Please sign in.');
-                    $('.js-signin-success').addClass('change-status-success');
-                    //            showLogInScreen();
-                    //                $('#sign-up-form').addClass('hidden');
-                    //                $('#landing-page-info').addClass('hidden');
-                    //                $('#full-form').removeClass('hidden');
-                    //                $('body').css('background', 'white');
+                    getPreviousEntries(loggedInUser);
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);

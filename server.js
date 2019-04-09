@@ -514,21 +514,20 @@ app.get('/get-entry-by-id/:selectedEntryID', function (req, res) {
 });
 
 // DELETE
-// Delete Journal entry from journal screen
-//app.delete('/sessions/:id', (req, res) => {
-//    Session
-//        .findByIdAndRemove(req.params.id)
-//        .then(() => {
-//            console.log(`Deleted entry with id \`${req.params.id}\``);
-//            res.status(204).end();
-//        })
-//        .catch(err => {
-//            console.error(err);
-//            res.status(500).json({
-//                message: 'Internal Server Error deleting entry'
-//            })
-//        });
-//});
+// Delete Entry
+app.delete('/delete-entry/:id', (req, res) => {
+    Form
+        .findByIdAndRemove(req.params.id)
+        .then(() => {
+            res.status(204).end();
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json({
+                message: 'Internal Server Error deleting entry'
+            })
+        });
+});
 
 // ---------------MISC------------------------------
 // catch-all endpoint if client makes request to non-existent endpoint
