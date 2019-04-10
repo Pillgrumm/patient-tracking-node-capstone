@@ -438,7 +438,7 @@ $('#login').on('click', function (event) {
             .done(function (result) {
                 $('.logged-in-user').val(result._id);
                 getPreviousEntries(result._id);
-                $('#login-form').addClass('hidden');
+                $('#login-form-section').addClass('hidden');
                 $('#landing-page-info').addClass('hidden');
                 $('#full-form').removeClass('hidden');
                 $('body').css('background', 'white');
@@ -996,14 +996,14 @@ $('#form-submit-button').on('click', function (event) {
 
 $('#sign-up-link').on('click', function (event) {
     event.preventDefault();
-    $('#login-form').addClass('hidden');
+    $('#login-form-section').addClass('hidden');
     $('#sign-up-form').removeClass('hidden');
 });
 
 $('#sign-in-link').on('click', function (event) {
     event.preventDefault();
     $('#sign-up-form').addClass('hidden');
-    $('#login-form').removeClass('hidden');
+    $('#login-form-section').removeClass('hidden');
 });
 
 //form trigger

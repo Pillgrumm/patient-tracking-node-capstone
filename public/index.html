@@ -13,16 +13,16 @@
 <body>
     <input type="hidden" class="logged-in-user" value="">
     <input type="hidden" class="selected-entry-id" value="">
-    <header>
+    <header role="banner">
         <h1 class="title">NICU Patient Report</h1>
     </header>
-    <main role="main" id="landing-page-info">
+    <section role="region" id="landing-page-info">
         <div class="app-summary">
             <h1>The NICU Patient Report application is for employees of the NICU to keep track of patients within their unit.</h1>
             <h4>In order to get started either login or register an account to use this application.</h4>
         </div>
-    </main>
-    <main role="main" id="login-form">
+    </section>
+    <section role="region" id="login-form-section">
         <div id="absoluteCenteredDiv">
             <form class="login-form">
                 <div class="authentication-box">
@@ -38,9 +38,9 @@
                 <p>Don't have an account? <a id="sign-up-link" href="#">Register here.</a></p>
             </div>
         </div>
-    </main>
+    </section>
 
-    <main role="main" id="sign-up-form" class="hidden">
+    <section role="region" id="sign-up-form" class="hidden">
         <div id="absoluteCenteredDiv">
             <form class="sign-up-form">
                 <div class="authentication-box">
@@ -55,11 +55,11 @@
                 <p>Already have an account? <a id="sign-in-link" href="#">Click here.</a></p>
             </div>
         </div>
-    </main>
+    </section>
     <main role="main" id="full-form" class="hidden">
-        <section class="form-wrapper">
+        <section role="region" class="form-wrapper">
             <fieldset>
-                <section class="select-previous-entries">
+                <section role="region" class="select-previous-entries">
                     <legend class="legend">Patient Entries</legend>
                     <select class="previous-entries-dropdown">
                     </select>
@@ -68,11 +68,11 @@
             </fieldset>
         </section>
         <form class="general-information-form">
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> General Patient Information</legend>
                     <legend class="legend-hide"><button>-</button> General Patient Information</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="firstName">First Name</label>
                             <input class="firstName" name="firstName" type="text" value="" placeholder="Jane" required>
@@ -272,11 +272,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Maternal/Delivery Information</legend>
                     <legend class="legend-hide"><button>-</button> Maternal/Delivery Information</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="gravida">Gravida</label>
                             <input class="gravida sideBySide" name="gravida" type="number" value="" placeholder="4" required>
@@ -400,11 +400,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Assessment</legend>
                     <legend class="legend-hide"><button>-</button> Assessment</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="hus">HUS</label>
                             <input class="husCheck sideBySide" name="husCheck" type="checkbox" value="husCheck">
@@ -497,11 +497,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Labs/Tests</legend>
                     <legend class="legend-hide"><button>-</button> Labs/Tests</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="labsTests">Labs/Tests</label>
                             <div class="radioCheck">
@@ -574,11 +574,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Other Tests</legend>
                     <legend class="legend-hide"><button>-</button> Other Tests</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="hepB">Hepatitis B Vaccine</label>
                             <input class="hepBDate sideBySide" name="hepBDate" type="date" value="">
@@ -673,11 +673,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Fluids/Drugs</legend>
                     <legend class="legend-hide"><button>-</button> Fluids/Drugs</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="ivFluids">IV Fluids</label>
                             <div class="radioCheck">
@@ -750,11 +750,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Diet/Feeding Schedule</legend>
                     <legend class="legend-hide"><button>-</button> Diet/Feeding Schedule</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="feedingMethod">Method of Feeding</label>
                             <select class="feedingMethod sideBySide" name="feedingMethod" required>
@@ -815,11 +815,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper">
+            <section role="region" class="form-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> In Depth Patient Notes</legend>
                     <legend class="legend-hide"><button>-</button> In Depth Patient Notes</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="planOfCare">Plan of Care</label>
                             <textarea name="planOfCare" cols="40" rows="5" class="depth-notes planOfCare" placeholder="lorem ipsum plan of care"></textarea>
@@ -853,11 +853,11 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper last-wrapper">
+            <section role="region" class="form-wrapper last-wrapper">
                 <fieldset>
                     <legend class="legend-show"><button>+</button> Other</legend>
                     <legend class="legend-hide"><button>-</button> Other</legend>
-                    <section class="section-content">
+                    <section role="region" class="section-content">
                         <div class="input-wrapper">
                             <label for="referalls">Referalls</label>
                             <input class="referalls sideBySide" name="referalls" type="text" value="" placeholder="Yashar">
@@ -945,7 +945,7 @@
                     </section>
                 </fieldset>
             </section>
-            <section class="form-wrapper fixed-cta">
+            <section role="region" class="form-wrapper fixed-cta">
                 <fieldset>
                     <button class="sideBySide button" id="form-submit-button">Save</button>
                 </fieldset>
