@@ -1,5 +1,6 @@
 # NICU Patient Tracking Application
 Live Preview with node @ https://patient-tracking-capstone.herokuapp.com/
+
 Live Preview without Node https://pillgrumm.github.io/patient-tracking-node-capstone/public/index.html
 
 This application is meant to be used for the medical staff of a neonatal intensive care unit. The staff will be able to keep record
@@ -25,7 +26,7 @@ Patient Updated Alert ![Patient Updated](public/github-images/patient-updated.JP
 
 Patient Deleted Alert ![Patient Deleted](public/github-images/patient-deleted.JPG)
 
-Login Error ![Login Error](public/github-images/login-error.jpg)
+Login Error ![Login Error](public/github-images/login-error.JPG)
 
 Register Error ![Register Error](public/github-images/register-error.JPG)
 
