@@ -9,32 +9,32 @@ also being able to update existing records and add brand new ones.
 I am not in the medical field myself but my father is; he pitched this as an idea and it was decided that this would be a very good project to practice building a full stack application.
 
 ## Screenshots
-Landing Page/Login Page ![Landing Page](https://github.com/Pillgrumm/patient-tracking-node-capstone/blob/master/public/github-images/landing-page.JPG)
+Landing Page/Login Page ![Landing Page](public/github-images/landing-page.JPG)
 
-Registration Page ![Registration Page](/public/github-images/registration-page.JPG)
+Registration Page ![Registration Page](public/github-images/registration-page.JPG)
 
-Main Page(No Patient Selected) ![Main Page No Patient](/public/github-images/main-page-no-patient.jpg)
+Main Page(No Patient Selected) ![Main Page No Patient](public/github-images/main-page-no-patient.JPG)
 
-Main Page(Patient Selected) ![Main Page Patient](/public/github-images/main-page-patient.jpg)
+Main Page(Patient Selected) ![Main Page Patient](public/github-images/main-page-patient.JPG)
 
-General Information Field ![General Information Field](/public/github-images/general-field.jpg)
+General Information Field ![General Information Field](public/github-images/general-field.JPG)
 
-Patient Added Alert ![Patient Added](/public/github-images/patient-added.jpg)
+Patient Added Alert ![Patient Added](public/github-images/patient-added.JPG)
 
-Patient Updated Alert ![Patient Updated](/public/github-images/patient-updated.jpg)
+Patient Updated Alert ![Patient Updated](public/github-images/patient-updated.JPG)
 
-Patient Deleted Alert ![Patient Deleted](/public/github-images/patient-deleted.jpg)
+Patient Deleted Alert ![Patient Deleted](public/github-images/patient-deleted.JPG)
 
-Login Error ![Login Error](/public/github-images/login-error.jpg)
+Login Error ![Login Error](public/github-images/login-error.jpg)
 
-Register Error ![Register Error](/public/github-images/register-error.jpg)
+Register Error ![Register Error](public/github-images/register-error.JPG)
 
-Required Field Error ![Required Field Error](/public/github-images/required-field-error.jpg)
+Required Field Error ![Required Field Error](public/github-images/required-field-error.JPG)
 
 ## User Stories
 **Landing Page**
 
-  As a user, I want to view the first page of the app and how to use it. 
+  As a user, I want to view the first page of the app and how to use it.
 
   As a user, I will also see a login form where I can input a prexisting account name and password.
 
@@ -72,12 +72,12 @@ Required Field Error ![Required Field Error](/public/github-images/required-fiel
 
 * HTML5
 * CSS3
-* JavaScript 
-* jQuery 
+* JavaScript
+* jQuery
 
-#### Back End 
+#### Back End
 
-* Node.js 
+* Node.js
 * Express.js
 * MongoDB
 * Mongoose
@@ -89,7 +89,7 @@ Required Field Error ![Required Field Error](/public/github-images/required-fiel
 </ul>
 
 ## Development Road Map
-Features for future iterations include: 
+Features for future iterations include:
 - Add ability to save at any point during entering fields.
 - Added security so the application can potentially be used in a real setting.
 - Automatic logout after inactivity
