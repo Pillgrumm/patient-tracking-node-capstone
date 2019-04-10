@@ -1,6 +1,5 @@
 // Triggers
 function getPreviousEntries(userId) {
-    console.log(userId);
     $.ajax({
             type: 'GET',
             url: `/get-all-entries/${userId}`,
@@ -9,7 +8,6 @@ function getPreviousEntries(userId) {
         })
         //if call is succefull
         .done(function (result) {
-            console.log(result);
             let htmlOutput = "<option value=''>Add new entry</option>";
             let formattedDataOutput = "";
             for (i = 0; i < result.entries.length; i++) {
@@ -38,7 +36,6 @@ function checkInputByValue(result, fieldName, expectedValue) {
 }
 
 function prePopulateFormBasedOnEntryID(selectedEntryID) {
-    console.log(selectedEntryID);
     $.ajax({
             type: 'GET',
             url: `/get-entry-by-id/${selectedEntryID}`,
@@ -47,7 +44,6 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
         })
         //if call is succefull
         .done(function (result) {
-            console.log(result);
             $('.logged-in-user').val(result.entries[0].loggedInUser);
             $('.firstName').val(result.entries[0].firstName);
             $('.lastName').val(result.entries[0].lastName);
@@ -397,7 +393,6 @@ $('#login').on('click', function (event) {
             username: loginUsername,
             password: loginPassword
         };
-        console.log(loginObject);
         $.ajax({
                 type: 'POST',
                 url: '/signin',
@@ -439,7 +434,6 @@ $('#register').on('click', function (event) {
             password,
             username
         };
-        console.log(newUserObject);
         $.ajax({
                 type: 'POST',
                 url: '/users/create',
@@ -470,7 +464,6 @@ $('#form-delete-button').on('click', function (event) {
     event.preventDefault();
     const loggedInUser = $('.logged-in-user').val();
     const selectedEntryID = $('.selected-entry-id').val();
-    console.log(loggedInUser, selectedEntryID);
     $.ajax({
             type: 'DELETE',
             url: `/delete-entry/${selectedEntryID}`,
@@ -479,7 +472,6 @@ $('#form-delete-button').on('click', function (event) {
         })
         //if call is succefull
         .done(function (result) {
-            console.log(result);
             alert("Entry deleted");
             getPreviousEntries(loggedInUser);
             $('.selected-entry-id').val("");
@@ -735,9 +727,7 @@ $('#form-submit-button').on('click', function (event) {
     const drugNotes = $('.drugNotes').val();
     const feedingMethod = $('.feedingMethod').val();
     const adLib = $("input[name='adLib']:checked").val();
-    console.log(adLib);
     const cueBased = $("input[name='cueBased']").val();
-    console.log(cueBased);
     const fiCC = $('.fiCC').val();
     const hrCC = $('.hrCC').val();
     const feedingAttempts = $('.feedingAttempts').val();
@@ -917,9 +907,7 @@ $('#form-submit-button').on('click', function (event) {
             phototherapyEndDate,
             phototherapySelect
         };
-        console.log(generalInformationObject);
         //if no entry was selected add new one
-        console.log(selectedEntryID);
         if (selectedEntryID == "") {
             $.ajax({
                     type: 'POST',
@@ -929,7 +917,6 @@ $('#form-submit-button').on('click', function (event) {
                     contentType: 'application/json'
                 })
                 .done(function (result) {
-                    console.log(result);
                     alert("Entry Added!");
                     getPreviousEntries(loggedInUser);
                     $('.selected-entry-id').val("");
@@ -1107,7 +1094,6 @@ $('#form-submit-button').on('click', function (event) {
                     contentType: 'application/json'
                 })
                 .done(function (result) {
-                    console.log(result);
                     alert("Entry Updated!");
                     getPreviousEntries(loggedInUser);
                     $('.selected-entry-id').val("");

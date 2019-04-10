@@ -302,7 +302,6 @@ app.put('/form/update/:id', function (req, res) {
             toUpdate[field] = req.body[field];
         }
     });
-    console.log(toUpdate);
     Form
         .findByIdAndUpdate(req.params.id, {
             $set: toUpdate
