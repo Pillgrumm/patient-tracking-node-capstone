@@ -9,7 +9,7 @@ also being able to update existing records and add brand new ones.
 I am not in the medical field myself but my father is; he pitched this as an idea and it was decided that this would be a very good project to practice building a full stack application.
 
 ## Screenshots
-Landing Page/Login Page ![Landing Page](./public/github-images/landing-page.jpg)
+Landing Page/Login Page ![Landing Page](public/github-images/landing-page.jpg)
 
 Registration Page ![Registration Page](/public/github-images/registration-page.jpg)
 
