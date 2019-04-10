@@ -17,7 +17,6 @@ function getPreviousEntries(userId) {
                 let partsOfDataInput = formattedDataOutput.split('T');
                 let dataOutputOnly = partsOfDataInput[0];
                 let timeOutputOnly = partsOfDataInput[1];
-                //                console.log(timeOutputOnly, dataOutputOnly);
                 let splitDataOutputOnly = dataOutputOnly.split('-');
                 let splitTimeOutputOnly = timeOutputOnly.split(':');
                 htmlOutput += '<option value="' + result.entries[i]._id + '">' + splitDataOutputOnly[1] + '/' + splitDataOutputOnly[2] + '/' + splitDataOutputOnly[0] + ' ' + splitTimeOutputOnly[0] + ':' + splitTimeOutputOnly[1] + '(UTC)  ' + result.entries[i].firstName + ' ' + result.entries[i].lastName + '</option>';
@@ -33,9 +32,7 @@ function getPreviousEntries(userId) {
 }
 
 function checkInputByValue(result, fieldName, expectedValue) {
-    //console.log(result.entries[0][fieldName], expectedValue);
     if (result.entries[0][fieldName] == expectedValue) {
-        //console.log($("input[value='" + expectedValue + "']"));
         $("input[value='" + expectedValue + "']").attr("checked", "checked");
     }
 }
@@ -80,7 +77,6 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.apgar2').val(result.entries[0].apgar2);
             $('.rom').val(result.entries[0].rom);
             $('.hx').val(result.entries[0].hx);
-            //            $("input[name='husCheck']:checked").val(result.entries[0].husCheck);
             checkInputByValue(result, 'husCheck', 'husCheck');
             $('.husText').val(result.entries[0].husText);
             checkInputByValue(result, 'respiratoryOptions', 'RA');
@@ -88,38 +84,27 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             checkInputByValue(result, 'respiratoryOptions', 'HFNC');
             checkInputByValue(result, 'respiratoryOptions', 'VT');
             checkInputByValue(result, 'respiratoryOptions', 'CPAP');
-            //$("input[name='respiratory']:checked").val(result.entries[0].respiratoryOptions);
             $('.respiratoryText').val(result.entries[0].respiratoryText);
             $('.fio2').val(result.entries[0].fio2);
             $('.abdpb').val(result.entries[0].abdpb);
-            //            $("input[name='murmur']:checked").val(result.entries[0].murmur);
             checkInputByValue(result, 'murmur', 'murmur');
-            //            $("input[name='echo']:checked").val(result.entries[0].echo);
             checkInputByValue(result, 'echo', 'echo');
             $('.cardiacResults').val(result.entries[0].cardiacResults);
             $('.meds').val(result.entries[0].meds);
             $('.maternalBloodType').val(result.entries[0].maternalBloodType);
-            //$("input[name='cbc']:checked").val(result.entries[0].cbc);
             checkInputByValue(result, 'cbc', 'cbc');
-            //            $("input[name='tb']:checked").val(result.entries[0].tb);
             checkInputByValue(result, 'tb', 'tb');
-            //            $("input[name='bmp']:checked").val(result.entries[0].bmp);
             checkInputByValue(result, 'bmp', 'bmp');
-            //            $("input[name='crp']:checked").val(result.entries[0].crp);
             checkInputByValue(result, 'crp', 'crp');
-            //            $("input[name='tg']:checked").val(result.entries[0].tg);
             checkInputByValue(result, 'tg', 'tg');
             $('.labsTestsText').val(result.entries[0].labsTestsText);
             $('.qtuLabs').val(result.entries[0].qtuLabs);
-            //            $("input[name='troughCheck']:checked").val(result.entries[0].troughCheck);
             checkInputByValue(result, 'troughCheck', 'troughCheck');
             $('.troughText').val(result.entries[0].troughText);
             $('.dateOfTrough').val(result.entries[0].dateOfTrough);
             $('.timeOfTrough').val(result.entries[0].timeOfTrough);
-            //            $("input[name='cxrCheck']:checked").val(result.entries[0].cxrCheck);
             checkInputByValue(result, 'cxrCheck', 'cxrCheck');
             $('.cxrDate').val(result.entries[0].cxrDate);
-            //            $("input[name='kubCheck']:checked").val(result.entries[0].kubCheck);
             checkInputByValue(result, 'kubCheck', 'kubCheck');
             $('.kubDate').val(result.entries[0].kubDate);
             $('.radiologyText').val(result.entries[0].radiologyText);
@@ -129,23 +114,14 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.eyeExamDate').val(result.entries[0].eyeExamDate);
             $('.eyeExamText').val(result.entries[0].eyeExamText);
             $('.fuDate').val(result.entries[0].fuDate);
-            //            $("input[name='hearingCheck']:checked").val(result.entries[0].hearingCheck);
             checkInputByValue(result, 'hearingCheck', 'hearingCheck');
-            //            $("input[name='carSeatCheck']:checked").val(result.entries[0].carSeatCheck);
             checkInputByValue(result, 'carSeatCheck', 'carSeatCheck');
-            //            $("input[name='cprCheck']:checked").val(result.entries[0].cprCheck);
             checkInputByValue(result, 'cprCheck', 'cprCheck');
-            //            $("input[name='circCheck']:checked").val(result.entries[0].circCheck);
             checkInputByValue(result, 'circCheck', 'circCheck');
-            //            $("input[name='pivCheck']:checked").val(result.entries[0].pivCheck);
             checkInputByValue(result, 'pivCheck', 'pivCheck');
-            //            $("input[name='piccCheck']:checked").val(result.entries[0].piccCheck);
             checkInputByValue(result, 'piccCheck', 'piccCheck');
-            //            $("input[name='uacCheck']:checked").val(result.entries[0].uacCheck);
             checkInputByValue(result, 'uacCheck', 'uacCheck');
-            //            $("input[name='uvcCheck']:checked").val(result.entries[0].uvcCheck);
             checkInputByValue(result, 'uvcCheck', 'uvcCheck');
-            //            $("input[name='salineLockCheck']:checked").val(result.entries[0].salineLockCheck);
             checkInputByValue(result, 'salineLockCheck', 'salineLockCheck');
             $('.drugInput').val(result.entries[0].drugInput);
             $('.ccDrug').val(result.entries[0].ccDrug);
@@ -157,9 +133,7 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.hrIl').val(result.entries[0].hrIl);
             $('.drugNotes').val(result.entries[0].drugNotes);
             $('.feedingMethod').val(result.entries[0].feedingMethod);
-            //            $("input[name='adLib']:checked").val(result.entries[0].adLib);
             checkInputByValue(result, 'adLib', 'adLib');
-            //            $("input[name='cueBased']:checked").val(result.entries[0].cueBased);
             checkInputByValue(result, 'cueBased', 'cueBased');
             $('.fiCC').val(result.entries[0].fiCC);
             $('.hrCC').val(result.entries[0].hrCC);
@@ -169,15 +143,11 @@ function prePopulateFormBasedOnEntryID(selectedEntryID) {
             $('.socialConsiderations').val(result.entries[0].socialConsiderations);
             $('.historyChanges').val(result.entries[0].historyChanges);
             $('.referalls').val(result.entries[0].referalls);
-            //            $("input[name='synagis']:checked").val(result.entries[0].synagis);
             checkInputByValue(result, 'synagis', 'synagis');
-            //            $("input[name='vaccine']:checked").val(result.entries[0].vaccine);
             checkInputByValue(result, 'vaccine', 'vaccine');
             $('.pediatrician').val(result.entries[0].pediatrician);
             $('.lastBath').val(result.entries[0].lastBath);
-            //            $("input[name='consent']:checked").val(result.entries[0].consent);
             checkInputByValue(result, 'consent', 'consent');
-            //            $("input[name='husCP']:checked").val(result.entries[0].husCP);
             checkInputByValue(result, 'husCP', 'husCP');
             $('.cpDate').val(result.entries[0].cpDate);
             $('.cpTime').val(result.entries[0].cpTime);
@@ -962,6 +932,164 @@ $('#form-submit-button').on('click', function (event) {
                     console.log(result);
                     alert("Entry Added!");
                     getPreviousEntries(loggedInUser);
+                    $('.selected-entry-id').val("");
+                    $("#form-delete-button").hide();
+                    $('.selected-entry-id').val("");
+                    $('.firstName').val("");
+                    $('.lastName').val("");
+                    $('.diagnosis').val("");
+                    $('.gestationalAge').val("");
+                    $('.correctedGestationalAgeDay').val("");
+                    $('.correctedGestationalAgeWeek').val("");
+                    $('.dayOfLife').val("");
+                    $('.dayOfBirth').val("");
+                    $('.timeOfBirth').val("");
+                    $('.birthWeight').val("");
+                    $('.currentWeight').val("");
+                    $('.kaiserScore').val("");
+                    $('.bloodType').val("");
+                    $('.coombs').val("");
+                    $('.acuity').val("");
+                    $('.bedNumber').val("");
+                    $('.dateOfAdmission').val("");
+                    $('.timeOfAdmission').val("");
+                    $('.dateOfDischarge').val("");
+                    $('.timeOfDischarge').val("");
+                    $('.gravida').val("");
+                    $('.para').val("");
+                    $('.age').val("");
+                    $('.vagCs').val("");
+                    $('.apgar1').val("");
+                    $('.apgar2').val("");
+                    $('.rom').val("");
+                    $('.hx').val("");
+                    $("input[name='husCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.husText').val("");
+                    $("input[name='respiratory']:checked").attr({
+                        checked: false
+                    });
+                    $('.respiratoryText').val("");
+                    $('.fio2').val("");
+                    $('.abdpb').val("");
+                    $("input[name='murmur']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='echo']:checked").attr({
+                        checked: false
+                    });
+                    $('.cardiacResults').val("");
+                    $('.meds').val("");
+                    $('.maternalBloodType').val("");
+                    $("input[name='cbc']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='tb']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='bmp']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='crp']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='tg']:checked").attr({
+                        checked: false
+                    });
+                    $('.labsTestsText').val("");
+                    $('.qtuLabs').val("");
+                    $("input[name='troughCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.troughText').val("");
+                    $('.dateOfTrough').val("");
+                    $('.timeOfTrough').val("");
+                    $("input[name='cxrCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.cxrDate').val("");
+                    $("input[name='kubCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.kubDate').val("");
+                    $('.radiologyText').val("");
+                    $('.hepBDate').val("");
+                    $('.newbornScreenDate').val("");
+                    $('.cchdEchoText').val("");
+                    $('.eyeExamDate').val("");
+                    $('.eyeExamText').val("");
+                    $('.fuDate').val("");
+                    $("input[name='hearingCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='carSeatCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='cprCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='circCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='pivCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='piccCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='uacCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='uvcCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='salineLockCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.drugInput').val("");
+                    $('.ccDrug').val("");
+                    $('.hrDrug').val("");
+                    $('.tDrugInput').val("");
+                    $('.ccTDrug').val("");
+                    $('.hrTDrug').val("");
+                    $('.ccIl').val("");
+                    $('.hrIl').val("");
+                    $('.drugNotes').val("");
+                    $('.feedingMethod').val("");
+                    $("input[name='adLib']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='cueBased']:checked").attr({
+                        checked: false
+                    });
+                    $('.fiCC').val("");
+                    $('.hrCC').val("");
+                    $('.feedingAttempts').val("");
+                    $('.completedAttempts').val("");
+                    $('.planOfCare').val("");
+                    $('.socialConsiderations').val("");
+                    $('.historyChanges').val("");
+                    $('.referalls').val("");
+                    $("input[name='synagis']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='vaccine']:checked").attr({
+                        checked: false
+                    });
+                    $('.pediatrician').val("");
+                    $('.lastBath').val("");
+                    $("input[name='consent']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='husCP']:checked").attr({
+                        checked: false
+                    });
+                    $('.cpDate').val("");
+                    $('.cpTime').val("");
+                    $('.phototherapyStartDate').val("");
+                    $('.phototherapyEndDate').val("");
+                    $('.phototherapySelect').val("");
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
@@ -982,6 +1110,164 @@ $('#form-submit-button').on('click', function (event) {
                     console.log(result);
                     alert("Entry Updated!");
                     getPreviousEntries(loggedInUser);
+                    $('.selected-entry-id').val("");
+                    $("#form-delete-button").hide();
+                    $('.selected-entry-id').val("");
+                    $('.firstName').val("");
+                    $('.lastName').val("");
+                    $('.diagnosis').val("");
+                    $('.gestationalAge').val("");
+                    $('.correctedGestationalAgeDay').val("");
+                    $('.correctedGestationalAgeWeek').val("");
+                    $('.dayOfLife').val("");
+                    $('.dayOfBirth').val("");
+                    $('.timeOfBirth').val("");
+                    $('.birthWeight').val("");
+                    $('.currentWeight').val("");
+                    $('.kaiserScore').val("");
+                    $('.bloodType').val("");
+                    $('.coombs').val("");
+                    $('.acuity').val("");
+                    $('.bedNumber').val("");
+                    $('.dateOfAdmission').val("");
+                    $('.timeOfAdmission').val("");
+                    $('.dateOfDischarge').val("");
+                    $('.timeOfDischarge').val("");
+                    $('.gravida').val("");
+                    $('.para').val("");
+                    $('.age').val("");
+                    $('.vagCs').val("");
+                    $('.apgar1').val("");
+                    $('.apgar2').val("");
+                    $('.rom').val("");
+                    $('.hx').val("");
+                    $("input[name='husCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.husText').val("");
+                    $("input[name='respiratory']:checked").attr({
+                        checked: false
+                    });
+                    $('.respiratoryText').val("");
+                    $('.fio2').val("");
+                    $('.abdpb').val("");
+                    $("input[name='murmur']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='echo']:checked").attr({
+                        checked: false
+                    });
+                    $('.cardiacResults').val("");
+                    $('.meds').val("");
+                    $('.maternalBloodType').val("");
+                    $("input[name='cbc']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='tb']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='bmp']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='crp']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='tg']:checked").attr({
+                        checked: false
+                    });
+                    $('.labsTestsText').val("");
+                    $('.qtuLabs').val("");
+                    $("input[name='troughCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.troughText').val("");
+                    $('.dateOfTrough').val("");
+                    $('.timeOfTrough').val("");
+                    $("input[name='cxrCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.cxrDate').val("");
+                    $("input[name='kubCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.kubDate').val("");
+                    $('.radiologyText').val("");
+                    $('.hepBDate').val("");
+                    $('.newbornScreenDate').val("");
+                    $('.cchdEchoText').val("");
+                    $('.eyeExamDate').val("");
+                    $('.eyeExamText').val("");
+                    $('.fuDate').val("");
+                    $("input[name='hearingCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='carSeatCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='cprCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='circCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='pivCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='piccCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='uacCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='uvcCheck']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='salineLockCheck']:checked").attr({
+                        checked: false
+                    });
+                    $('.drugInput').val("");
+                    $('.ccDrug').val("");
+                    $('.hrDrug').val("");
+                    $('.tDrugInput').val("");
+                    $('.ccTDrug').val("");
+                    $('.hrTDrug').val("");
+                    $('.ccIl').val("");
+                    $('.hrIl').val("");
+                    $('.drugNotes').val("");
+                    $('.feedingMethod').val("");
+                    $("input[name='adLib']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='cueBased']:checked").attr({
+                        checked: false
+                    });
+                    $('.fiCC').val("");
+                    $('.hrCC').val("");
+                    $('.feedingAttempts').val("");
+                    $('.completedAttempts').val("");
+                    $('.planOfCare').val("");
+                    $('.socialConsiderations').val("");
+                    $('.historyChanges').val("");
+                    $('.referalls').val("");
+                    $("input[name='synagis']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='vaccine']:checked").attr({
+                        checked: false
+                    });
+                    $('.pediatrician').val("");
+                    $('.lastBath').val("");
+                    $("input[name='consent']:checked").attr({
+                        checked: false
+                    });
+                    $("input[name='husCP']:checked").attr({
+                        checked: false
+                    });
+                    $('.cpDate').val("");
+                    $('.cpTime').val("");
+                    $('.phototherapyStartDate').val("");
+                    $('.phototherapyEndDate').val("");
+                    $('.phototherapySelect').val("");
                 })
                 .fail(function (jqXHR, error, errorThrown) {
                     console.log(jqXHR);
