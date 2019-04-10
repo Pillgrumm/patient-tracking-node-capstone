@@ -9,27 +9,27 @@ also being able to update existing records and add brand new ones.
 I am not in the medical field myself but my father is; he pitched this as an idea and it was decided that this would be a very good project to practice building a full stack application.
 
 ## Screenshots
-Landing Page/Login Page ![Landing Page](public/github-images/landing-page.jpg)
+Landing Page/Login Page ![Landing Page](/public/github-images/landing-page.jpg)
 
-Registration Page ![Registration Page](public/github-images/registration-page.jpg)
+Registration Page ![Registration Page](/public/github-images/registration-page.jpg)
 
-Main Page(No Patient Selected) ![Main Page No Patient](public/github-images/main-page-no-patient.jpg)
+Main Page(No Patient Selected) ![Main Page No Patient](/public/github-images/main-page-no-patient.jpg)
 
-Main Page(Patient Selected) ![Main Page Patient](public/github-images/main-page-patient.jpg)
+Main Page(Patient Selected) ![Main Page Patient](/public/github-images/main-page-patient.jpg)
 
-General Information Field ![General Information Field](public/github-images/general-field.jpg)
+General Information Field ![General Information Field](/public/github-images/general-field.jpg)
 
-Patient Added Alert ![Patient Added](public/github-images/patient-added.jpg)
+Patient Added Alert ![Patient Added](/public/github-images/patient-added.jpg)
 
-Patient Updated Alert ![Patient Updated](public/github-images/patient-updated.jpg)
+Patient Updated Alert ![Patient Updated](/public/github-images/patient-updated.jpg)
 
-Patient Deleted Alert ![Patient Deleted](public/github-images/patient-deleted.jpg)
+Patient Deleted Alert ![Patient Deleted](/public/github-images/patient-deleted.jpg)
 
-Login Error ![Login Error](public/github-images/login-error.jpg)
+Login Error ![Login Error](/public/github-images/login-error.jpg)
 
-Register Error ![Register Error](public/github-images/register-error.jpg)
+Register Error ![Register Error](/public/github-images/register-error.jpg)
 
-Required Field Error ![Required Field Error](public/github-images/required-field-error.jpg)
+Required Field Error ![Required Field Error](/public/github-images/required-field-error.jpg)
 
 ## User Stories
 **Landing Page**
