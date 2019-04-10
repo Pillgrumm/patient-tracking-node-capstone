@@ -145,6 +145,7 @@ Content styles
 
 .radioCheck {
     display: block;
+    margin-bottom: 10px;
 }
 
 .form-wrapper fieldset .icons-wrapper {
