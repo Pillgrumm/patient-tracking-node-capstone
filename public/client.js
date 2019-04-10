@@ -472,7 +472,7 @@ $('#form-delete-button').on('click', function (event) {
         })
         //if call is succefull
         .done(function (result) {
-            alert("Entry deleted");
+            alert("Entry Deleted!");
             getPreviousEntries(loggedInUser);
             $('.selected-entry-id').val("");
             $("#form-delete-button").hide();
